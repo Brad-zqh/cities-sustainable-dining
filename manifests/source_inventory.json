@@ -1,0 +1,3130 @@
+{
+  "status": "metadata_only_no_empirical_data",
+  "files": [
+    {
+      "path": "source_data/fig01_framework_v4/README.md",
+      "bytes": 822,
+      "sha256": "69fd9e01f90285959db22a74ff702f8b1c07993ef3dc9da00fbecfb089260aad",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig02/bundle_manifest.json",
+      "bytes": 1434,
+      "sha256": "94dabb93bd0f4f32e406cef2f6a8e1034d146191a0f8f2135249077cb4dd9aa3",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig02/factorial_decomposition.csv",
+      "bytes": 466,
+      "sha256": "4fc57ed9c2f89d1e4a33324dfd598bea856f2f3c474ae02217901b4f609de724",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "contrast",
+        "conditioning",
+        "mean_difference"
+      ],
+      "rows": 8,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig02/geometry_archive_locator.yml",
+      "bytes": 479,
+      "sha256": "6d72ddcfdcd2ad07ba804b826abecb5d7c61ab42810514a36c28b97f925c7539",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig02/platform_coverage_audit.csv",
+      "bytes": 711,
+      "sha256": "73705b0032ea6d15f66e572ea357109d41bee7ee7d32444e981ad66a52348006",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "interval_proxy",
+        "observed_interval_proxy_outlet_n_assigned",
+        "review_outlet_n",
+        "shihuan_outlet_n",
+        "missing_source_outlet_n",
+        "direct_activity_calendar_n",
+        "direct_share_of_interval_calendar",
+        "coordinate_coverage_audit",
+        "lsbg_with_any_outlet_share"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig02/recent_2024_count_access.csv",
+      "bytes": 80039,
+      "sha256": "f7fc4afd662004ec7ab75ccceae1b1b912c09df97d32fa4bcf1623bf7dc93b03",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "threshold_min",
+        "network_available",
+        "count_access_2024"
+      ],
+      "rows": 3492,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03/bundle_manifest.json",
+      "bytes": 918,
+      "sha256": "fc9bc239507904cdd001fb2d53237d17e4f8c02e61dc604f0cf853bf6d7d4151",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03/coverage_denominators.csv",
+      "bytes": 423,
+      "sha256": "dd023e1d55359fcf79e78f5e159a0898f0f331d68fb962c17c29950a2b9a50ac",
+      "public_data_included": false,
+      "columns": [
+        "measure",
+        "numerator",
+        "denominator",
+        "share",
+        "estimand"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03/direct_inequality_intervals.csv",
+      "bytes": 2039,
+      "sha256": "8445d58fd5b8b513a668db38644e49b50596269e05b253b4b256ca492a535399",
+      "public_data_included": false,
+      "columns": [
+        "metric",
+        "threshold_min",
+        "block_scale",
+        "point_estimate",
+        "ci_low",
+        "ci_high",
+        "confidence_level",
+        "valid_replicate_n",
+        "failed_or_nonfinite_n"
+      ],
+      "rows": 20,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03/geometry_archive_locator.yml",
+      "bytes": 480,
+      "sha256": "6375b45ecba815b1898361291f2fa081d67f08b72525de9aa0b7a1a630850150",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03/lsbg_count_access.csv",
+      "bytes": 92367,
+      "sha256": "64e86803c17f2abe1cf2f8e7ff0e15abdb88cfaee1c6f5640406d154cf65bdde",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "threshold_min",
+        "access_value",
+        "access_status"
+      ],
+      "rows": 3492,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03_study_area_annual_distribution_v1/analysis_contract.json",
+      "bytes": 1275,
+      "sha256": "5da0cb1017cb80e1f811936c727d8929129418e6ba4848f849c17d60a4fe2c0e",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03_study_area_annual_distribution_v1/annual_restaurant_coordinate_coverage.csv",
+      "bytes": 462,
+      "sha256": "9723d5a7527d5b95f3b9d8af0cc3a321c3a0fa901fb6f07638ed496f545f4493",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "interval_proxy_restaurant_n",
+        "valid_coordinate_restaurant_n",
+        "coordinate_coverage_pct",
+        "occupied_200m_cells_n",
+        "occupied_fixed_2021_lsbg_n",
+        "fixed_2021_lsbg_n",
+        "occupied_fixed_2021_lsbg_share_pct"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03_study_area_annual_distribution_v1/annual_restaurant_density_200m.csv",
+      "bytes": 244895,
+      "sha256": "a0a8d3e4762cd5c71b1d4d68f604f4a07240743eae7b317557c6dd6b5287fb0f",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "grid_easting",
+        "grid_northing",
+        "restaurant_n",
+        "easting_m",
+        "northing_m"
+      ],
+      "rows": 6740,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03_study_area_annual_distribution_v1/archived_voyager_map_axis_2026_08_26.json",
+      "bytes": 788,
+      "sha256": "c382a1056a510936995dc0d0974dea918844ba8be0887a18f00ede2e710d94cb",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig03_study_area_annual_distribution_v1/archived_voyager_map_axis_2026_08_26.png",
+      "bytes": 746452,
+      "sha256": "fd8d346c1122273fc8ab42d6e96c47471a7fbe8e3c78b0918988b1c7de62a967",
+      "public_data_included": false,
+      "clearance": "excluded_archived_basemap_preview"
+    },
+    {
+      "path": "source_data/fig03_study_area_annual_distribution_v1/carto_voyager_nolabels_2026_08_26.tif",
+      "bytes": 5249415,
+      "sha256": "ef7349967c1f4520a2c89fd03baedeed6c850fd9ff4399d4828c490e7ad4e0a0",
+      "public_data_included": false,
+      "clearance": "excluded_archived_basemap_preview"
+    },
+    {
+      "path": "source_data/fig03_study_area_annual_distribution_v1/osm_major_walkable_context_2025_01_01.gpkg",
+      "bytes": 2084864,
+      "sha256": "b59e3b97f0f69d0ddc21d035fbbeb91b1adc46b03f334adf1114dbb7d6e8219d",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "osm_major_walkable_context_2025_01_01",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "highway"
+          ],
+          "rows": 12623
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04/bundle_manifest.json",
+      "bytes": 1094,
+      "sha256": "b42cd024a5bd4fe90607263728e6895515ef41122abfa8a76c31bc63b417cbfd",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04/geometry_archive_locator.yml",
+      "bytes": 439,
+      "sha256": "bdfe9833718e29dbdd406a6ad9ba31b877fe69eb770824a92a62c689f8124db7",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04/maup_scale_stability.csv",
+      "bytes": 751,
+      "sha256": "1b226fa937da3b7060e055b40dec4b6b5fc989f873c66f9bdf2b1fba06e6707f",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "coarse_scale",
+        "comparison",
+        "metric",
+        "estimate",
+        "display_metric"
+      ],
+      "rows": 8,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04/source_scope_access.csv",
+      "bytes": 158445,
+      "sha256": "e3154c8c99018a53b87eeae49e71a7c8ff4db0af26103b1eced788a8ecafaf4f",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "threshold_min",
+        "openrice_per_1000_source",
+        "fehd_calibrated_per_1000_source"
+      ],
+      "rows": 3490,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04/source_scope_agreement.csv",
+      "bytes": 305,
+      "sha256": "7a1cabf37d7601f7101e25e98726005940d240db77dfe43fe28bed64518d952e",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "pearson_r",
+        "spearman_rho",
+        "low_access_jaccard",
+        "low_access_population_agreement",
+        "lsbg_n",
+        "population_analyzed"
+      ],
+      "rows": 2,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_equity_siting_v7/candidate_planning_nodes.csv",
+      "bytes": 34740,
+      "sha256": "d1d3ef12b6e49fb4f2e2a574dc9044475d05da96844ba7f5cdeb5c8cba6b7df3",
+      "public_data_included": false,
+      "columns": [
+        "site_id",
+        "site_name",
+        "district",
+        "longitude",
+        "latitude",
+        "source_address_point_n",
+        "representative_building",
+        "candidate_type",
+        "primary_scenario_eligible"
+      ],
+      "rows": 237,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_equity_siting_v7/lsbg_scenario_map.gpkg",
+      "bytes": 17543168,
+      "sha256": "46523a199b3389c00ee0df47ef0ede8471f7ad1d7191d85286a3b9093d9b1272",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "lsbg_scenario_map",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id",
+            "opportunity_n_le_100",
+            "zero_affordability_priority_population"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_equity_siting_v7/priority_population_definition.csv",
+      "bytes": 77829,
+      "sha256": "17cf611d1d5407f68177408e398cc139b58c4dfb207fa73d9ca80211d5359432",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "ma_hh",
+        "opportunity_n_le_100",
+        "low_income_40_membership",
+        "low_access_40_membership",
+        "joint_priority_population",
+        "zero_affordability_priority_population"
+      ],
+      "rows": 1746,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_equity_siting_v7/scenario_results.csv",
+      "bytes": 3806,
+      "sha256": "e49ed10d03eb1a07389fd74c02299fed34640c9ce913995407c0b647ba93a803",
+      "public_data_included": false,
+      "columns": [
+        "scenario",
+        "budget_sites",
+        "weighted_gini",
+        "income_concentration_index",
+        "zero_access_population_share",
+        "population_newly_covered",
+        "population_within_selected_catchments",
+        "joint_priority_population_reached",
+        "joint_priority_population_denominator",
+        "joint_priority_reached_share",
+        "zero_affordability_priority_population_reached",
+        "zero_affordability_priority_population_denominator",
+        "zero_affordability_priority_reached_share",
+        "mean_affordable_options",
+        "selected_site_ids"
+      ],
+      "rows": 13,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_equity_siting_v7/selected_planning_nodes.csv",
+      "bytes": 14831,
+      "sha256": "f8d48d39d38e426215cd5493fb7d68fe35f70e33524f4200c36dc64da798bcdd",
+      "public_data_included": false,
+      "columns": [
+        "scenario",
+        "budget_sites",
+        "selection_rank",
+        "site_id",
+        "site_name",
+        "district",
+        "longitude",
+        "latitude"
+      ],
+      "rows": 140,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_equity_siting_v7/selected_site_case_metrics_v8.csv",
+      "bytes": 40885,
+      "sha256": "94b5762999553f169e0d457b3cbdc832080e75b444d697540a79565626f6f937",
+      "public_data_included": false,
+      "columns": [
+        "site_id",
+        "total_population",
+        "joint_priority_population",
+        "zero_gap_population",
+        "low_income_population",
+        "low_access_population",
+        "zero_access_population",
+        "assigned_lsbg_n",
+        "mean_walk_min",
+        "site_name",
+        "district",
+        "longitude",
+        "latitude",
+        "selected_zero_affordability_gap",
+        "selected_equity_joint",
+        "selected_access_deficit",
+        "selected_population_reach",
+        "zero_gap_share",
+        "joint_share",
+        "low_income_share",
+        "low_access_share",
+        "zero_access_share",
+        "population_reach_norm",
+        "proximity_norm"
+      ],
+      "rows": 237,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_equity_siting_v7/selected_site_catchment_metrics.csv",
+      "bytes": 715,
+      "sha256": "0090e778b7dd8156024dc083360ff7421ab6ccb0a0ee3a867ed01a62e2444472",
+      "public_data_included": false,
+      "columns": [
+        "site_id",
+        "priority_population_in_catchment",
+        "total_population_in_catchment",
+        "site_name",
+        "district"
+      ],
+      "rows": 10,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/2016_lsbg_geometry.gpkg",
+      "bytes": 1069056,
+      "sha256": "f825908927966b83af5fb235c99dc5f153891bb5903dcf80b1a54295c9fd30e2",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2016_lsbg_geometry",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id",
+            "restaurant_n"
+          ],
+          "rows": 1622
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/2021_lsbg_geometry.gpkg",
+      "bytes": 1064960,
+      "sha256": "42808294e5ebabee188d926a54d10354ce6df61d9a555f3902fb7bc02ae6a35a",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2021_lsbg_geometry",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id",
+            "restaurant_n"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/2024_lsbg_geometry.gpkg",
+      "bytes": 1064960,
+      "sha256": "eeda8517174b7d092aad568df04068b0ba0a650f1a1c6da63ae145753f2286b4",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2024_lsbg_geometry",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id",
+            "restaurant_n"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/analysis_contract.json",
+      "bytes": 482,
+      "sha256": "9d941c3ef4452bf6c0fbb824d0a2678b8865805fc21f3d4df6649c40663f946e",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/lsbg_network_price_opportunity.csv",
+      "bytes": 493342,
+      "sha256": "6b972f6145c124af594fbe7aeeeadb26d38280fc43c7715e7ce2143cda3c9594",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "ma_hh",
+        "year",
+        "network_available",
+        "opportunity_n_le_100",
+        "opportunity_n_all_valid_tiers",
+        "threshold_min"
+      ],
+      "rows": 10228,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/network_price_inequality_intervals.csv",
+      "bytes": 7292,
+      "sha256": "775fd33e5db66730b106ef7f9cde16104908fb3f61161a3da38c39a0f6c447d6",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "threshold_min",
+        "outcome",
+        "metric",
+        "ci_low",
+        "ci_high",
+        "valid_replicate_n"
+      ],
+      "rows": 72,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/network_price_inequality_point_estimates.csv",
+      "bytes": 3973,
+      "sha256": "496bcb3892566cef09c57d3b3f98c5b73cd23e99028496ee9e26457e50166f8e",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "threshold_min",
+        "outcome",
+        "lsbg_n",
+        "population_analyzed",
+        "population_weighted_mean",
+        "weighted_gini",
+        "theil_t",
+        "theil_l",
+        "zero_access_population_share",
+        "bottom_access_quintile_mean",
+        "concentration_index",
+        "income_quintile_low_mean",
+        "income_quintile_high_mean",
+        "income_quintile_absolute_gap",
+        "income_quintile_relative_ratio",
+        "income_bottom40_mean",
+        "income_top10_mean",
+        "palma_top10_bottom40_ratio"
+      ],
+      "rows": 12,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig04_network_price_v4/sha256_manifest.csv",
+      "bytes": 740,
+      "sha256": "39c1cd534c0d1f883a5cf7e08a15b54a4567350866a22c3d4be969f8cdb38874",
+      "public_data_included": false,
+      "columns": [
+        "file",
+        "bytes",
+        "sha256"
+      ],
+      "rows": 7,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig05/bundle_manifest.json",
+      "bytes": 457,
+      "sha256": "51b33ba433cdd694c4575e084de5abbd3e2eee69458802586f5416652ae79be1",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig05/price_market_intervals.csv",
+      "bytes": 5793,
+      "sha256": "d1b5e96f7dfa222fae78ece729ce8076f7e56a2c697aea781d592c730e972b41",
+      "public_data_included": false,
+      "columns": [
+        "display_metric",
+        "display_outcome",
+        "threshold_min",
+        "point_estimate",
+        "ci_low",
+        "ci_high",
+        "valid_replicate_n",
+        "failed_or_nonfinite_n",
+        "block_scale",
+        "block_n",
+        "lsbg_n",
+        "population_analyzed"
+      ],
+      "rows": 40,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06/bundle_manifest.json",
+      "bytes": 1234,
+      "sha256": "a517229dd39b50ba7392d472258a90819807b4a9c73013e6b83c4755c9b54e4d",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06/geometry_archive_locator.yml",
+      "bytes": 479,
+      "sha256": "6d72ddcfdcd2ad07ba804b826abecb5d7c61ab42810514a36c28b97f925c7539",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06/ha_candidate_site_reach.csv",
+      "bytes": 1170,
+      "sha256": "7c8a3be6cbf16a19f1bef7ba844b3ba9deabb323e1b8ba247cb48e3f0c408aa5",
+      "public_data_included": false,
+      "columns": [
+        "map_code",
+        "site_id",
+        "display_name",
+        "candidate_estate_contains",
+        "candidate_premises_contains",
+        "district",
+        "latitude",
+        "longitude",
+        "equity_entry_budget_k",
+        "low_access_population_reached",
+        "total_population_reached",
+        "lsbg_reached_n"
+      ],
+      "rows": 9,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06/ha_policy_scenarios.csv",
+      "bytes": 2656,
+      "sha256": "459d610a54a5f475fe0ef8d842edfd14150c9ee942084f84f49bbc3ca91e50e9",
+      "public_data_included": false,
+      "columns": [
+        "low_access_population_share_definition",
+        "objective",
+        "budget_k",
+        "selected_site_ids",
+        "selected_site_n",
+        "low_access_population_denominator",
+        "low_access_population_reached",
+        "low_access_population_reached_share",
+        "total_population_denominator",
+        "total_population_reached",
+        "total_population_reached_share",
+        "lsbg_reached_n"
+      ],
+      "rows": 16,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06/lsbg_2024_policy_baseline.csv",
+      "bytes": 59670,
+      "sha256": "9d365bcfd211d95dd445fb4e71a7270047d5fbd4f2fa7337e8d6a786d104d2fc",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "baseline_count_access",
+        "population",
+        "bottom20_population_membership",
+        "bottom40_population_membership",
+        "any_candidate_site_reached"
+      ],
+      "rows": 1746,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06_v4/audited_public_food_service_sites.csv",
+      "bytes": 2717,
+      "sha256": "e2c9e0b8a513f9dafee4ef23b3299350f65a95095c58e9a89bf559ee56fd6b45",
+      "public_data_included": false,
+      "columns": [
+        "site_id",
+        "authority",
+        "als_anchor",
+        "official_facility_name",
+        "district",
+        "latitude",
+        "longitude",
+        "permitted_trade",
+        "source_document",
+        "source_page",
+        "official_inventory_date",
+        "match_status",
+        "position_quality",
+        "primary_scenario_eligible"
+      ],
+      "rows": 12,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06_v4/bundle_manifest.json",
+      "bytes": 1189,
+      "sha256": "edafc787c27fa4fbc3098524936859a3e1ad422248a1796fa0a0da6664e424d4",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06_v4/lsbg_geometry_2024_simplified.gpkg",
+      "bytes": 1376256,
+      "sha256": "7688759d3c06b5f6c44864edf0805219d90bf53ca52cc16d1afbde55d4bc0c0f",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "lsbg_geometry_2024_simplified",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06_v4/lsbg_policy_baseline_15min.csv",
+      "bytes": 60940,
+      "sha256": "9ad4805d565fca02c75ccbd6932fceeb49a6b0e8b31a07c588c66cef910e0645",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "baseline_count_access",
+        "population",
+        "bottom_population_membership",
+        "bottom_population_equivalent",
+        "any_candidate_site_reached"
+      ],
+      "rows": 1746,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06_v4/scenario_ha_only.csv",
+      "bytes": 5146,
+      "sha256": "22f80a7765aafa1b3adafda372892c85eb86e54c7049abef28dd4389198394a8",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "low_access_population_share_definition",
+        "objective",
+        "budget_k",
+        "selected_site_ids",
+        "selected_site_n",
+        "low_access_population_denominator",
+        "low_access_population_reached",
+        "low_access_population_reached_share",
+        "total_population_denominator",
+        "total_population_reached",
+        "total_population_reached_share",
+        "lsbg_reached_n"
+      ],
+      "rows": 32,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig06_v4/scenario_ha_plus_fehd.csv",
+      "bytes": 7581,
+      "sha256": "ad2fe2c60ab14f99c4ff6f7cbc28f6066488cbee3aaafd26ff0e67ebb3c39ffd",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "low_access_population_share_definition",
+        "objective",
+        "budget_k",
+        "selected_site_ids",
+        "selected_site_n",
+        "low_access_population_denominator",
+        "low_access_population_reached",
+        "low_access_population_reached_share",
+        "total_population_denominator",
+        "total_population_reached",
+        "total_population_reached_share",
+        "lsbg_reached_n"
+      ],
+      "rows": 40,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_component_social_decomposition_v1/analysis_manifest.json",
+      "bytes": 872,
+      "sha256": "712be820049f805490d7e090a4747bfcfdd0dd3b87129ef9658e86b355624cbd",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_component_social_decomposition_v1/component_domain_group_means_2024.csv",
+      "bytes": 12020,
+      "sha256": "c334264cab2c85895d1fae1c8eae2f56a9e3aa646c8bafcc45f8cb60142a45c1",
+      "public_data_included": false,
+      "columns": [
+        "restaurant_evidence_year",
+        "population_reference_year",
+        "domain",
+        "group",
+        "component",
+        "source_weight_field",
+        "weighted_component_mean",
+        "observed_group_weight",
+        "observed_lsbg_n"
+      ],
+      "rows": 138,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_component_social_decomposition_v1/component_domain_reference_contrasts_2024.csv",
+      "bytes": 4916,
+      "sha256": "e1eabe0fb610f8165f5cae59e3f73ddff3e3f87dfcf72cc9a1bc0c5393d04ab8",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "population_reference_year",
+        "domain",
+        "focal_group",
+        "reference_group",
+        "contrast_label",
+        "component",
+        "focal_mean",
+        "reference_mean",
+        "difference"
+      ],
+      "rows": 36,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_component_social_decomposition_v1/weighted_component_income_distributions.csv",
+      "bytes": 14667,
+      "sha256": "9ae008328709ac61ca812e32818b89c922bbfac6e3576c6da6ae605c24bde301",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "population_reference_year",
+        "component",
+        "component_column",
+        "income_quintile",
+        "observed_lsbg_n",
+        "population_observed",
+        "q05",
+        "q25",
+        "median",
+        "q75",
+        "q95",
+        "weighted_mean"
+      ],
+      "rows": 90,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/2016_joint_access_geometry.gpkg",
+      "bytes": 15958016,
+      "sha256": "7d9da14028879bf748ebc24860a73a526b40cc7b2d514dfe3e73b0b0b9c671cb",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2016_joint_access_geometry",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id",
+            "t_pop",
+            "ma_hh",
+            "dcca",
+            "year",
+            "network_available",
+            "low_price_access",
+            "joint_access",
+            "joint_retention_share"
+          ],
+          "rows": 1622
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/2021_joint_access_geometry.gpkg",
+      "bytes": 17588224,
+      "sha256": "d46851181cffdd893f40321f3d40b1d2714bd027ab5178b15e178061c94722f6",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2021_joint_access_geometry",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id",
+            "t_pop",
+            "ma_hh",
+            "dcca",
+            "year",
+            "network_available",
+            "low_price_access",
+            "joint_access",
+            "joint_retention_share"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/2024_joint_access_geometry.gpkg",
+      "bytes": 17588224,
+      "sha256": "1be36736aabf7c8b335d8e0d8f01c0cf851648a1f18102bfbfc0c3197af6e891",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2024_joint_access_geometry",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg_id",
+            "t_pop",
+            "ma_hh",
+            "dcca",
+            "year",
+            "network_available",
+            "low_price_access",
+            "joint_access",
+            "joint_retention_share"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/analysis_contract.json",
+      "bytes": 1547,
+      "sha256": "1495b2dd00a2c825734dd8d70e2cea75d7680966be832ae40e5da6d5648ffc08",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/joint_access_data_coverage_audit.csv",
+      "bytes": 649,
+      "sha256": "48e5a43918705c50e0687297e3486d53e03b114635f2c70dba5cb7fbde8b65c5",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "eligible_restaurant_n",
+        "eligible_with_price_n",
+        "eligible_with_price_share",
+        "eligible_with_destination_area_sdi_n",
+        "eligible_with_destination_area_sdi_share",
+        "reachable_pair_n",
+        "reachable_pair_with_price_share",
+        "reachable_pair_with_destination_area_sdi_share",
+        "origin_lsbg_n",
+        "population_analyzed"
+      ],
+      "rows": 3,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/joint_access_dcca_block_intervals.csv",
+      "bytes": 2595,
+      "sha256": "a800f8bf32ee043d91516f10b15cd9cb96383a3fade16f311e9f433fed12a0c3",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "outcome",
+        "metric",
+        "ci_low",
+        "ci_high",
+        "valid_replicates",
+        "point_estimate"
+      ],
+      "rows": 24,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/joint_access_dcca_block_replicates.csv",
+      "bytes": 1591711,
+      "sha256": "05655217ce916bc6f764cb58535928a42a2623cea35d8511b5d19f234d6e9428",
+      "public_data_included": false,
+      "columns": [
+        "replicate",
+        "outcome",
+        "metric",
+        "estimate",
+        "year"
+      ],
+      "rows": 23976,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/joint_access_point_estimates.csv",
+      "bytes": 8648,
+      "sha256": "3e292d3d2d1c6644f62d53f16abcee3602e0ebe515fa936c335bf2100ab1f9c9",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "threshold_min",
+        "price_ceiling_hkd",
+        "destination_area_sdi_threshold",
+        "outcome",
+        "population_weighted_mean",
+        "zero_access_population_share",
+        "weighted_gini",
+        "concentration_index",
+        "lsbg_n",
+        "population_analyzed"
+      ],
+      "rows": 63,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/lsbg_joint_quality_affordable_access.csv",
+      "bytes": 307663,
+      "sha256": "402389fe0cb9995bcd59c4ad521986e597a5967a13c7a6d0f0dc515434bb40a7",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "ma_hh",
+        "dcca",
+        "year",
+        "network_available",
+        "low_price_access",
+        "joint_access",
+        "joint_retention_share"
+      ],
+      "rows": 5114,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/run_manifest.json",
+      "bytes": 1896,
+      "sha256": "5b0b901152ee7bcee8c9c6c90289e9030277e0cdef603b7665edcad25ce3a47d",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig13_joint_quality_affordable_access_v1/sha256_manifest.csv",
+      "bytes": 3546,
+      "sha256": "f6e6e152eed95c491f1f65dacf2da5c8d3fbce24cf4ea068a8b72c2d10ccbdc1",
+      "public_data_included": false,
+      "columns": [
+        "role",
+        "path",
+        "sha256"
+      ],
+      "rows": 20,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig14_joint_subgroup_planning_v1/joint_analysis_manifest.json",
+      "bytes": 14354,
+      "sha256": "3458e1eb1b6bf44b5f06d80297421d884964a6f2ca262f7cfea3737c2b07ab49",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig14_joint_subgroup_planning_v1/joint_subgroup_dcca_block_intervals.csv",
+      "bytes": 12346,
+      "sha256": "e557b863421f7cd5d26404a2de7ae8ac0dd4981319c849e0742a872ddc7c56f3",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "domain",
+        "group",
+        "metric",
+        "lower_95",
+        "upper_95",
+        "valid_replicate_n"
+      ],
+      "rows": 138,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig14_joint_subgroup_planning_v1/joint_subgroup_dcca_block_replicates.csv",
+      "bytes": 4649440,
+      "sha256": "53121b32ca77c03fe6208fb0c6d9788ef7275fa36aed09012b9a88c538068919",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "domain",
+        "group",
+        "replicate",
+        "mean_joint_options",
+        "zero_joint_access_share"
+      ],
+      "rows": 68931,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig14_joint_subgroup_planning_v1/joint_subgroup_point_estimates.csv",
+      "bytes": 7449,
+      "sha256": "43028886bc7ae608f161ad73b18b7e774dd908bfcd62a49e03c7cd521d8742c6",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "census_composition_year",
+        "temporal_status",
+        "domain",
+        "group",
+        "source_count_field",
+        "mean_joint_options",
+        "zero_joint_access_share",
+        "group_denominator"
+      ],
+      "rows": 69,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig14_joint_subgroup_planning_v1/priority_population_definition.csv",
+      "bytes": 80187,
+      "sha256": "c6ece2ddd2982fc3a69151c3c127d16263c3b645b32581777c32fa78d6265c60",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "ma_hh",
+        "low_price_access",
+        "joint_access",
+        "low_income_40_membership",
+        "low_access_40_membership",
+        "joint_priority_population",
+        "zero_affordability_priority_population"
+      ],
+      "rows": 1744,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig14_joint_subgroup_planning_v1/scenario_results.csv",
+      "bytes": 4472,
+      "sha256": "a1f075ab159e884e60d816b52cbb15bb87268e27ae919d663529ab171998858c",
+      "public_data_included": false,
+      "columns": [
+        "scenario",
+        "budget_sites",
+        "weighted_gini",
+        "income_concentration_index",
+        "zero_access_population_share",
+        "population_newly_covered",
+        "population_within_selected_catchments",
+        "joint_priority_population_reached",
+        "joint_priority_population_denominator",
+        "joint_priority_reached_share",
+        "zero_affordability_priority_population_reached",
+        "zero_affordability_priority_population_denominator",
+        "zero_affordability_priority_reached_share",
+        "mean_joint_options",
+        "selected_site_ids",
+        "baseline_outcome"
+      ],
+      "rows": 13,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig14_joint_subgroup_planning_v1/selected_planning_nodes.csv",
+      "bytes": 14806,
+      "sha256": "e6020e2b9fade1f4743d5ee7197af2b463a63dc5f272e421b2d6800976ffa595",
+      "public_data_included": false,
+      "columns": [
+        "scenario",
+        "budget_sites",
+        "selection_rank",
+        "site_id",
+        "site_name",
+        "district",
+        "longitude",
+        "latitude"
+      ],
+      "rows": 140,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2011_dcca_components.csv",
+      "bytes": 141680,
+      "sha256": "29e3dd2745e400f83e5b7312ebb43a61375fe9978a2876f1f35c4d3e2670d611",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 412,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2011_dcca_components.gpkg",
+      "bytes": 430080,
+      "sha256": "8a332579be69349dc2237f260c9cd0a15d08c82c524d784197e062b768aaefbc",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2011_dcca_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "dcca",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 412
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2011_lsbg_components.csv",
+      "bytes": 434481,
+      "sha256": "c4ddc82d7ce16f9baacc32236fe8a41fc080c7140925e194947d64ec6fe41af7",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 1620,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2011_lsbg_components.gpkg",
+      "bytes": 1089536,
+      "sha256": "233b7bea2b9ee27fe9890ee593d8c86f269b8dd3c59b3805188470ea127ab503",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2011_lsbg_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 1620
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2016_dcca_components.csv",
+      "bytes": 158626,
+      "sha256": "2acb60c472f55790c695acc0df1aa6dd68a3949ca3c963fd272344ca2d132e1b",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 431,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2016_dcca_components.gpkg",
+      "bytes": 454656,
+      "sha256": "6cbd22c9fa56baf3fa50004f1c728203d89540628c1a2b86406f0e0d42c20780",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2016_dcca_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "dcca",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 431
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2016_lsbg_components.csv",
+      "bytes": 476413,
+      "sha256": "a5a9be0c01781d124aa75c97a4194eef3c0fbed7770ba8258789365fc7551b98",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 1622,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2016_lsbg_components.gpkg",
+      "bytes": 1142784,
+      "sha256": "dfdfae8beedef05fe5c0006d453a22f4dab91aa1027f12ededd6ae405d159f79",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2016_lsbg_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 1622
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2021_dcca_components.csv",
+      "bytes": 174754,
+      "sha256": "91cef75f6a0e6d7f113bd09df5605e0e3856371c8ab71137f34bed79904cc7f3",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 452,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2021_dcca_components.gpkg",
+      "bytes": 688128,
+      "sha256": "e975f1722bd3e5376fe79680123002fd02bf133e2b7c702793eebbc8258a8ad3",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2021_dcca_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "dcca",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 452
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2021_lsbg_components.csv",
+      "bytes": 545376,
+      "sha256": "efebdc791a2bdafcc896acf854f194e94f3620ed50dcaafeb878bb84f485f836",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 1746,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2021_lsbg_components.gpkg",
+      "bytes": 1155072,
+      "sha256": "fde3e3953cc96c69a3d5d85864adb034fa22be7e8879a580783883a8d98d21d3",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2021_lsbg_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2024_dcca_components.csv",
+      "bytes": 172641,
+      "sha256": "a730528843207e8fbd415327794d35c7c7c387c3a5c62682d62abfc8ffa77930",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 452,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2024_dcca_components.gpkg",
+      "bytes": 688128,
+      "sha256": "e8858fe2e923e96ec6c4991126f633e7306ecdadce1f787cc0894e76b0fa3af2",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2024_dcca_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "dcca",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 452
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2024_lsbg_components.csv",
+      "bytes": 531535,
+      "sha256": "61bdeeddcc384e18604a68681f09b89cb48af05f083bcd7d299f4d7949329d01",
+      "public_data_included": false,
+      "columns": [
+        "lsbg",
+        "t_pop",
+        "ma_hh",
+        "age_65o_p",
+        "restaurant_n",
+        "annual_mention_sum",
+        "nutrition_observed_n",
+        "nutrition_coverage",
+        "nutrition_demand_mean",
+        "nutrition_restaurant_mean",
+        "carbon_observed_n",
+        "carbon_coverage",
+        "carbon_demand_mean",
+        "carbon_restaurant_mean",
+        "sustainability_mean",
+        "hygiene_mean",
+        "practice_share",
+        "cuisine_evenness",
+        "price_evenness",
+        "year",
+        "scale",
+        "population_reference_year",
+        "supply_per_1000",
+        "dcca",
+        "nutrition_score",
+        "carbon_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score",
+        "diversity_score",
+        "component_observed_n",
+        "sdi_equal_arithmetic",
+        "sdi_equal_geometric"
+      ],
+      "rows": 1746,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/2024_lsbg_components.gpkg",
+      "bytes": 1155072,
+      "sha256": "bf2c80fcec94c3b795ab36337ce088c80f764b01449ba003adb395a81947e7f8",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2024_lsbg_components",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "restaurant_n",
+            "nutrition_score",
+            "carbon_score",
+            "diversity_score",
+            "sustainability_score",
+            "hygiene_score",
+            "practice_score",
+            "sdi_equal_arithmetic"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/analysis_contract.json",
+      "bytes": 531,
+      "sha256": "858fd59612375c92a88be28e8af2f63b21713e3ec4b7ccb33dbd042cddefd04e",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/population_weighted_summary.csv",
+      "bytes": 2179,
+      "sha256": "3836a0598f069cc4c3729a1d803e872de191703c742b93f8c2047194f1ec0dbb",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "scale",
+        "unit_n",
+        "restaurant_n",
+        "population_reference_year",
+        "population_weighted_supply_per_1000",
+        "population_weighted_nutrition_score",
+        "population_weighted_carbon_score",
+        "population_weighted_diversity_score",
+        "population_weighted_sustainability_score",
+        "population_weighted_hygiene_score",
+        "population_weighted_practice_score",
+        "population_weighted_sdi_equal_arithmetic",
+        "population_weighted_sdi_equal_geometric",
+        "population_without_restaurant_share"
+      ],
+      "rows": 8,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/fig_v4_four_year/sha256_manifest.csv",
+      "bytes": 1795,
+      "sha256": "23f1977ad6a715a50073b9e2796aed201a46daaa71f74c6c96a200fe0d8a48e5",
+      "public_data_included": false,
+      "columns": [
+        "file",
+        "bytes",
+        "sha256"
+      ],
+      "rows": 18,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/bundle_manifest.json",
+      "bytes": 1595,
+      "sha256": "685e6d3b6d1abedc08c8b700384181430c58d998ac35ce633b551bb831eb4767",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_a_demand_nodes.geojson",
+      "bytes": 1998491,
+      "sha256": "22003221456508f43cae364deca53b600a1b380f4a516f973b1506fa16ca153f",
+      "public_data_included": false,
+      "rows": 1746,
+      "columns": [
+        "analysis_role",
+        "analysis_version",
+        "classification_method",
+        "clipped_to_land",
+        "code_repo_tracking",
+        "color_domain_max",
+        "color_domain_min",
+        "coordinate_units",
+        "coverage_status",
+        "crs",
+        "display_status",
+        "geometry_version",
+        "join_key",
+        "land_mask_id",
+        "lsbg_id",
+        "metric_units",
+        "population",
+        "primary_available",
+        "primary_status",
+        "release_channel",
+        "release_class",
+        "snap_distance_m",
+        "source_snapshot",
+        "vertex_only_no_internal_node"
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_a_land_mask.geojson",
+      "bytes": 25726033,
+      "sha256": "e46d3bad0f4572b517adb9a8a3e1582b23f5b027f9bce6fa660bda00f9ac6b3c",
+      "public_data_included": false,
+      "rows": 1,
+      "columns": [
+        "analysis_version",
+        "classification_method",
+        "clipped_to_land",
+        "code_repo_tracking",
+        "color_domain_max",
+        "color_domain_min",
+        "coordinate_units",
+        "coverage_status",
+        "crs",
+        "geometry_version",
+        "join_key",
+        "land_mask_id",
+        "mask_id",
+        "metric_units",
+        "release_channel",
+        "release_class",
+        "source_feature_n",
+        "source_snapshot"
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_b_snap_distance_status.csv",
+      "bytes": 975165,
+      "sha256": "ea5237f0740630bcb1c88f9b33d2a802459b9d20861b2e752d707ac1bda20c07",
+      "public_data_included": false,
+      "columns": [
+        "figure_id",
+        "panel_id",
+        "analysis_version",
+        "unit_id",
+        "spatial_scale",
+        "year",
+        "metric",
+        "estimate",
+        "lower_ci",
+        "upper_ci",
+        "unit",
+        "n",
+        "weight_definition",
+        "ci_method",
+        "status",
+        "source_year",
+        "match_type",
+        "missing_reason",
+        "coverage_flag",
+        "source_dataset",
+        "source_snapshot",
+        "script_commit",
+        "release_class",
+        "release_channel",
+        "code_repo_tracking",
+        "origin_status",
+        "primary_status",
+        "vertex_only_no_internal_node",
+        "network_location_method",
+        "denominator_type",
+        "origin_count",
+        "population_count",
+        "population_coverage_share",
+        "unavailable_reason"
+      ],
+      "rows": 1746,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_c_denominators.csv",
+      "bytes": 4817,
+      "sha256": "c2a183643fa6c4258c031f7b422bbb2bf42417fa38f1618cb1ecf27bf3f0372f",
+      "public_data_included": false,
+      "columns": [
+        "figure_id",
+        "panel_id",
+        "analysis_version",
+        "unit_id",
+        "spatial_scale",
+        "year",
+        "metric",
+        "estimate",
+        "lower_ci",
+        "upper_ci",
+        "unit",
+        "n",
+        "weight_definition",
+        "ci_method",
+        "status",
+        "source_year",
+        "match_type",
+        "missing_reason",
+        "coverage_flag",
+        "source_dataset",
+        "source_snapshot",
+        "script_commit",
+        "release_class",
+        "release_channel",
+        "code_repo_tracking",
+        "origin_status",
+        "network_location_method",
+        "denominator_type",
+        "origin_count",
+        "population_count",
+        "population_coverage_share",
+        "unavailable_reason",
+        "estimand"
+      ],
+      "rows": 7,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_d_case_points.geojson",
+      "bytes": 2249,
+      "sha256": "7186a0d66ea32925fbdb255cad56011e55de5e4583b2803f0736f656f38b5be3",
+      "public_data_included": false,
+      "rows": 2,
+      "columns": [
+        "analysis_role",
+        "analysis_version",
+        "classification_method",
+        "clipped_to_land",
+        "code_repo_tracking",
+        "color_domain_max",
+        "color_domain_min",
+        "coordinate_units",
+        "coverage_status",
+        "crs",
+        "distance_m",
+        "feature_id",
+        "geometry_version",
+        "join_key",
+        "land_mask_id",
+        "lsbg_id",
+        "metric_units",
+        "primary_status",
+        "release_channel",
+        "release_class",
+        "source_snapshot"
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_d_lsbg_29423.geojson",
+      "bytes": 1510,
+      "sha256": "3de2c4f06f0fcafc67deafa9581f32b36d7222e6bf496043962b03514db9c12b",
+      "public_data_included": false,
+      "rows": 1,
+      "columns": [
+        "analysis_version",
+        "classification_method",
+        "clipped_to_land",
+        "code_repo_tracking",
+        "color_domain_max",
+        "color_domain_min",
+        "coordinate_units",
+        "coverage_status",
+        "crs",
+        "geometry_version",
+        "join_key",
+        "land_mask_id",
+        "lsbg_id",
+        "metric_units",
+        "population",
+        "primary_status",
+        "release_channel",
+        "release_class",
+        "source_snapshot"
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_d_lsbg_29423_facts.csv",
+      "bytes": 4713,
+      "sha256": "d4dd968d8dc7a92c66527e5de7272e286c1c92c9d164fb67e1b4b3941d755748",
+      "public_data_included": false,
+      "columns": [
+        "figure_id",
+        "panel_id",
+        "analysis_version",
+        "unit_id",
+        "spatial_scale",
+        "year",
+        "metric",
+        "estimate",
+        "lower_ci",
+        "upper_ci",
+        "unit",
+        "n",
+        "weight_definition",
+        "ci_method",
+        "status",
+        "source_year",
+        "match_type",
+        "missing_reason",
+        "coverage_flag",
+        "source_dataset",
+        "source_snapshot",
+        "script_commit",
+        "release_class",
+        "release_channel",
+        "code_repo_tracking",
+        "analysis_role",
+        "origin_status",
+        "primary_status",
+        "network_location_method",
+        "denominator_type",
+        "origin_count",
+        "population_count",
+        "population_coverage_share",
+        "unavailable_reason",
+        "primary_value_policy"
+      ],
+      "rows": 7,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_d_nearby_walkable_edges.geojson",
+      "bytes": 54496,
+      "sha256": "c44b50115a105fd9cc44079245763111fa1052c34b309963df1a3ed2a52081ce",
+      "public_data_included": false,
+      "rows": 48,
+      "columns": [
+        "analysis_role",
+        "analysis_version",
+        "classification_method",
+        "clipped_to_land",
+        "code_repo_tracking",
+        "color_domain_max",
+        "color_domain_min",
+        "coordinate_units",
+        "coverage_status",
+        "crs",
+        "edge_feature_id",
+        "geometry_version",
+        "join_key",
+        "land_mask_id",
+        "metric_units",
+        "primary_intersects_lsbg_29423",
+        "release_channel",
+        "release_class",
+        "source_snapshot"
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/panel_d_sensitivity_connector.geojson",
+      "bytes": 1235,
+      "sha256": "bc873981e7fe3526658ecb00a922270dc3bcec3d1a4c9bb300c7bcf82d74cd43",
+      "public_data_included": false,
+      "rows": 1,
+      "columns": [
+        "analysis_role",
+        "analysis_version",
+        "classification_method",
+        "clipped_to_land",
+        "code_repo_tracking",
+        "color_domain_max",
+        "color_domain_min",
+        "coordinate_units",
+        "coverage_status",
+        "crs",
+        "distance_m",
+        "feature_id",
+        "geometry_version",
+        "join_key",
+        "land_mask_id",
+        "lsbg_id",
+        "metric_units",
+        "release_channel",
+        "release_class",
+        "source_snapshot"
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs02/README.md",
+      "bytes": 582,
+      "sha256": "7e907ecf457ed35a7881e39be38c8edf73d0e658ee27df9e742e518cbf748a0f",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs03/access_rank_sensitivity.csv",
+      "bytes": 280,
+      "sha256": "cbbf8d08bd39993eef07695e95095b5a1eafaa134a8ce9545cb60e0ef5f7e9dd",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "decay",
+        "spearman_vs_primary",
+        "lsbg_n"
+      ],
+      "rows": 6,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs03/bundle_manifest.json",
+      "bytes": 1135,
+      "sha256": "21b01437fa865f432bcc2d1465875f1ddcdc693dfc1182a2015b942a0a6220c8",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs03/inequality_parameter_sensitivity.csv",
+      "bytes": 4131,
+      "sha256": "dc06cfd6365ca4f29e1737bcc21ad392eb5db713e38344dca6e0cdb732f2f551",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "decay",
+        "metric",
+        "estimate",
+        "status",
+        "lsbg_n",
+        "population_analyzed",
+        "analysis_status"
+      ],
+      "rows": 30,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs06/bundle_manifest.json",
+      "bytes": 653,
+      "sha256": "4bd51bd8697044aeadbb196ea2404be65ff99d73f9a19ca7f7ae5b65c8460d3e",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs06/direct_inequality_spatial_block_intervals.csv",
+      "bytes": 5357,
+      "sha256": "5d48131332b756d485e53317b4104e96ac2435fd8793c48d992147dc8e42c430",
+      "public_data_included": false,
+      "columns": [
+        "metric",
+        "confidence_level",
+        "ci_low",
+        "ci_high",
+        "valid_replicate_n",
+        "failed_or_nonfinite_n",
+        "status",
+        "point_estimate",
+        "threshold_min",
+        "block_scale",
+        "block_n",
+        "analysis_status",
+        "display_status"
+      ],
+      "rows": 32,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs12/aggregation_comparison.csv",
+      "bytes": 2028,
+      "sha256": "709032441bbdbbed71890429504dc8a387698dbab1da9c1b263bd7877b1e864f",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "variant",
+        "spearman_rho",
+        "top_tail_jaccard",
+        "bottom_tail_jaccard"
+      ],
+      "rows": 30,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs12/component_disposition.csv",
+      "bytes": 1055,
+      "sha256": "17e67b4d1b5868c97f741a45fd08c686fdc95cd42e8e74e00c15cb7e3dff4341",
+      "public_data_included": false,
+      "columns": [
+        "component",
+        "display_name",
+        "disposition",
+        "temporal_note",
+        "primary_composite_eligible"
+      ],
+      "rows": 11,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figs12/data_driven_weights.csv",
+      "bytes": 1517,
+      "sha256": "ef5583ec33a1c305d2cdcb24eac8d021cb2f6597a5da10742cb15aafb2744938",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "method",
+        "component",
+        "weight"
+      ],
+      "rows": 36,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_2024_component_maps_v13/component_map_breaks_and_coverage.csv",
+      "bytes": 912,
+      "sha256": "50b25019b86e8f79fc09be53c1f10ee90d0741dbef08d229722e1858bee999cb",
+      "public_data_included": false,
+      "columns": [
+        "component",
+        "panel_title",
+        "palette",
+        "observed_lsbg_n",
+        "missing_lsbg_n",
+        "break_0",
+        "break_1",
+        "break_2",
+        "break_3",
+        "break_4",
+        "break_5"
+      ],
+      "rows": 6,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_2024_component_maps_v13/README.md",
+      "bytes": 302,
+      "sha256": "b9748fcafe55d1ccce57809e9070fa5c842d9a9258b2d93ae772f43a6c1213e4",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_four_year_component_series_v13/four_year_component_breaks_and_coverage.csv",
+      "bytes": 3494,
+      "sha256": "830279e51be35145a7648d6a0327eb83f772a99d84aa94393390e7dee9598d83",
+      "public_data_included": false,
+      "columns": [
+        "component",
+        "panel_title",
+        "year",
+        "palette",
+        "observed_lsbg_n",
+        "missing_lsbg_n",
+        "pooled_break_0",
+        "pooled_break_1",
+        "pooled_break_2",
+        "pooled_break_3",
+        "pooled_break_4",
+        "pooled_break_5"
+      ],
+      "rows": 24,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_four_year_component_series_v13/README.md",
+      "bytes": 296,
+      "sha256": "7e6687af48a1cb9c88fc6fb00041052e8ac57a269491927a9a65f2009676a276",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_llm_reported_matrices_v14/reported_correlation_matrices.json",
+      "bytes": 4220,
+      "sha256": "a7ce0966659095a525b16324a858e7ec027f9e405a560ee09b3b4e71c2c50cbd",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_llm_reproducibility_v13/inter_model_summary.csv",
+      "bytes": 944,
+      "sha256": "5676504a5081eb7ba0cd98ec3029436529658e88923d413dd4694955b3c3d155",
+      "public_data_included": false,
+      "columns": [
+        "Metric",
+        "n_pairs",
+        "q25",
+        "median",
+        "q75",
+        "minimum",
+        "maximum"
+      ],
+      "rows": 8,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_llm_reproducibility_v13/intra_model_summary.csv",
+      "bytes": 810,
+      "sha256": "c33b8ddccb75f611a016ec0f2665ae9b613a9c579db0da73fa087c5a878dd51d",
+      "public_data_included": false,
+      "columns": [
+        "Metric",
+        "n_pairs",
+        "spearman_min",
+        "spearman_median",
+        "spearman_max",
+        "icc"
+      ],
+      "rows": 8,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_llm_reproducibility_v13/model_pair_median_spearman.csv",
+      "bytes": 527,
+      "sha256": "fe28ba0df64f7de5683d041260348bc9eacb22b764500246ad8595428b45ffbc",
+      "public_data_included": false,
+      "columns": [
+        "",
+        "GPT-4.1-nano",
+        "GPT-4.1",
+        "GPT-5",
+        "Claude-Sonnet-4.5",
+        "Gemini-2.5-Pro"
+      ],
+      "rows": 5,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_llm_reproducibility_v13/README.md",
+      "bytes": 299,
+      "sha256": "b81b0bd37d9c3faf1f305e1645ebdfc7e292d65ff66e3b4c2229a0c49db222e8",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_openrice_fehd_v4/comparison_summary.json",
+      "bytes": 3797,
+      "sha256": "2dde7b12aa047c41b7a278e26ff5074db64c88e606591d4591e97051821fc16b",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_openrice_fehd_v4/lsbg_2021_simplified.gpkg",
+      "bytes": 1515520,
+      "sha256": "c3b814fc2a0b8857e2bbd304470c893ea2cd50b9640bd543a512815c5cf519cb",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "lsbg_2021_simplified",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_openrice_fehd_v4/lsbg_openrice_fehd_count_access.csv",
+      "bytes": 361490,
+      "sha256": "f4945205fcfedbbc7915c0ab8697e0c6e7886f2e3f054894493bf5b76e4a4341",
+      "public_data_included": false,
+      "columns": [
+        "lsbg_id",
+        "threshold_min",
+        "openrice",
+        "fehd_raw",
+        "fehd_calibrated",
+        "population",
+        "median_household_income",
+        "openrice_per_1000_source",
+        "fehd_raw_per_1000_source",
+        "fehd_calibrated_per_1000_source"
+      ],
+      "rows": 3490,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_openrice_fehd_v4/README.md",
+      "bytes": 442,
+      "sha256": "8d46d8be81a810fe262348d75110a4413e1b81dba84f0f227b586e1451af6bb4",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/2011_lsbg_price_market.gpkg",
+      "bytes": 1028096,
+      "sha256": "ef19fe34904cade6ab720c8d4833b71809e313f254f04fc282dcba0cd5916a19",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2011_lsbg_price_market",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "active_restaurant_n",
+            "low_price_share"
+          ],
+          "rows": 1620
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/2016_lsbg_price_market.gpkg",
+      "bytes": 1081344,
+      "sha256": "a0518d5349a50c8c3e74ee966b4ff0eb46e397f2b7ef74b2119895fece91aa47",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2016_lsbg_price_market",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "active_restaurant_n",
+            "low_price_share"
+          ],
+          "rows": 1622
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/2021_lsbg_price_market.gpkg",
+      "bytes": 1073152,
+      "sha256": "d29530196106b4e438c4ce096073dc6575df50bfabe0ad9996cbd97cc3c82642",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2021_lsbg_price_market",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "active_restaurant_n",
+            "low_price_share"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/2024_lsbg_price_market.gpkg",
+      "bytes": 1073152,
+      "sha256": "91c8c553eafcccfa6f200a17d4eea9a26d5dc38e593598b3b955031b791ea30c",
+      "public_data_included": false,
+      "layers": [
+        {
+          "name": "2024_lsbg_price_market",
+          "kind": "features",
+          "columns": [
+            "fid",
+            "geom",
+            "lsbg",
+            "active_restaurant_n",
+            "low_price_share"
+          ],
+          "rows": 1746
+        }
+      ],
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/analysis_contract.json",
+      "bytes": 473,
+      "sha256": "e1c8b18782fc85e4fdee63225000f31d69fac919ee063e597b88427fca5432ab",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/price_market_summary.csv",
+      "bytes": 812,
+      "sha256": "c5d76d185c11f0609b537874c7f4caedb6f251e1ca729ead5201d9690daf71e3",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "population_reference_year",
+        "active_restaurant_n",
+        "valid_price_n",
+        "valid_price_share",
+        "low_price_le100_share_of_valid",
+        "population_weighted_low_price_share",
+        "population_weighted_low_price_per1000",
+        "population_weighted_total_supply_per1000",
+        "population_weighted_quality_no_practice"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/quality_market_decomposition.csv",
+      "bytes": 3576,
+      "sha256": "3345969f2cda2aeaf9e3f652356fbf1417693cb97783bf7f328c23fdd8693c21",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "model",
+        "predictor",
+        "standardized_beta",
+        "se_cluster_dcca",
+        "ci_low",
+        "ci_high",
+        "p_value",
+        "lsbg_n",
+        "dcca_cluster_n",
+        "weighted_r2"
+      ],
+      "rows": 20,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_price_market_v4/sha256_manifest.csv",
+      "bytes": 719,
+      "sha256": "e4b6da9acfc4bec2091933b0ac123be1a7a1b01784b8555d4cf119a0d440a243",
+      "public_data_included": false,
+      "columns": [
+        "file",
+        "bytes",
+        "sha256"
+      ],
+      "rows": 7,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_sdi_structural_inequality_v4/analysis_contract.json",
+      "bytes": 616,
+      "sha256": "1e8359addccb3ed233db7b392775f3c1e732acf07de2a51d816d3ad4ecce0ee5",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_sdi_structural_inequality_v4/component_income_concentration.csv",
+      "bytes": 1370,
+      "sha256": "c08ee702d0975e0a095c5a10845cee2fc5a698250e1a0acc3b3ceec6c0c00552",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "component",
+        "concentration_index",
+        "lsbg_n",
+        "population_analyzed"
+      ],
+      "rows": 24,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_sdi_structural_inequality_v4/sdi_income_concentration_curves.csv",
+      "bytes": 12701,
+      "sha256": "67247c4447e086db37c536de44bc16b06965ef82cbb8751c0434a729f28b949f",
+      "public_data_included": false,
+      "columns": [
+        "population_fraction",
+        "cumulative_sdi_fraction",
+        "year"
+      ],
+      "rows": 404,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_sdi_structural_inequality_v4/sdi_income_quintile_means.csv",
+      "bytes": 575,
+      "sha256": "d51a714184670a0fe69c14f79bde163c4764f197a670669c1cc9d4e70bcf8311",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "income_quintile",
+        "mean_sdi"
+      ],
+      "rows": 20,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_sdi_structural_inequality_v4/sdi_inequality_block_intervals.csv",
+      "bytes": 1462,
+      "sha256": "d1e049640fa7552b8bba3e73ecca65137a5b1f8016cf358d04e8e7b00ccacba1",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "metric",
+        "estimate",
+        "lower_95",
+        "upper_95",
+        "valid_replicates"
+      ],
+      "rows": 16,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_sdi_structural_inequality_v4/sdi_inequality_summary.csv",
+      "bytes": 1466,
+      "sha256": "a5855c91697faf8971007cc16c7dd43b342a456192d74baeab52d5d1471d1465",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "lsbg_n",
+        "population_analyzed",
+        "population_weighted_mean",
+        "weighted_gini",
+        "theil_t",
+        "theil_l",
+        "zero_access_population_share",
+        "bottom_access_quintile_mean",
+        "concentration_index",
+        "income_quintile_low_mean",
+        "income_quintile_high_mean",
+        "income_quintile_absolute_gap",
+        "income_quintile_relative_ratio",
+        "income_bottom40_mean",
+        "income_top10_mean",
+        "palma_top10_bottom40_ratio"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_sdi_structural_inequality_v4/sdi_variant_income_inequality_intervals.csv",
+      "bytes": 7423,
+      "sha256": "33befcf5a04646fc7e8d8835ddd7f8b1e39ff2350f3144a8fa53c8efce8665d4",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "variant",
+        "metric",
+        "estimate",
+        "lower_95",
+        "upper_95",
+        "lsbg_n",
+        "population_analyzed",
+        "valid_replicates"
+      ],
+      "rows": 56,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_subgroup_inequality_v7/subgroup_dcca_block_intervals.csv",
+      "bytes": 11240,
+      "sha256": "6e91f61306c63233c7e0da2e9275281a8df33b3c630ae3a621598f69fc5d4bbe",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "domain",
+        "group",
+        "metric",
+        "lower_95",
+        "upper_95",
+        "valid_replicate_n"
+      ],
+      "rows": 126,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_subgroup_inequality_v7/subgroup_dcca_block_replicates.csv",
+      "bytes": 4326493,
+      "sha256": "aec510ca32aaccdae9ec86a97a5913351abf575e8eb789f792490e52012383b6",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "domain",
+        "group",
+        "replicate",
+        "mean_affordable_options",
+        "zero_access_share"
+      ],
+      "rows": 62937,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_subgroup_inequality_v7/subgroup_point_estimates.csv",
+      "bytes": 6791,
+      "sha256": "d4b53476f03ddc59af90bb8ebe5506f7cb3afc81a2f8be5b1ddfb459344127e9",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "census_composition_year",
+        "temporal_status",
+        "domain",
+        "group",
+        "source_count_field",
+        "mean_affordable_options",
+        "zero_access_share",
+        "group_denominator"
+      ],
+      "rows": 63,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_temporal_uncertainty_v4/annual_block_bootstrap_intervals.csv",
+      "bytes": 4577,
+      "sha256": "ec75f445dd5fd94ef8ce2002d7fa758dd39ccbab8983bb151d7496144ccec741",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "metric",
+        "metric_label",
+        "population_weighted_mean",
+        "ci_low",
+        "ci_high",
+        "valid_lsbg_n",
+        "valid_population",
+        "dcca_block_n",
+        "bootstrap_replicates"
+      ],
+      "rows": 36,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_temporal_uncertainty_v4/bundle_manifest.json",
+      "bytes": 1035,
+      "sha256": "4c09bdacca1d377fd9c484e9a85624c4ca36f9d397a781b686b984404683a74a",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_temporal_uncertainty_v4/change_from_2011_intervals.csv",
+      "bytes": 3153,
+      "sha256": "acc2c08160760e6be6f05fb52e6dd48d0775608a2428bbff7d4b32ed6e0afae3",
+      "public_data_included": false,
+      "columns": [
+        "reference_year",
+        "year",
+        "metric",
+        "metric_label",
+        "difference",
+        "ci_low",
+        "ci_high",
+        "bootstrap_replicates"
+      ],
+      "rows": 27,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_temporal_uncertainty_v4/lsbg_dcca_crosswalk_qa.csv",
+      "bytes": 167,
+      "sha256": "f9b3928608c46142ee7f94015f27f1c7d701c94e93ec6c0964fd121023a69ff8",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "lsbg_n",
+        "within_n",
+        "nearest_fallback_n",
+        "nearest_fallback_max_m"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_temporal_uncertainty_v4/metric_coverage_audit.csv",
+      "bytes": 5089,
+      "sha256": "a9442fec9fd2a25eb3e5731cc217d6eb516d9be9252a897a60e87163204b7ddc",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "metric",
+        "metric_label",
+        "valid_lsbg_n",
+        "all_lsbg_n",
+        "lsbg_coverage_share",
+        "valid_population",
+        "all_population",
+        "population_coverage_share",
+        "strict_valid_population",
+        "population_share_of_strict_denominator"
+      ],
+      "rows": 36,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_temporal_uncertainty_v4/summary.json",
+      "bytes": 1041,
+      "sha256": "7955a8f1d597cec96df167929955bef675115473785799e58efed916c8842a78",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_weight_sensitivity_v4/analysis_contract.json",
+      "bytes": 274,
+      "sha256": "77436e313ea937772b873dbe50b3056d529a7207319a211a808afe77895a7fd5",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_weight_sensitivity_v4/maup_agreement.csv",
+      "bytes": 2620,
+      "sha256": "30ecaa1d417687987747e6fef4f868654bfc01e573209eecaaffa28d9ee9b17e",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "variant",
+        "dcca_n",
+        "pearson",
+        "spearman",
+        "mae",
+        "direct_population_weighted_mean",
+        "aggregated_population_weighted_mean"
+      ],
+      "rows": 20,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_weight_sensitivity_v4/sha256_manifest.csv",
+      "bytes": 487,
+      "sha256": "fafe5a96487a8a7c2c867ea024ea32eb43d3a9062252e5e5d8e5bc4ca123d2c6",
+      "public_data_included": false,
+      "columns": [
+        "file",
+        "bytes",
+        "sha256"
+      ],
+      "rows": 5,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_weight_sensitivity_v4/variant_agreement.csv",
+      "bytes": 4921,
+      "sha256": "e5f2abc3ece304c35e39a1c4ed8f1f92c6d7d10ff2bb111d891ef7c871af907f",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "scale",
+        "variant",
+        "spearman_vs_equal",
+        "pearson_vs_equal",
+        "low_quintile_jaccard",
+        "high_quintile_jaccard"
+      ],
+      "rows": 56,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_weight_sensitivity_v4/variant_population_summary.csv",
+      "bytes": 5937,
+      "sha256": "b9690754030b64943429f3b878d016e83cd953862a9a8b214b13c1e386654293",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "scale",
+        "variant",
+        "unit_n",
+        "population_n",
+        "population_weighted_mean",
+        "median",
+        "iqr"
+      ],
+      "rows": 56,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/figS_weight_sensitivity_v4/weight_schemes.csv",
+      "bytes": 1171,
+      "sha256": "b149883eb6cffcb004e2b1c49862e32dfea06235064a390badd25aaac8232749",
+      "public_data_included": false,
+      "columns": [
+        "scheme",
+        "component",
+        "weight",
+        "component_label"
+      ],
+      "rows": 18,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/sha256_manifest.csv",
+      "bytes": 2170,
+      "sha256": "78b1e2e1250a4c637b7d51cba9bbc3352a6c7244ffaf6c328be60f7331485323",
+      "public_data_included": false,
+      "columns": [
+        "file",
+        "bytes",
+        "sha256"
+      ],
+      "rows": 19,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S1_temporal_membership_and_coverage.csv",
+      "bytes": 768,
+      "sha256": "29a7a2e278ca50a38b5057b1973ec6778cad10c75253e46b07cd070a8c97991d",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "population_reference_year",
+        "unit_n",
+        "restaurant_n",
+        "population_weighted_supply_per_1000",
+        "population_without_restaurant_share",
+        "nutrition_population_coverage",
+        "carbon_population_coverage",
+        "high_coverage_population_share",
+        "primary_sdi"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S1_temporal_membership_and_coverage.md",
+      "bytes": 1138,
+      "sha256": "6a76385105460e5777cefbebd05b9419cb55393f149a55ff0779728cf790212f",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S2_component_provenance_and_disposition.csv",
+      "bytes": 1353,
+      "sha256": "707d764c06dad7d6a0773d5a925cfc56ab3533537ef8cbd7fa3a4e578656171b",
+      "public_data_included": false,
+      "columns": [
+        "Attribute",
+        "Operational construct",
+        "Direction",
+        "Temporal rule",
+        "Missingness/limitation",
+        "V4 disposition"
+      ],
+      "rows": 8,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S2_component_provenance_and_disposition.md",
+      "bytes": 1654,
+      "sha256": "93f84d5d32ce538e544db18f091e4cf6e1e8847ca6ef9b64bfd6e216b3ff4553",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S3_weighting_schemes.csv",
+      "bytes": 481,
+      "sha256": "55cc6fe9ea53cf3aec6c9cede4059847319d935fabb49db403f3c7ac90625fb8",
+      "public_data_included": false,
+      "columns": [
+        "component_label",
+        "Absolute PC1 loading",
+        "Entropy",
+        "Equal six"
+      ],
+      "rows": 6,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S3_weighting_schemes.md",
+      "bytes": 751,
+      "sha256": "4da22013c6e9589c3fc5e529e3768c87075c88d41b01c021fd193e7cd2d324e6",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S4_four_year_area_SDI_inequality.csv",
+      "bytes": 633,
+      "sha256": "30022aeb8e39196b469ae20fe1575c0d89e442c1bd67193f287a1dbe5db0dec9",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "LSBG_n",
+        "population_analyzed",
+        "Gini (95% block interval)",
+        "Theil T (95% block interval)",
+        "Income concentration (95% block interval)",
+        "Income Q5/Q1 (95% block interval)"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S4_four_year_area_SDI_inequality.md",
+      "bytes": 885,
+      "sha256": "e745a25e4871e4efebdd010aa0a2aae97f7abefc1b5f7ee49e7b5fda2838b382",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S5_network_inequality_15min.csv",
+      "bytes": 1117,
+      "sha256": "45dbca54742d06b279521a12a0eb744ae65b69a8324ed2349da9b5ab2872eb7f",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "outcome",
+        "lsbg_n",
+        "population_analyzed",
+        "population_weighted_mean",
+        "weighted_gini",
+        "theil_t",
+        "zero_access_population_share",
+        "concentration_index",
+        "income_quintile_relative_ratio"
+      ],
+      "rows": 6,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S5_network_inequality_15min.md",
+      "bytes": 1487,
+      "sha256": "12820c747d4152f36060589da8d6b288a5a09eaa998d115a6faea59b42cebf5b",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S6_price_threshold_sensitivity.md",
+      "bytes": 280,
+      "sha256": "08f841ae415f1e3bd87d59fc249d08ba48192c2dcb8ecd90c31288e982db5a46",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S6_price_threshold_sensitivity_block_intervals.csv",
+      "bytes": 4284,
+      "sha256": "484d78ee6f927528eecbae3c621e41b1a7510a58bdea1a5f856817df92966b82",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "price_ceiling_hkd",
+        "travel_time_min",
+        "metric",
+        "ci_low",
+        "ci_high",
+        "valid_replicate_n"
+      ],
+      "rows": 54,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S6_price_threshold_sensitivity_point_estimates.csv",
+      "bytes": 1485,
+      "sha256": "2c16d3e6e2369e8e3eb56b37ff295b7346c11a5eb472bc6cd22b3fe476bebd4f",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "price_ceiling_hkd",
+        "travel_time_min",
+        "lsbg_n",
+        "population_analyzed",
+        "population_weighted_mean",
+        "weighted_gini",
+        "theil_t",
+        "zero_access_population_share",
+        "concentration_index",
+        "income_quintile_relative_ratio"
+      ],
+      "rows": 9,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S7_LSBG_DCCA_MAUP_agreement.csv",
+      "bytes": 607,
+      "sha256": "9c25ee878e55c9bad610ac9d37405cf11dc348f2247851159738710a3fc67333",
+      "public_data_included": false,
+      "columns": [
+        "year",
+        "variant",
+        "dcca_n",
+        "pearson",
+        "spearman",
+        "mae",
+        "direct_population_weighted_mean",
+        "aggregated_population_weighted_mean"
+      ],
+      "rows": 4,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S7_LSBG_DCCA_MAUP_agreement.md",
+      "bytes": 906,
+      "sha256": "6da654423aa631c156ea84fe1c7c782e9a119f752182653687f6f514f0ec2e36",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S8_OpenRice_FEHD_count_pattern_benchmark.csv",
+      "bytes": 271,
+      "sha256": "1291d49783b4ff4c6487a9d52ef5f77d82daeadde6fc8c73f1f21c867aab9337",
+      "public_data_included": false,
+      "columns": [
+        "threshold_min",
+        "LSBG_n",
+        "Pearson",
+        "Spearman",
+        "population_weighted_low_access_agreement",
+        "low_access_Jaccard"
+      ],
+      "rows": 2,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S8_OpenRice_FEHD_count_pattern_benchmark.md",
+      "bytes": 617,
+      "sha256": "fcd04fa9db5be8f5f458cad08c7f8a7120ae0ae8dd7bd4e8db4c018a5c164815",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S9_public_site_stress_test.csv",
+      "bytes": 584,
+      "sha256": "7aa52b6499d9635311af524ca65a79d3083288d1b6d3d1ca29a2b52e9ad11a6b",
+      "public_data_included": false,
+      "columns": [
+        "low_access_population_share_definition",
+        "budget_k",
+        "selected_site_n",
+        "low_access_population_reached_share",
+        "total_population_reached_share",
+        "lsbg_reached_n"
+      ],
+      "rows": 10,
+      "clearance": "pending_source_specific_review"
+    },
+    {
+      "path": "source_data/supplement_tables_v4/Table_S9_public_site_stress_test.md",
+      "bytes": 996,
+      "sha256": "1671306989ec1403a098878ff8fd4486c7df42a0f1eea94da4c2ccf01eff29a4",
+      "public_data_included": false,
+      "clearance": "pending_source_specific_review"
+    }
+  ]
+}

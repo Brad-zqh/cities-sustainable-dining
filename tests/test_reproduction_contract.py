@@ -14,11 +14,16 @@ from presentation_finish import finish
 from fig09_social_within_year import bh_adjust, significance_stars
 from sus_dining_access.inequality import weighted_gini, zero_access_population_share
 from render_base import JOBS
+sys.path.insert(0,str(ROOT))
+from reproduce import FIGURE_MAP
 
 
 class ContractTests(unittest.TestCase):
     def test_all_main_data_figures_registered(self):
         self.assertEqual(set(JOBS), set(range(3, 17)))
+        self.assertEqual(set(FIGURE_MAP),set(range(3,15)))
+        self.assertEqual(FIGURE_MAP[5],'A')
+        self.assertEqual(FIGURE_MAP[8],'B')
 
     def test_star_thresholds(self):
         self.assertEqual(significance_stars(.008), '**')

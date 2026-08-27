@@ -11,7 +11,9 @@ manuscripts, reviewer correspondence or credentials are included.
 
 ## What is included
 
-- Current main-text data-figure entry points, Figs. 3–16, and shared styling.
+- Current main-text data-figure entry points, Figs. 3–14, and shared styling.
+- Two source-native composites: Fig. 5 combines SDI change and coverage;
+  Fig. 8 combines joint-opportunity maps, distributions and sensitivity checks.
 - Joint quality/price/walking computation and subgroup/planning computation,
   with their required estimator modules. These require separately authorized
   inputs; raw acquisition and multimodal model execution are not reproduced here.
@@ -56,8 +58,20 @@ python scripts/qc_joint_downstream.py
 ```
 
 The current entry point is **reproduce.py**, not a legacy preview script.
-Outputs go to `figures/current/`; source and artist checks go to
-`audit/render_final/`. Missing data cause a failure, never synthetic substitution.
+Outputs go to `figures/current/`; the current-number execution record is
+`audit/current_figure_manifest.json`. Legacy source/artist checks go to
+`audit/render_final/`; composite checks are saved beside their exports.
+Missing data cause a failure, never synthetic substitution.
+Legacy filenames are retained for unmerged figures; use the mapping below.
+
+| Current figure | Source in the preceding 16-figure layout |
+| --- | --- |
+| 3, 4 | 3, 4 |
+| 5 | 5 + 15, redrawn as an eight-panel composite |
+| 6, 7 | 6, 7 |
+| 8 | 8 + 9, redrawn as an eleven-panel composite |
+| 9–14 | 10, 11, 12, 13, 14, 16, respectively |
+
 The quality checks distinguish an unavailable restricted-input check from a
 passed check. SHA-256 verifies file identity, not validity or ownership.
 

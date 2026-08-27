@@ -1,6 +1,6 @@
 # Reproduction scope and verification
 
-The current runner covers 14 main-text data figures, numbered 3–16. Each is
+The current runner covers 12 main-text data figures, numbered 3–14. Each is
 rendered from the local source bundle rather than from an AI-generated image.
 Source hashes are compared before and after rendering. A presentation audit
 also compares plotted numeric primitives before and after adding borders,
@@ -26,9 +26,11 @@ verification of the raw origin–destination records.
 The default figure entry point is `python reproduce.py`. The source bundle
 layout is in `manifests/source_inventory.json`. The final export uses the same
 numeric data and classification rules as the manuscript candidate. A clean
-run writes its actual status to `audit/render_final/export_log.json`.
+run writes its current-number status to `audit/current_figure_manifest.json`.
+Legacy rendering writes to `audit/render_final/export_log.json`; composites
+write source hashes and numerical checks alongside their exports.
 
-## Recorded local verification: 27 August 2026
+## Recorded local verification: V44, 27 August 2026
 
 - A fresh Python 3.12 virtual environment installed `requirements.txt`.
 - A separate checkout containing the code and the privately held source bundle
@@ -42,3 +44,15 @@ run writes its actual status to `audit/render_final/export_log.json`.
 
 These are recorded local results, not a claim that a public code-only checkout
 can reproduce the empirical results. Automated public CI runs only code tests.
+
+## Composite verification: V45, 27 August 2026
+
+The preceding 16-figure layout has been consolidated into 14 main figures,
+including the two unchanged method illustrations. The two composites were
+independently regenerated in the fresh Python 3.12 environment using the private
+bundle. Both PNGs were byte-identical and all 174 source hashes were unchanged.
+The joint composite additionally checked 30 weighted box summaries (five
+statistics each) against the native estimator and checked 18 point estimates
+against their interval-source estimates. No extra observations, significance
+tests or uncertainty bands were synthesized for the layouts. Seven synthetic
+unit tests passed with the updated current-number mapping.

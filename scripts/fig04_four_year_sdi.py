@@ -10,6 +10,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import sys
 
@@ -86,7 +87,7 @@ import v10_plot_four_year_sdi_nature_pdf as base  # noqa: E402
 from v5_cities_visual_system import COLORS, COMPONENT_COLORS, MM, clean_axis, panel_label  # noqa: E402
 
 
-OUT = ROOT / "figures"
+OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 STEM = "Fig3_FourYear_Strict_SDI_v25_RIGHT_CBAR_MATCHED_LINES"
 YEARS = base.YEARS
 FIELD = base.FIELD

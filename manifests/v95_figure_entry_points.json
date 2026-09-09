@@ -1,0 +1,79 @@
+{
+  "edition": "V95",
+  "status": "code_only_authorized_source_data_required",
+  "description": "Manuscript-facing V95 figure entry points. The mapping is presentation-only: it does not expose restricted observations or replace the hash-locked empirical source bundles.",
+  "figures": {
+    "11": {
+      "title": "Restaurant-quality SDI, 2011–2024",
+      "entry_point": "scripts/render_evidence_composites.py",
+      "arguments": ["A"],
+      "output_subdir": "fig11_sdi_evolution_coverage",
+      "output_stems": ["Fig05_SDI_Evolution_Coverage_Composite"],
+      "source_bundles": ["fig_v4_four_year", "figS_temporal_uncertainty_v4"]
+    },
+    "12": {
+      "title": "Four-year spatial distributions of six restaurant-quality components",
+      "entry_point": "scripts/fig05_component_atlas.py",
+      "arguments": [],
+      "output_subdir": "fig12_component_atlas",
+      "output_stems": ["FigS1_FourYear_Component_Atlas_v27_INDEPENDENT_RIGHT_CBAR"],
+      "source_bundles": ["fig_v4_four_year"]
+    },
+    "13": {
+      "title": "Restaurant-quality inequality and socioeconomic contrasts",
+      "entry_point": "scripts/render_quality_inequality_composite.py",
+      "arguments": [],
+      "output_subdir": "fig13_quality_inequality",
+      "output_stems": ["Fig13_Quality_Inequality_Integrated_Evidence"],
+      "source_bundles": ["figS_sdi_structural_inequality_v4", "fig13_component_social_decomposition_v1"]
+    },
+    "14": {
+      "title": "Price composition and adjusted socioeconomic associations",
+      "entry_point": "scripts/fig06_price_market.py",
+      "arguments": [],
+      "output_subdir": "fig14_price_market",
+      "output_stems": ["FigS_FourYear_Price_Market_Decomposition_Cities_RR_v15_RIGHT_CBAR"],
+      "source_bundles": ["figS_price_market_v4"]
+    },
+    "15": {
+      "title": "Joint quality–walking–price opportunity",
+      "entry_point": "scripts/render_evidence_composites.py",
+      "arguments": ["B"],
+      "output_subdir": "fig15_joint_opportunity",
+      "output_stems": ["Fig08_Joint_Opportunity_Evidence_Composite"],
+      "source_bundles": ["fig13_joint_quality_affordable_access_v1", "fig04_network_price_v4"]
+    },
+    "16": {
+      "title": "Same-year socioeconomic differences in zero joint opportunity",
+      "entry_point": "scripts/fig09_social_within_year.py",
+      "arguments": [],
+      "output_subdir": "fig16_zero_joint_opportunity",
+      "output_stems": ["Fig9_Joint_Socioeconomic_Sex_Contrasts_v26_NATURE"],
+      "source_bundles": ["fig14_joint_subgroup_planning_v1"]
+    },
+    "17a": {
+      "title": "Spatial-scale sensitivity maps",
+      "entry_point": "scripts/render_scale_weight_composite_single_page.py",
+      "arguments": ["--split-part", "maps"],
+      "output_subdir": "fig17a_scale_maps",
+      "output_stems": ["Fig17a_Spatial_Scale_Sensitivity_Maps"],
+      "source_bundles": ["fig_v4_four_year", "figS_weight_sensitivity_v4", "figs02"]
+    },
+    "17b": {
+      "title": "Weighting and cross-scale diagnostics",
+      "entry_point": "scripts/render_scale_weight_composite_single_page.py",
+      "arguments": ["--split-part", "diagnostics"],
+      "output_subdir": "fig17b_weighting_diagnostics",
+      "output_stems": ["Fig17b_Weighting_And_Cross_Scale_Diagnostics"],
+      "source_bundles": ["figS_weight_sensitivity_v4"]
+    },
+    "18": {
+      "title": "Public-housing food-provision siting strategies",
+      "entry_point": "scripts/render_planning_composite.py",
+      "arguments": [],
+      "output_subdir": "fig18_planning",
+      "output_stems": ["Fig18_Planning_Selection_Reach_Tradeoffs"],
+      "source_bundles": ["fig14_joint_subgroup_planning_v1", "fig04_equity_siting_v7"]
+    }
+  }
+}

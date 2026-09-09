@@ -19,6 +19,7 @@ Statistics:
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import sys
 
@@ -56,7 +57,7 @@ mpl.rcParams.update({
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
-OUT = ROOT / "figures"
+OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 STEM = "Fig9_Joint_Socioeconomic_Sex_Contrasts_v26_NATURE"
 YEARS = (2016, 2021, 2024)
 

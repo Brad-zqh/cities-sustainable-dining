@@ -12,6 +12,7 @@ component uses pooled four-year breaks so maps remain comparable through time.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import matplotlib as mpl
@@ -85,7 +86,7 @@ from matplotlib.patches import Patch
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "source_data" / "fig_v4_four_year"
-OUT = ROOT / "figures"
+OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 STEM = "FigS1_FourYear_Component_Atlas_v27_INDEPENDENT_RIGHT_CBAR"
 YEARS = (2011, 2016, 2021, 2024)
 CONTEXT = "#EEF2F4"

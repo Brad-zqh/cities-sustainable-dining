@@ -11,7 +11,9 @@ manuscripts, reviewer correspondence or credentials are included.
 
 ## What is included
 
-- Current main-text data-figure entry points, Figs. 3–14, and shared styling.
+- The preceding-release main-text data-figure entry points, Figs. 3–14, and
+  shared styling. The current V95 manuscript-facing map is recorded separately
+  in `manifests/v95_figure_entry_points.json` and covers Figs. 11–18.
 - Two source-native composites: Fig. 5 combines SDI change and coverage;
   Fig. 8 combines joint-opportunity maps, distributions and sensitivity checks.
 - Joint quality/price/walking computation and subgroup/planning computation,
@@ -56,6 +58,20 @@ python reproduce.py --figure 10
 python scripts/qc_joint_quality_access.py
 python scripts/qc_joint_downstream.py
 ```
+
+For the current V95 manuscript numbering, use the edition flag. The runner
+accepts `17a` and `17b` for the two parts of the scale/weighting result:
+
+```powershell
+python reproduce.py --edition v95
+python reproduce.py --edition v95 --figure 15
+python reproduce.py --edition v95 --figure 17b
+```
+
+The V95 figure-level contract and source-bundle requirements are documented in
+[`docs/V95_FIGURE_REPRODUCTION.md`](docs/V95_FIGURE_REPRODUCTION.md). The
+legacy 3–14 map remains unchanged for historical reruns; do not infer current
+manuscript numbering from that table.
 
 The current entry point is **reproduce.py**, not a legacy preview script.
 Outputs go to `figures/current/`; the current-number execution record is

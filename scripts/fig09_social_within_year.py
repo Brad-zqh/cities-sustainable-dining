@@ -57,7 +57,7 @@ mpl.rcParams.update({
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
 OUT = ROOT / "figures"
-STEM = "Fig9_Joint_Socioeconomic_Sex_Contrasts_v26_NATURE"
+STEM = "Fig17_SameYear_Socioeconomic_Zero_Joint_Opportunity"
 YEARS = (2016, 2021, 2024)
 
 DOMAIN_PALETTES = {

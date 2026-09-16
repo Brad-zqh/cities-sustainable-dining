@@ -334,7 +334,7 @@ def main() -> None:
         summary,
     )
 
-    save_figure(fig, "FigS_FourYear_Price_Market_Decomposition_Cities_RR_v15_RIGHT_CBAR")
+    save_figure(fig, "Fig15_Price_Composition_Socioeconomic_Associations")
     plt.close(fig)
 
 

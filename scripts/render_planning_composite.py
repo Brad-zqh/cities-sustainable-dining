@@ -23,7 +23,7 @@ import fig12_planning as source
 from v5_cities_visual_system import configure, north_arrow, segmented_scale_bar, FONT_FAMILY
 
 ROOT = Path(__file__).resolve().parents[1]
-STEM = 'Fig10_Planning_Selection_Reach_Tradeoffs'
+STEM = 'Fig19_Planning_Strategies'
 K = (5, 10, 20)
 SHADES = (.40, .70, 1.0)
 INK = '#111111'
@@ -234,7 +234,7 @@ def main():
     # Keep the empirical values and coordinate audit next to each export.
     active.to_csv(args.output_dir/'planning_outcomes_source.csv',index=False)
     assert hashes()==before,'Input changed'
-    report=dict(figure='10',panels=8,basemap=False,source_sha256=before,
+    report=dict(figure='19',panels=8,basemap=False,source_sha256=before,
                 sources_unchanged=len(before),font=FONT_FAMILY,width_mm=183,height_mm=242,
                 map_panels=maps,bar_values_verified=records,selection_jaccard=matrix,
                 heatmap_internal_lines=False,off_canvas_text=off,

@@ -153,7 +153,7 @@ def build(paired_pages=False, split_part=None):
                            'DCCA right; diagnostics i-l below; no continuation')
     if split_part == 'maps':
         audit['layout'] = 'Standalone map figure: four same-year rows, LSBG left and DCCA right.'
-        shared.export(fig,'Fig18_Spatial_Scale_Maps',audit)
+        shared.export(fig,'Fig18a_Spatial_Scale_Sensitivity_Maps',audit)
         return
 
     weights=pd.read_csv(SOURCE/'weight_schemes.csv')

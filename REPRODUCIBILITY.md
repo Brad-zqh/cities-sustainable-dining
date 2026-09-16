@@ -1,7 +1,8 @@
 # Reproduction scope and verification
 
-The current runner covers 12 main-text data figures, numbered 3–14. Each is
-rendered from the local source bundle rather than from an AI-generated image.
+The current runner covers the eight analytical main-text figure entries,
+numbered 12–19; Figure 18 produces separately captioned parts 18a and 18b. Each
+is rendered from the local source bundle rather than from an AI-generated image.
 Source hashes are compared before and after rendering. A presentation audit
 also compares plotted numeric primitives before and after adding borders,
 changing text style and moving legends.
@@ -26,7 +27,8 @@ verification of the raw origin–destination records.
 The default figure entry point is `python reproduce.py`. The source bundle
 layout is in `manifests/source_inventory.json`. The final export uses the same
 numeric data and classification rules as the manuscript candidate. A clean
-run writes its current-number status to `audit/current_figure_manifest.json`.
+run writes its manuscript-number status, exact commands and output SHA-256
+values to `audit/current_figure_manifest.json`.
 Legacy rendering writes to `audit/render_final/export_log.json`; composites
 write source hashes and numerical checks alongside their exports.
 
@@ -44,6 +46,23 @@ write source hashes and numerical checks alongside their exports.
 
 These are recorded local results, not a claim that a public code-only checkout
 can reproduce the empirical results. Automated public CI runs only code tests.
+
+## Current-manuscript verification: Submission 0916, 17 September 2026
+
+The entry-point registry was aligned to the current manuscript rather than the
+preceding consolidated layout. `python reproduce.py` regenerated analytical
+Figures 12–19 (with separate Fig. 18a and Fig. 18b exports) from 174 authorized
+prepared input files. Every figure command returned 0, every required output
+was rewritten during that run, and all input SHA-256 values were unchanged.
+Eight contract tests passed. The joint-opportunity and downstream checks also
+passed, replaying 999-block intervals, 51 paired contrasts and BH adjustment,
+237 planning candidates, 1,744 demand LSBGs and 12 non-baseline scenarios. The
+optional hash check for the restricted origin–destination pair file remained
+explicitly skipped because `CITIES_RESTRICTED_PROJECT` was not supplied.
+
+See `MANUSCRIPT_CODE_CORRESPONDENCE.md` for the caption-level crosswalk and the
+machine-readable local record at `audit/current_figure_manifest.json` for exact
+commands and output hashes.
 
 ## Composite verification: V45, 27 August 2026
 

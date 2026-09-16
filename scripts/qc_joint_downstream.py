@@ -54,7 +54,7 @@ def main() -> int:
     intervals = pd.read_csv(DATA / "joint_subgroup_dcca_block_intervals.csv")
     replicates = pd.read_csv(DATA / "joint_subgroup_dcca_block_replicates.csv")
     contrasts = pd.read_csv(
-        FIGURES / "Fig9_Joint_Socioeconomic_Sex_Contrasts_v26_NATURE_within_year_contrasts.csv"
+        FIGURES / "Fig17_SameYear_Socioeconomic_Zero_Joint_Opportunity_within_year_contrasts.csv"
     )
     scenarios = pd.read_csv(DATA / "scenario_results.csv")
     selected = pd.read_csv(DATA / "selected_planning_nodes.csv")

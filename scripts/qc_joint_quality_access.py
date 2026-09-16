@@ -13,7 +13,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
-FIG = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures/current"))) / "Fig7_Joint_Quality_Affordable_Access_v2_RIGHT_CBAR_NATURE"
+FIG = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures/current"))) / "Fig16_Joint_Quality_Walking_Price_Opportunity"
 
 
 def digest(path: Path) -> str:
@@ -88,13 +88,13 @@ def main() -> None:
         require(path.exists(), f"manifest output missing: {row.path}")
         require(digest(path) == row.sha256, f"hash mismatch: {row.path}")
 
-    for suffix in (".png", ".pdf", ".svg", ".tiff"):
+    for suffix in (".png", ".pdf", ".svg"):
         path = FIG.with_suffix(suffix)
         require(path.exists() and path.stat().st_size > 20_000, f"figure output invalid: {suffix}")
-    with Image.open(FIG.with_suffix(".tiff")) as image:
-        require(image.width >= 4000 and image.height >= 2500, "TIFF below publication pixel dimensions")
+    with Image.open(FIG.with_suffix(".png")) as image:
+        require(image.width >= 4000 and image.height >= 2500, "PNG below publication pixel dimensions")
         dpi = image.info.get("dpi", (0, 0))
-        require(min(dpi) >= 590, f"TIFF DPI below 600 target: {dpi}")
+        require(min(dpi) >= 590, f"PNG DPI below 600 target: {dpi}")
 
     print(
         "JOINT_ACCESS_QC=PASS "

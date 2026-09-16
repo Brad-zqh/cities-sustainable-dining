@@ -86,7 +86,7 @@ from matplotlib.patches import Patch
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "source_data" / "fig_v4_four_year"
 OUT = ROOT / "figures"
-STEM = "FigS1_FourYear_Component_Atlas_v27_INDEPENDENT_RIGHT_CBAR"
+STEM = "Fig13_Six_Component_FourYear_Atlas"
 YEARS = (2011, 2016, 2021, 2024)
 CONTEXT = "#EEF2F4"
 EDGE = "#C6CED2"

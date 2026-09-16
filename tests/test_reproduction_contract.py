@@ -15,15 +15,26 @@ from fig09_social_within_year import bh_adjust, significance_stars
 from sus_dining_access.inequality import weighted_gini, zero_access_population_share
 from render_base import JOBS
 sys.path.insert(0,str(ROOT))
-from reproduce import FIGURE_MAP
+from reproduce import FIGURE_MAP, MANUSCRIPT_FIGURES
 
 
 class ContractTests(unittest.TestCase):
     def test_all_main_data_figures_registered(self):
         self.assertEqual(set(JOBS), set(range(3, 17)))
-        self.assertEqual(set(FIGURE_MAP),set(range(3,15)))
-        self.assertEqual(FIGURE_MAP[5],'A')
-        self.assertEqual(FIGURE_MAP[8],'B')
+        self.assertEqual(set(FIGURE_MAP), set(range(12, 20)))
+        self.assertEqual(FIGURE_MAP, MANUSCRIPT_FIGURES)
+        self.assertEqual(len(MANUSCRIPT_FIGURES[18]['commands']), 2)
+        self.assertEqual(
+            MANUSCRIPT_FIGURES[16]['stems'],
+            ('Fig16_Joint_Quality_Walking_Price_Opportunity',),
+        )
+
+    def test_manuscript_registry_paths_and_names(self):
+        for number, specification in MANUSCRIPT_FIGURES.items():
+            for command in specification['commands']:
+                self.assertTrue((ROOT / command[0]).is_file(), command[0])
+            for stem in specification['stems']:
+                self.assertTrue(stem.startswith(f'Fig{number}'), stem)
 
     def test_star_thresholds(self):
         self.assertEqual(significance_stars(.008), '**')

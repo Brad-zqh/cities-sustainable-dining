@@ -9,6 +9,12 @@ are openly reproducible. Redistribution clearance for platform-derived
 aggregates and spatial inputs is still being checked. No restricted raw records,
 manuscripts, reviewer correspondence or credentials are included.
 
+The V135 revision adds synthetic-testable utilities for annual dish mentions,
+nutrition scoring and deletion audits, and external benchmark bookkeeping.
+This is a **partial code-only update**, not a release of V135 empirical inputs,
+final figure assets or a clean-clone reproduction of every revised result.
+See `docs/V135_CODE_ONLY_STATUS.md` for the boundary.
+
 ## What is included
 
 - The preceding-release main-text data-figure entry points, Figs. 3–14, and

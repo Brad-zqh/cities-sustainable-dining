@@ -22,7 +22,7 @@ from v5_cities_visual_system import YEAR_COLORS, clean_axis
 ROOT = Path(__file__).resolve().parents[1]
 STRUCT = ROOT/'source_data/figS_sdi_structural_inequality_v4'
 DETAIL = ROOT/'source_data/fig13_component_social_decomposition_v1'
-STEM = 'Fig13_Quality_Inequality_Integrated_Evidence'
+STEM = 'Fig14_Restaurant_Quality_Inequality'
 YEARS = [2011, 2016, 2021, 2024]
 MARKERS = ['o', 's', 'D', '^']
 NAMES = ['Nutrition', 'Carbon', 'Diversity', 'Environment', 'Hygiene', 'Practice']
@@ -191,7 +191,8 @@ def render():
     cb=fig.colorbar(im,cax=cax,orientation='horizontal',ticks=[-.1,0,.1])
     cb.set_label('Income concentration index',fontsize=6.5,labelpad=2)
     frame_heatmap(ax,cb)
-    shared.export(fig,STEM,dict(panels=11,replaces=[13,14],
+    shared.export(fig,STEM,dict(manuscript_figure=14,panels=11,
+        legacy_source_figures=[13,14],
         weighted_boxes_recomputed=90,box_statistics=box_stats,
         subgroup_contrasts_recomputed=36,intervals=recorded,
         duplicate_removed='Same 24 component concentration values previously drawn twice',

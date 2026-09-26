@@ -145,7 +145,8 @@ def plot_full_model_heatmap(ax: plt.Axes, regression: pd.DataFrame) -> None:
     values = matrix.to_numpy(dtype=float)
     norm = TwoSlopeNorm(vmin=-0.40, vcenter=0.0, vmax=0.40)
     readable_diverging = LinearSegmentedColormap.from_list(
-        "readable_market_coefficients", ["#A9CBE5", "#FFFFFF", "#E8A5A3"], N=256
+        "readable_market_coefficients",
+        ["#78A9C7", "#D3E4EC", "#FAFAFA", "#F1D0D2", "#E1848C"], N=256
     )
     image = ax.imshow(values, cmap=readable_diverging, norm=norm, aspect="auto")
     ax.set_xticks(np.arange(len(YEARS)), YEARS)
@@ -163,12 +164,20 @@ def plot_full_model_heatmap(ax: plt.Axes, regression: pd.DataFrame) -> None:
                 color="#151515",
             )
     ax.tick_params(length=0)
+    ax.set_xticks(np.arange(-.5, len(YEARS), 1), minor=True)
+    ax.set_yticks(np.arange(-.5, len(matrix.index), 1), minor=True)
+    ax.grid(which="minor", color="white", linewidth=0.25, alpha=0.75)
+    ax.tick_params(which="minor", bottom=False, left=False)
     for spine in ax.spines.values():
-        spine.set_visible(False)
+        spine.set_visible(True)
+        spine.set_color("#202020")
+        spine.set_linewidth(0.55)
     ax.set_title("Market-composition coefficients", loc="left", pad=4, fontweight="bold")
     cbar = ax.figure.colorbar(image, ax=ax, orientation="horizontal", fraction=0.055, pad=0.16, aspect=28)
     cbar.set_label("Association with area quality score", labelpad=2)
-    cbar.outline.set_visible(False)
+    cbar.outline.set_visible(True)
+    cbar.outline.set_edgecolor("#202020")
+    cbar.outline.set_linewidth(0.55)
     cbar.ax.tick_params(length=2, width=0.5)
     add_panel_label(ax, "c", x=-0.16, y=1.02)
 
@@ -279,18 +288,18 @@ def main() -> None:
     summary = pd.read_csv(DATA_DIR / "price_market_summary.csv")
 
     breaks = pooled_quantile_breaks(frames, "low_price_share", quantiles=5)
-    fig = plt.figure(figsize=(183 * MM, 210 * MM), constrained_layout=False)
+    fig = plt.figure(figsize=(183 * MM, 216 * MM), constrained_layout=False)
     outer = fig.add_gridspec(
         2,
         1,
-        height_ratios=[1.64, 1.00],
+        height_ratios=[1.78, 1.00],
         left=0.050,
         right=0.958,
         top=0.965,
         bottom=0.105,
         hspace=0.16,
     )
-    map_grid = outer[0].subgridspec(2, 2, wspace=0.075, hspace=0.055)
+    map_grid = outer[0].subgridspec(2, 2, wspace=0.045, hspace=0.045)
     map_axes = []
     for index, year in enumerate(YEARS):
         ax = fig.add_subplot(map_grid[index // 2, index % 2])
@@ -324,7 +333,7 @@ def main() -> None:
         map_axes.append(ax)
     add_panel_label(map_axes[0], "a", x=-0.09, y=1.02)
 
-    bottom = outer[1].subgridspec(1, 3, width_ratios=[1.04, 0.88, 1.05], wspace=0.48)
+    bottom = outer[1].subgridspec(1, 3, width_ratios=[1.00, 1.03, 1.00], wspace=0.42)
     plot_income_attenuation(fig.add_subplot(bottom[0, 0]), regression)
     plot_full_model_heatmap(fig.add_subplot(bottom[0, 1]), regression)
     trajectory = bottom[0, 2].subgridspec(2, 1, height_ratios=[0.62, 0.38], hspace=0.18)

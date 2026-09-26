@@ -17,3 +17,8 @@ The historical figure renderers remain available for authorized users with
 the separately cleared input bundle. In the manuscript, quantitative V135
 panels were regenerated from revised calculations with the historical visual
 design; some newer workflow schematics are illustrative, not result maps.
+
+The V148 visualization source lineage is now included in this branch for the
+current result panels. See `docs/V148_VISUALIZATION_CODE.md`. It still requires
+the withheld V135 aggregate and geometry inputs; no empirical figure assets
+are published by this code-only update.

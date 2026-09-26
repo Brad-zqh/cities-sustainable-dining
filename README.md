@@ -15,6 +15,10 @@ This is a **partial code-only update**, not a release of V135 empirical inputs,
 final figure assets or a clean-clone reproduction of every revised result.
 See `docs/V135_CODE_ONLY_STATUS.md` for the boundary.
 
+The latest V148 result-figure code lineage is included as code only. Its
+layered entry points and required separately cleared inputs are described in
+[`docs/V148_VISUALIZATION_CODE.md`](docs/V148_VISUALIZATION_CODE.md).
+
 ## What is included
 
 - The preceding-release main-text data-figure entry points, Figs. 3–14, and

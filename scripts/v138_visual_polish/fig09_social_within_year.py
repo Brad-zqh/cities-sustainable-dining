@@ -322,18 +322,17 @@ def draw_same_year_forest(ax: plt.Axes, contrasts: pd.DataFrame) -> None:
                 alpha=.14, solid_capstyle="round", zorder=1)
         ax.plot([lower, upper], [y, y], color=colour, lw=1.0,
                 solid_capstyle="round", zorder=2)
-        ax.scatter(x, y, s=35, marker="D" if significant else "o",
-                   facecolor=colour if significant else "white",
-                   edgecolor=colour, linewidth=.9, zorder=3)
+        ax.scatter(x, y, s=48, marker="D" if significant else "o",
+                   facecolor="white", edgecolor=colour, linewidth=1.1, zorder=3)
         comparison = str(row["comparison_group"]).replace("$", r"\$")
         reference = str(row["reference_group"]).replace("$", r"\$")
         labels.append(f"{domain}: {comparison} vs {reference}")
         ax.text(maximum + .045 * span, y,
                 f"{x:+.1f} pp   {fmt_q(float(row['q_bh_within_domain_year']))}",
-                va="center", ha="left", fontsize=6.0, color="#151515")
+                va="center", ha="left", fontsize=6.7, color="#151515")
 
     ax.set_yticks(positions, labels=labels)
-    ax.tick_params(axis="y", labelsize=5.8, length=0, pad=4)
+    ax.tick_params(axis="y", labelsize=6.5, length=0, pad=4)
     ax.set_xlim(minimum - .07 * span, maximum + .34 * span)
     ax.set_ylim(-.65, len(selected) - .35)
     ax.set_title("Largest same-year within-domain gap · 2024", loc="left",
@@ -359,10 +358,10 @@ def main() -> int:
     if contrasts["paired_replicates"].min() != 999:
         raise ValueError("Every within-year contrast must retain 999 paired DCCA replicates")
 
-    fig = plt.figure(figsize=(183 / 25.4, 191 / 25.4), facecolor="white")
+    fig = plt.figure(figsize=(183 / 25.4, 198 / 25.4), facecolor="white")
     gs = fig.add_gridspec(
         3, 12, left=0.082, right=0.98, top=0.955, bottom=0.072,
-        height_ratios=[1.0, 1.0, 1.08], wspace=0.68, hspace=.46,
+        height_ratios=[1.0, 1.0, 1.16], wspace=0.68, hspace=.46,
     )
     placements = [
         ("Ethnicity", (0, slice(0, 4))),

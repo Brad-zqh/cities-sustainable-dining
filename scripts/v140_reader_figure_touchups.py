@@ -268,6 +268,7 @@ def render_12_16(number: str) -> dict:
     if number == "12":
         evidence.sdi.base.YEAR_RAMPS.update(evidence.sdi.MAP_RAMPS)
         evidence.sdi.base.load_maps = lambda: _fixed_sdi_maps(evidence)
+        evidence.TEMPORAL_DATA_DIR = bridge.TEMPORAL
         evidence.ROOT = bridge.TemporalRoot(evidence.ROOT)
         evidence.sdi_composite()
     else:

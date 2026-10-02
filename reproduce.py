@@ -25,6 +25,14 @@ def load_v95_manifest() -> dict[str, dict[str, object]]:
 
 
 V95_FIGURE_MAP = load_v95_manifest()
+V180_FIGURE_MAP = json.loads(
+    (ROOT / "manifests/v180_figure_entry_points.json").read_text(encoding="utf-8")
+)["figures"]
+MANUSCRIPT_FIGURES = {
+    int(number): {"commands": ((spec["entry_point"], *spec["arguments"]),),
+                  "stems": (spec["output_stem"],)}
+    for number, spec in V180_FIGURE_MAP.items()
+}
 
 
 def source_data_available() -> bool:
@@ -73,13 +81,51 @@ def run_spec(spec: dict[str, object], output_dir: Path) -> int:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--edition', choices=['legacy', 'v95'], default='legacy',
-                        help='Use the historical 3–14 map or the current V95 map.')
+    parser.add_argument('--edition', choices=['legacy', 'v95', 'v180'], default='v180',
+                        help='V180: current Figs. 12–19; legacy and V95: historical numbering.')
     parser.add_argument('--figure',
                         help='One figure number (V95 also accepts 17a or 17b).')
     parser.add_argument('--output-dir', type=Path,
-                        help='Root for generated figure outputs; defaults to figures/current or figures/v95.')
+                        help='Fresh output root (required for V180); historical editions have defaults.')
+    parser.add_argument('--data-root', type=Path, help='Authorized current prepared-bundle root')
+    parser.add_argument('--census-root', type=Path, help='Authorized census tree for current component plots')
     args = parser.parse_args()
+    if args.edition == 'v180':
+        if args.data_root is None or args.output_dir is None:
+            parser.error('V180 requires --data-root and a fresh --output-dir; see docs/V180_REPRODUCTION.md')
+        from verify_current import fresh_output, sha256
+        data_root, output_root = args.data_root.resolve(), args.output_dir.resolve()
+        fresh_output(output_root, data_root)
+        if args.census_root:
+            fresh_output(output_root, args.census_root.resolve())
+        specs = json.loads((ROOT / 'manifests/v180_figure_entry_points.json').read_text(encoding='utf-8'))['figures']
+        requested = [args.figure] if args.figure else list(specs)
+        if any(key not in specs for key in requested):
+            parser.error('V180 figures are 12–19')
+        env = os.environ.copy()
+        env['CITIES_DATA_ROOT'] = str(data_root)
+        env['MPLBACKEND'] = 'Agg'
+        if args.census_root:
+            env['CITIES_CENSUS_ROOT'] = str(args.census_root.resolve())
+        output_root.mkdir(parents=True, exist_ok=True)
+        runs = []
+        for key in requested:
+            spec = specs[key]
+            output_dir = output_root / key
+            env['CITIES_FIGURE_DIR'] = str(output_dir)
+            command = [sys.executable, '-X', 'utf8', str(ROOT / spec['entry_point']), *spec['arguments']]
+            print(f'Redrawing current Fig. {key}...', flush=True)
+            with (output_root / f'figure_{key}.log').open('w', encoding='utf-8') as log:
+                status = subprocess.run(command, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, check=False).returncode
+            files = {p.name: sha256(p) for p in output_dir.glob('*') if p.is_file()}
+            runs.append({'figure': key, 'command': command, 'returncode': status, 'output_sha256': files})
+            (output_root / 'figure_reproduction.json').write_text(json.dumps(runs, indent=2), encoding='utf-8')
+            if status:
+                print(f'Fig. {key} failed; see figure_{key}.log', file=sys.stderr)
+                return status
+            if not all((output_dir / (spec['output_stem'] + '.' + ext)).is_file() for ext in ('png','pdf','svg')):
+                raise FileNotFoundError(f'Fig. {key}: expected exports missing')
+        return 0
     if not source_data_available():
         parser.error('Empirical data are not included in the code-only release. '
                      'Supply the cleared source_data bundle described in DATA_AVAILABILITY.md. '

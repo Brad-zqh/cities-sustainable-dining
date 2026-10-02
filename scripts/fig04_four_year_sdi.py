@@ -76,6 +76,7 @@ from matplotlib.patches import Patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 SCRIPT_DIR = Path(__file__).resolve().parent
 FIGURES = ROOT / "figures"
 PROJECT_SCRIPTS = ROOT / "scripts"
@@ -245,7 +246,7 @@ def main() -> int:
     base.YEAR_RAMPS.update(MAP_RAMPS)
     frames = base.load_maps()
     breaks = base.pooled_quintiles(frames)
-    data_dir = ROOT / "source_data" / "figS_temporal_uncertainty_v4"
+    data_dir = DATA_ROOT / "source_data" / "figS_temporal_uncertainty_v4"
     annual = pd.read_csv(data_dir / "annual_block_bootstrap_intervals.csv")
     changes = pd.read_csv(data_dir / "change_from_2011_intervals.csv")
     coverage = pd.read_csv(data_dir / "metric_coverage_audit.csv")

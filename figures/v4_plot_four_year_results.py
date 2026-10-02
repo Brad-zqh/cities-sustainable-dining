@@ -21,7 +21,8 @@ from v5_nature_theme import (
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_DATA_DIR = REPO_ROOT / "source_data" / "fig_v4_four_year"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(REPO_ROOT)))
+PUBLIC_DATA_DIR = DATA_ROOT / "source_data" / "fig_v4_four_year"
 DATA_DIR = (
     PUBLIC_DATA_DIR
     if (PUBLIC_DATA_DIR / "2011_lsbg_components.gpkg").exists()
@@ -33,8 +34,8 @@ OUT_DIR = Path(
         str(REPO_ROOT / "release" / "v4_figures"),
     )
 )
-SOURCE_DIR = REPO_ROOT / "source_data" / "fig_v4_four_year"
-LAND_MASK_FILE = REPO_ROOT / "source_data" / "figs02" / "panel_a_land_mask.geojson"
+SOURCE_DIR = DATA_ROOT / "source_data" / "fig_v4_four_year"
+LAND_MASK_FILE = DATA_ROOT / "source_data" / "figs02" / "panel_a_land_mask.geojson"
 
 YEARS = (2011, 2016, 2021, 2024)
 MM = 1 / 25.4

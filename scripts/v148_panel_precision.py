@@ -22,7 +22,7 @@ import v140_reader_figure_touchups as parent
 import v147_reader_figure_refinements as prior
 
 
-OUT = parent.ROOT / "outputs/restricted/v148_panel_precision"
+OUT = parent.OUT
 parent.OUT = OUT
 prior.OUT = OUT
 _load_original = parent.bridge.load_original

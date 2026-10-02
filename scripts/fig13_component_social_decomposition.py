@@ -86,11 +86,12 @@ from compute_joint_subgroups_planning import GROUPS, census_paths
 
 
 ROOT = Path(__file__).resolve().parents[1]
-COMPONENT_DATA = ROOT / "source_data" / "fig_v4_four_year"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+COMPONENT_DATA = DATA_ROOT / "source_data" / "fig_v4_four_year"
 CONCENTRATION_DATA = (
-    ROOT / "source_data" / "figS_sdi_structural_inequality_v4" / "component_income_concentration.csv"
+    DATA_ROOT / "source_data" / "figS_sdi_structural_inequality_v4" / "component_income_concentration.csv"
 )
-SOURCE_OUT = ROOT / "source_data" / "fig13_component_social_decomposition_v1"
+SOURCE_OUT = DATA_ROOT / "source_data" / "fig13_component_social_decomposition_v1"
 FIGURE_OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 STEM = "Fig13_Component_Social_Inequality_Weighted_Boxplots_v1_NATURE"
 YEARS = (2016, 2021, 2024)

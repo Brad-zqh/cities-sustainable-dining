@@ -25,7 +25,7 @@ import v138_reproduce_visual_polish as bridge
 
 
 ROOT = bridge.ROOT
-OUT = ROOT / "outputs/restricted/v140_reader_figure_touchups"
+OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(bridge.CODE_ROOT / "figures/v180")))
 RAMP = ["#78A9C7", "#D3E4EC", "#FAFAFA", "#F1D0D2", "#E1848C"]
 
 
@@ -338,7 +338,8 @@ def render_14() -> dict:
     components.COMPONENT_DATA = bridge.AREA
     components.CONCENTRATION_DATA = composite.STRUCT / "component_income_concentration.csv"
     components.SOURCE_OUT = composite.DETAIL
-    components.census_paths = lambda: subgroup_source.census_paths(ROOT.parent)
+    components.census_paths = lambda: subgroup_source.census_paths(
+        Path(os.environ.get("CITIES_CENSUS_ROOT", str(ROOT.parent))))
     composite.shared.OUT = OUT
     original_export = composite.shared.export
 

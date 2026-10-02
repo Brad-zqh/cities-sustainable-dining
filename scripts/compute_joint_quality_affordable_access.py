@@ -101,6 +101,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--project-root", type=Path, required=True)
     parser.add_argument("--master", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--area-dir", type=Path,
+                        help="Fixed current area SDI bundle; overrides the historical V4 input")
     parser.add_argument("--bootstrap", type=int, default=999)
     return parser.parse_args()
 
@@ -144,7 +146,8 @@ def main() -> int:
     }
     for year in YEARS:
         specs[year]["area"] = (
-            project / f"outputs/restricted/v4_price_market_decomposition/{year}_lsbg_price_market.gpkg"
+            (args.area_dir.resolve() if args.area_dir else project / "outputs/restricted/v4_price_market_decomposition")
+            / f"{year}_lsbg_price_market.gpkg"
         )
     network_reference = (
         project / "source_data/fig04_network_price_v4/lsbg_network_price_opportunity.csv"

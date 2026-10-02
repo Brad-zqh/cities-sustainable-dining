@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import sys
 from pathlib import Path
+import os
 
 import geopandas as gpd
 import matplotlib
@@ -25,6 +26,7 @@ from matplotlib.patches import Patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 FIGURES = ROOT / "figures"
 if str(FIGURES) not in sys.path:
     sys.path.insert(0, str(FIGURES))
@@ -74,7 +76,7 @@ COMPONENT_COLOUR_KEYS = {
 
 
 def load_maps() -> dict[int, gpd.GeoDataFrame]:
-    data_dir = ROOT / "source_data" / "fig_v4_four_year"
+    data_dir = DATA_ROOT / "source_data" / "fig_v4_four_year"
     frames: dict[int, gpd.GeoDataFrame] = {}
     for year in YEARS:
         frame = gpd.read_file(data_dir / f"{year}_lsbg_components.gpkg").to_crs(2326)
@@ -262,9 +264,9 @@ def main() -> None:
 
     frames = load_maps()
     breaks = pooled_quintiles(frames)
-    annual = pd.read_csv(ROOT / "source_data" / "figS_temporal_uncertainty_v4" / "annual_block_bootstrap_intervals.csv")
-    changes = pd.read_csv(ROOT / "source_data" / "figS_temporal_uncertainty_v4" / "change_from_2011_intervals.csv")
-    coverage = pd.read_csv(ROOT / "source_data" / "figS_temporal_uncertainty_v4" / "metric_coverage_audit.csv")
+    annual = pd.read_csv(DATA_ROOT / "source_data" / "figS_temporal_uncertainty_v4" / "annual_block_bootstrap_intervals.csv")
+    changes = pd.read_csv(DATA_ROOT / "source_data" / "figS_temporal_uncertainty_v4" / "change_from_2011_intervals.csv")
+    coverage = pd.read_csv(DATA_ROOT / "source_data" / "figS_temporal_uncertainty_v4" / "metric_coverage_audit.csv")
     all_bounds = np.array([frames[y].total_bounds for y in YEARS])
     common_bounds = np.array([all_bounds[:, 0].min(), all_bounds[:, 1].min(), all_bounds[:, 2].max(), all_bounds[:, 3].max()])
 

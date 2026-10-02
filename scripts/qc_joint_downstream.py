@@ -18,8 +18,9 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
-PRIMARY = ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+DATA = DATA_ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
+PRIMARY = DATA_ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
 PROJECT = Path(os.environ["CITIES_RESTRICTED_PROJECT"]) if os.environ.get("CITIES_RESTRICTED_PROJECT") else None
 FIGURES = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures/current")))
 
@@ -54,12 +55,12 @@ def main() -> int:
     intervals = pd.read_csv(DATA / "joint_subgroup_dcca_block_intervals.csv")
     replicates = pd.read_csv(DATA / "joint_subgroup_dcca_block_replicates.csv")
     contrasts = pd.read_csv(
-        FIGURES / "Fig9_Joint_Socioeconomic_Sex_Contrasts_v26_NATURE_within_year_contrasts.csv"
+        FIGURES / "Fig17_SameYear_Socioeconomic_Zero_Joint_Opportunity_within_year_contrasts.csv"
     )
     scenarios = pd.read_csv(DATA / "scenario_results.csv")
     selected = pd.read_csv(DATA / "selected_planning_nodes.csv")
     priorities = pd.read_csv(DATA / "priority_population_definition.csv")
-    candidates = pd.read_csv(ROOT / "source_data" / "fig04_equity_siting_v7" / "candidate_planning_nodes.csv")
+    candidates = pd.read_csv(DATA_ROOT / "source_data" / "fig04_equity_siting_v7" / "candidate_planning_nodes.csv")
 
     require(len(points) == 69, f"expected 69 subgroup-year estimates, found {len(points)}")
     require(len(intervals) == 138, f"expected 138 confidence intervals, found {len(intervals)}")

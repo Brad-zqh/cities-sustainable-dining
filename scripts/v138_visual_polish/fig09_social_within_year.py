@@ -20,6 +20,7 @@ Statistics:
 from __future__ import annotations
 
 from pathlib import Path
+import os
 import sys
 
 import matplotlib
@@ -55,7 +56,8 @@ mpl.rcParams.update({
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+SOURCE = DATA_ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
 OUT = ROOT / "figures"
 STEM = "Fig17_SameYear_Socioeconomic_Zero_Joint_Opportunity"
 YEARS = (2016, 2021, 2024)

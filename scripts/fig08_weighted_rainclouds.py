@@ -10,6 +10,7 @@ the audited 999-replicate DCCA-block-bootstrap intervals, not panel shading.
 from __future__ import annotations
 
 from pathlib import Path
+import os
 import sys
 
 import matplotlib
@@ -23,6 +24,7 @@ from scipy.stats import gaussian_kde
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 FIGURES = ROOT / "figures"
 if str(FIGURES) not in sys.path:
     sys.path.insert(0, str(FIGURES))
@@ -30,7 +32,7 @@ if str(FIGURES) not in sys.path:
 from v5_cities_visual_system import COLORS, clean_axis, configure, panel_label, save_bundle  # noqa: E402
 
 
-DATA = ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
+DATA = DATA_ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
 OUT = ROOT / "figures"
 STEM = "Fig8_Joint_Access_Weighted_Rainclouds_Inequality_v3"
 YEARS = [2016, 2021, 2024]

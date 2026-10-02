@@ -12,7 +12,8 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+DATA = DATA_ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
 FIG = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures/current"))) / "Fig16_Joint_Quality_Walking_Price_Opportunity"
 
 
@@ -53,7 +54,7 @@ def main() -> None:
 
     primary = points.loc[points["outcome"].eq("low_price_access")].set_index("year")
     reference = pd.read_csv(
-        ROOT / "source_data/fig04_network_price_v4/network_price_inequality_point_estimates.csv"
+        DATA_ROOT / "source_data/fig04_network_price_v4/network_price_inequality_point_estimates.csv"
     )
     reference = reference.loc[
         reference["threshold_min"].eq(15.0)

@@ -4,6 +4,7 @@ No source estimator, map class boundary, or observation is changed. Halos are
 presentation strokes, not intervals. Document assembly is a separate step.
 """
 from pathlib import Path
+import os
 import argparse
 import json
 import sys
@@ -19,6 +20,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 sys.path.insert(0, str(ROOT / 'scripts'))
 sys.path.insert(0, str(ROOT / 'figures'))
 import render_evidence_composites as shared
@@ -29,7 +31,7 @@ from v5_cities_visual_system import segmented_scale_bar, north_arrow, clean_axis
 YEARS = [2011, 2016, 2021, 2024]
 YEAR_COLORS = {2011:'#C94157', 2016:'#347FC0', 2021:'#419B58', 2024:'#E69736'}
 MARKERS = {2011:'o', 2016:'s', 2021:'D', 2024:'^'}
-SOURCE = ROOT / 'source_data/figS_weight_sensitivity_v4'
+SOURCE = DATA_ROOT / 'source_data/figS_weight_sensitivity_v4'
 STEM = 'Fig10_Spatial_Scale_Weighting_Integrated_Evidence'
 PAIRED_RAMPS = {
     2011: ['#F1BFC6', '#E797A4', '#D96A7C', '#BC3E56', '#862439'],

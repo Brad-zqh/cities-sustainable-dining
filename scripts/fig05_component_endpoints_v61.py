@@ -8,6 +8,7 @@ over all four study years.  No values are imputed, simulated or reclassified.
 from __future__ import annotations
 
 from pathlib import Path
+import os
 
 import matplotlib
 
@@ -25,7 +26,8 @@ from v5_cities_visual_system import FONT_FAMILY, north_arrow, outer_boundary, se
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "source_data" / "fig_v4_four_year"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+DATA = DATA_ROOT / "source_data" / "fig_v4_four_year"
 OUT = ROOT / "figures" / "v61_nature_visual_review"
 STEM = "Fig05_Component_Endpoints_2011_2024"
 ALL_YEARS = (2011, 2016, 2021, 2024)

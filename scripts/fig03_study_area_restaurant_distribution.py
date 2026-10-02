@@ -28,8 +28,9 @@ from v5_cities_visual_system import configure, north_arrow, outer_boundary, segm
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "source_data" / "fig03_study_area_annual_distribution_v1"
-GEOMETRY = ROOT / "source_data" / "fig_v4_four_year" / "2024_lsbg_components.gpkg"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+SOURCE = DATA_ROOT / "source_data" / "fig03_study_area_annual_distribution_v1"
+GEOMETRY = DATA_ROOT / "source_data" / "fig_v4_four_year" / "2024_lsbg_components.gpkg"
 OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 YEARS = (2011, 2016, 2021, 2024)
 COLORS = {2011: "#B62B45", 2016: "#24659A", 2021: "#33854F", 2024: "#CE752D"}

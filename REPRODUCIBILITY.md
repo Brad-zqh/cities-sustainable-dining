@@ -1,36 +1,35 @@
 # Reproduction scope and verification
 
-The current runner covers the eight analytical main-text figure entries,
-numbered 12–19; Figure 18 produces separately captioned parts 18a and 18b. Each
-is rendered from the local source bundle rather than from an AI-generated image.
-Source hashes are compared before and after rendering. A presentation audit
-also compares plotted numeric primitives before and after adding borders,
-changing text style and moving legends.
+## Current V180 entry points
 
-These checks are limited: unchanged files do not prove that the underlying
-study design, measurements, licences or data provenance are correct.
+Follow [the V180 reproduction guide](docs/V180_REPRODUCTION.md) for the input
+layout and complete commands. The public repository contains code. Authorized
+coauthors receive the empirical input bundle separately.
 
-The public code-only checkout can run synthetic unit tests. It **cannot**
-reproduce empirical figures without the withheld data. The complete local
-bundle can be used for private reconstruction by authorized researchers; this
-does not make it an open-data release.
+- `verify_current.py` recalculates eight groups of downstream analyses and
+  compares 29 result tables with frozen references. Input hashes are checked
+  before and after calculation; source hashes and task logs are retained.
+- `reproduce.py --edition v180` renders current main-text Figs. 12–19 as PNG,
+  PDF and SVG. The current Word Fig. 18 uses the diagnostics export (18b);
+  the same lineage also exports an additional scale-map page (18a).
+- `verify_documents.py` compares 51 main-text numeric anchors and 698 SI-table
+  values with the named outputs. It separates 518 values supported by this
+  recalculation from 180 values checked against source tables. Optional image
+  comparison checks the embedded Word images against the renderer exports.
 
-The shared computation code calculates joint opportunity and subgroup/planning
-results from the documented prepared inputs. It does not include or reproduce
-the original data acquisition, model API runs or network preparation. Those
-stages and their source-specific permissions remain outside this milestone.
+Use fresh output folders outside the inputs. Numerical receipts are written
+to `verification.json`, Word comparisons to `document_comparison.json` and
+`word_table_comparison.json`, and renderer commands/output hashes to
+`figure_reproduction.json` in their respective output folders.
 
-The optional restricted-input hash check is skipped, with an explicit message,
-when CITIES_RESTRICTED_PROJECT is not supplied. Do not interpret that skip as
-verification of the raw origin–destination records.
+The replay starts from prepared multimodal area components and audited walking
+pairs. Original platform acquisition, fresh model inference, pedestrian-network
+construction, recipe-reference inference and independent construct validation
+have separate evidence requirements. Agreement in this downstream replay
+supports the calculations and document correspondence within that scope.
 
-The default figure entry point is `python reproduce.py`. The source bundle
-layout is in `manifests/source_inventory.json`. The final export uses the same
-numeric data and classification rules as the manuscript candidate. A clean
-run writes its manuscript-number status, exact commands and output SHA-256
-values to `audit/current_figure_manifest.json`.
-Legacy rendering writes to `audit/render_final/export_log.json`; composites
-write source hashes and numerical checks alongside their exports.
+The sections below retain historical verification records. Their figure
+numbers, commands, test counts and receipts refer to those earlier releases.
 
 ## Recorded local verification: V44, 27 August 2026
 

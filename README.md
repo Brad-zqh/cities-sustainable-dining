@@ -1,7 +1,24 @@
-# Sustainable dining: figure-reproduction code
+# Sustainable dining: analysis and figure reproduction
 
-Code for the Cities revision on restaurant quality, walking opportunity and
-socioeconomic inequality in Hong Kong.
+## Current V180 manuscript
+
+The current branch includes the eight-task numerical replay, current Figs.
+12–19, and a direct Word-to-results comparison. Follow
+[the coauthor reproduction guide](docs/V180_REPRODUCTION.md).
+
+```sh
+python verify_current.py --help
+python reproduce.py --edition v180 --help
+python verify_documents.py --help
+```
+
+Supply authorized inputs outside the clone and use fresh output directories.
+The scripts record source/input hashes, preserve source files and report
+differences explicitly. The data-sharing boundary remains separate from this
+code release. The sections below document historical entry points.
+
+Code for the Cities revision on sustainable dining, walking opportunity and
+social inequality in Hong Kong.
 
 **Release status: code-only; the empirical data bundle is not publicly released.**
 This repository must not be cited as evidence that all data or all experiments
@@ -9,27 +26,34 @@ are openly reproducible. Redistribution clearance for platform-derived
 aggregates and spatial inputs is still being checked. No restricted raw records,
 manuscripts, reviewer correspondence or credentials are included.
 
+The V135 revision adds synthetic-testable utilities for annual dish mentions,
+nutrition scoring and deletion audits, and external benchmark bookkeeping.
+This is a **partial code-only update**, not a release of V135 empirical inputs,
+final figure assets or a clean-clone reproduction of every revised result.
+See `docs/V135_CODE_ONLY_STATUS.md` for the boundary.
+
+The latest V148 result-figure code lineage is included as code only. Its
+layered entry points and required separately cleared inputs are described in
+[`docs/V148_VISUALIZATION_CODE.md`](docs/V148_VISUALIZATION_CODE.md).
+
 ## What is included
 
-- Current manuscript analytical-figure entry points, Figs. 12–19, and shared
-  styling. Figure 18 exports two separately captioned parts (18a and 18b).
-- Two source-native composites: Fig. 12 combines SDI change and coverage;
-  Fig. 16 combines joint-opportunity maps, distributions and sensitivity checks.
+- The preceding-release main-text data-figure entry points, Figs. 3–14, and
+  shared styling. The current V95 manuscript-facing map is recorded separately
+  in `manifests/v95_figure_entry_points.json` and covers Figs. 11–18.
+- Two source-native composites: Fig. 5 combines SDI change and coverage;
+  Fig. 8 combines joint-opportunity maps, distributions and sensitivity checks.
 - Joint quality/price/walking computation and subgroup/planning computation,
   with their required estimator modules. These require separately authorized
   inputs; raw acquisition and multimodal model execution are not reproduced here.
 - Dependency specifications, synthetic unit tests, source-file hashes and a
   data dictionary/availability inventory (metadata, not empirical observations).
 - Licensed TeX Gyre Heros fonts; these are Helvetica-compatible, not Helvetica.
-- The 16 September submission snapshot also retains the source-native composite
-  renderers and the Times New Roman visual-system variant listed in
-  [SUBMISSION_0916_CODE_MAP.md](SUBMISSION_0916_CODE_MAP.md). These scripts are
-  optional publication-layout entry points and do not change empirical values.
 
-Figures 1–11 are conceptual, data-processing or method illustrations. They are
-not numerical reproductions and are therefore intentionally outside the
-analytical batch runner. Supplementary archived image bytes are not included in
-this release.
+The historical conceptual and method illustrations are outside these plotting
+entry points. Current V180 reproduction covers Figs. 12–19; other main-text
+figures and supplementary model-comparison figures have separate source
+lineages. Supplementary archived image bytes are not included in this release.
 
 ## Install and test
 
@@ -58,29 +82,39 @@ listed in `manifests/source_inventory.json`.
 
 ```sh
 python reproduce.py
-python reproduce.py --figure 16
+python reproduce.py --figure 10
 python scripts/qc_joint_quality_access.py
 python scripts/qc_joint_downstream.py
 ```
 
+For the current V95 manuscript numbering, use the edition flag. The runner
+accepts `17a` and `17b` for the two parts of the scale/weighting result:
+
+```powershell
+python reproduce.py --edition v95
+python reproduce.py --edition v95 --figure 15
+python reproduce.py --edition v95 --figure 17b
+```
+
+The V95 figure-level contract and source-bundle requirements are documented in
+[`docs/V95_FIGURE_REPRODUCTION.md`](docs/V95_FIGURE_REPRODUCTION.md). The
+legacy 3–14 map remains unchanged for historical reruns; do not infer current
+manuscript numbering from that table.
+
 The current entry point is **reproduce.py**, not a legacy preview script.
-Outputs go to `figures/current/`; the manuscript-number execution record is
+Outputs go to `figures/current/`; the current-number execution record is
 `audit/current_figure_manifest.json`. Legacy source/artist checks go to
 `audit/render_final/`; composite checks are saved beside their exports.
 Missing data cause a failure, never synthetic substitution.
-Every output stem now starts with the figure number used in the current
-manuscript. The registry in `reproduce.py` is the machine-readable crosswalk.
+Legacy filenames are retained for unmerged figures; use the mapping below.
 
-| Manuscript figure | Analytical content | Canonical output stem |
-| --- | --- | --- |
-| 12 | Four-year SDI, specification sensitivity and coverage | `Fig12_Restaurant_Quality_SDI_Evolution_Coverage` |
-| 13 | Four-year maps of six SDI components | `Fig13_Six_Component_FourYear_Atlas` |
-| 14 | Citywide and component-level socioeconomic inequality | `Fig14_Restaurant_Quality_Inequality` |
-| 15 | Price composition and adjusted socioeconomic associations | `Fig15_Price_Composition_Socioeconomic_Associations` |
-| 16 | Joint quality, walking and price opportunity | `Fig16_Joint_Quality_Walking_Price_Opportunity` |
-| 17 | Same-year socioeconomic differences in zero joint opportunity | `Fig17_SameYear_Socioeconomic_Zero_Joint_Opportunity` |
-| 18a–b | Spatial-scale sensitivity and weighting diagnostics | `Fig18a_...`, `Fig18b_...` |
-| 19 | Conditional public-housing siting stress test | `Fig19_Planning_Strategies` |
+| Current figure | Source in the preceding 16-figure layout |
+| --- | --- |
+| 3, 4 | 3, 4 |
+| 5 | 5 + 15, redrawn as an eight-panel composite |
+| 6, 7 | 6, 7 |
+| 8 | 8 + 9, redrawn as an eleven-panel composite |
+| 9–14 | 10, 11, 12, 13, 14, 16, respectively |
 
 The quality checks distinguish an unavailable restricted-input check from a
 passed check. SHA-256 verifies file identity, not validity or ownership.
@@ -105,11 +139,3 @@ See [data availability](DATA_AVAILABILITY.md),
 Code is MIT-licensed. Fonts retain their own licence. No licence for withheld
 third-party data is granted by this repository. An archived DOI and final
 manuscript citation will be added only when they exist.
-
-## Submission snapshot
-
-This branch was refreshed for the 16 September manuscript package. The public
-repository remains code-only: empirical source tables, raw platform records,
-restaurant identifiers, coordinates and origin-destination pairs are excluded.
-The matching private submission folder contains the authorized local source
-bundle and should not be treated as a public redistribution package.

@@ -1,204 +1,165 @@
-"""Reproduce the current manuscript's eight analytical figures (Figs. 12–19).
-
-Figures 1–11 are conceptual or method illustrations and are deliberately not
-presented as numerical reproductions. Figure 18 contains two separately
-exported parts, 18a and 18b.
-"""
-from __future__ import annotations
-
+"""Reproduce the legacy figure map or the current V95 manuscript figures."""
 from pathlib import Path
 import argparse
-import hashlib
-import json
+import os
 import subprocess
 import sys
-import time
-
+import json
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "figures" / "current"
-AUDIT = ROOT / "audit" / "current_figure_manifest.json"
+# Keep the preceding release stable: downstream users may still request its
+# 3–14 numbering. The V95 map is loaded from a separate manifest below.
+FIGURE_MAP = {3:3, 4:4, 5:'A', 6:6, 7:7, 8:'B', 9:10,
+              10:11, 11:12, 12:13, 13:14, 14:16}
+LEGACY_FIGURE_MAP = FIGURE_MAP
+V95_MANIFEST = ROOT / "manifests" / "v95_figure_entry_points.json"
 
-# This registry follows the numbering and captions in the 16 September 2026
-# manuscript. The ``source`` field documents reused evidence-locked analysis
-# modules; it is not an alternative figure number.
+
+def load_v95_manifest() -> dict[str, dict[str, object]]:
+    """Load the manuscript-facing V95 entry-point contract."""
+    payload = json.loads(V95_MANIFEST.read_text(encoding="utf-8"))
+    figures = payload.get("figures")
+    if not isinstance(figures, dict) or not figures:
+        raise ValueError("V95 figure manifest has no figure entries")
+    return figures
+
+
+V95_FIGURE_MAP = load_v95_manifest()
+V180_FIGURE_MAP = json.loads(
+    (ROOT / "manifests/v180_figure_entry_points.json").read_text(encoding="utf-8")
+)["figures"]
 MANUSCRIPT_FIGURES = {
-    12: {
-        "caption": "Restaurant quality SDI, 2011 to 2024",
-        "source": "source-native SDI evolution and coverage composite",
-        "commands": (("scripts/render_evidence_composites.py", "A"),),
-        "stems": ("Fig12_Restaurant_Quality_SDI_Evolution_Coverage",),
-    },
-    13: {
-        "caption": "Four-year spatial distributions of six restaurant quality components",
-        "source": "four-year component atlas",
-        "commands": (("scripts/render_final.py", "6"),),
-        "stems": ("Fig13_Six_Component_FourYear_Atlas",),
-    },
-    14: {
-        "caption": "Restaurant quality inequality",
-        "source": "structural and component-level inequality composite",
-        "commands": (("scripts/render_quality_inequality_composite.py",),),
-        "stems": ("Fig14_Restaurant_Quality_Inequality",),
-    },
-    15: {
-        "caption": "Price composition and adjusted socioeconomic associations",
-        "source": "four-year price-market decomposition",
-        "commands": (("scripts/render_final.py", "7"),),
-        "stems": ("Fig15_Price_Composition_Socioeconomic_Associations",),
-        "required": ("Fig15_Price_Composition_Socioeconomic_Associations_600dpi.png",),
-    },
-    16: {
-        "caption": "Joint quality, walking and price opportunity",
-        "source": "source-native joint-opportunity evidence composite",
-        "commands": (("scripts/render_evidence_composites.py", "B"),),
-        "stems": ("Fig16_Joint_Quality_Walking_Price_Opportunity",),
-    },
-    17: {
-        "caption": "Same-year socioeconomic differences in zero joint opportunity",
-        "source": "same-year subgroup analysis with fixed 2021 composition in 2024",
-        "commands": (("scripts/render_final.py", "10"),),
-        "stems": ("Fig17_SameYear_Socioeconomic_Zero_Joint_Opportunity",),
-    },
-    18: {
-        "caption": "Spatial-scale sensitivity and weighting diagnostics",
-        "source": "LSBG-DCCA scale and weighting sensitivity",
-        "commands": (
-            ("scripts/render_scale_weight_composite_single_page.py", "--split-part", "maps"),
-            ("scripts/render_scale_weight_composite_single_page.py", "--split-part", "diagnostics"),
-        ),
-        "stems": (
-            "Fig18a_Spatial_Scale_Sensitivity_Maps",
-            "Fig18b_Weighting_And_Cross_Scale_Diagnostics",
-        ),
-    },
-    19: {
-        "caption": "Public-housing food-provision siting strategies",
-        "source": "conditional planning stress-test composite",
-        "commands": (("scripts/render_planning_composite.py",),),
-        "stems": ("Fig19_Planning_Strategies",),
-    },
+    int(number): {"commands": ((spec["entry_point"], *spec["arguments"]),),
+                  "stems": (spec["output_stem"],)}
+    for number, spec in V180_FIGURE_MAP.items()
 }
 
-# Backwards-compatible import name used by external checks.
-FIGURE_MAP = MANUSCRIPT_FIGURES
+
+def source_data_available() -> bool:
+    """Return whether any authorized local source file is present."""
+    data_root = ROOT / "source_data"
+    return data_root.is_dir() and any(path.is_file() for path in data_root.rglob("*"))
 
 
-def digest(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
-def source_hashes() -> dict[str, str]:
+def legacy_spec(number: int) -> dict[str, object]:
+    """Convert the historical integer map to the shared runner schema."""
+    original = FIGURE_MAP[number]
+    if isinstance(original, str):
+        return {
+            "entry_point": "scripts/render_evidence_composites.py",
+            "arguments": [original],
+            "output_subdir": "",
+        }
     return {
-        path.relative_to(ROOT).as_posix(): digest(path)
-        for path in sorted((ROOT / "source_data").rglob("*"))
-        if path.is_file()
+        "entry_point": "scripts/render_final.py",
+        "arguments": [str(original)],
+        "output_subdir": "",
     }
 
 
-def command_for(parts: tuple[str, ...]) -> list[str]:
-    command = [sys.executable, "-X", "utf8", str(ROOT / parts[0]), *parts[1:]]
-    if parts[0] in {
-        "scripts/render_evidence_composites.py",
-        "scripts/render_quality_inequality_composite.py",
-        "scripts/render_scale_weight_composite_single_page.py",
-        "scripts/render_planning_composite.py",
-    }:
-        command.extend(["--output-dir", str(OUT)])
-    return command
+def run_spec(spec: dict[str, object], output_dir: Path) -> int:
+    """Execute one entry point with a per-figure output directory."""
+    entry_value = spec.get("entry_point")
+    if not isinstance(entry_value, str):
+        raise ValueError("figure entry point must be a string")
+    entry = ROOT / entry_value
+    if not entry.is_file():
+        raise FileNotFoundError(entry)
+    raw_arguments = spec.get("arguments", [])
+    if not isinstance(raw_arguments, list) or not all(isinstance(x, str) for x in raw_arguments):
+        raise ValueError(f"invalid arguments for {entry_value}")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    command = [sys.executable, "-X", "utf8", str(entry), *raw_arguments]
+    # Composite renderers expose --output-dir; the older single-figure scripts
+    # receive the same location through the documented environment variable.
+    if Path(entry_value).name.startswith("render_") and Path(entry_value).name != "render_final.py":
+        command.extend(["--output-dir", str(output_dir)])
+    env = os.environ.copy()
+    env["CITIES_FIGURE_DIR"] = str(output_dir)
+    return subprocess.call(command, cwd=ROOT, env=env)
 
 
-def exported_files(stems: tuple[str, ...]) -> list[Path]:
-    return sorted({path for stem in stems for path in OUT.glob(f"{stem}*") if path.is_file()})
-
-
-def write_manifest(payload: dict) -> None:
-    AUDIT.parent.mkdir(parents=True, exist_ok=True)
-    AUDIT.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-
-
-def main() -> int:
+def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--figure", type=int, choices=sorted(MANUSCRIPT_FIGURES))
+    parser.add_argument('--edition', choices=['legacy', 'v95', 'v180'], default='v180',
+                        help='V180: current Figs. 12–19; legacy and V95: historical numbering.')
+    parser.add_argument('--figure',
+                        help='One figure number (V95 also accepts 17a or 17b).')
+    parser.add_argument('--output-dir', type=Path,
+                        help='Fresh output root (required for V180); historical editions have defaults.')
+    parser.add_argument('--data-root', type=Path, help='Authorized current prepared-bundle root')
+    parser.add_argument('--census-root', type=Path, help='Authorized census tree for current component plots')
     args = parser.parse_args()
-    before = source_hashes()
-    if not before:
-        parser.error(
-            "Empirical data are not included in the code-only release. Supply the "
-            "cleared source_data bundle described in DATA_AVAILABILITY.md. No "
-            "synthetic values will be substituted."
-        )
-
-    OUT.mkdir(parents=True, exist_ok=True)
-    selected = [args.figure] if args.figure else list(MANUSCRIPT_FIGURES)
-    report = {
-        "manuscript_version": "Submission 0916",
-        "scope": "analytical main-text figures 12–19; Figure 18 exports parts a and b",
-        "conceptual_method_figures": "Figures 1–11 are outside numerical reproduction",
-        "source_files_before": len(before),
-        "runs": [],
-    }
-    write_manifest(report)
-
-    for number in selected:
-        spec = MANUSCRIPT_FIGURES[number]
-        run = {
-            "manuscript_figure": number,
-            "caption": spec["caption"],
-            "source_analysis": spec["source"],
-            "commands": [],
-        }
-        report["runs"].append(run)
-        started = time.time_ns()
-        for parts in spec["commands"]:
-            command = command_for(parts)
-            process = subprocess.run(
-                command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8"
-            )
-            run["commands"].append({
-                "argv": command,
-                "returncode": process.returncode,
-                "stdout": process.stdout,
-                "stderr": process.stderr,
-            })
-            write_manifest(report)
-            if process.returncode:
-                return process.returncode
-
-        required_png = [
-            OUT / name for name in spec.get(
-                "required", tuple(f"{stem}.png" for stem in spec["stems"])
-            )
-        ]
-        missing = [path.name for path in required_png if not path.is_file()]
-        stale = [path.name for path in required_png if path.is_file() and path.stat().st_mtime_ns < started]
-        if missing or stale:
-            run["returncode"] = 1
-            run["output_contract_error"] = {"missing": missing, "not_rewritten": stale}
-            write_manifest(report)
-            return 1
-        outputs = exported_files(spec["stems"])
-        run["returncode"] = 0
-        run["output_sha256"] = {
-            path.relative_to(ROOT).as_posix(): digest(path) for path in outputs
-        }
-        write_manifest(report)
-
-    after = source_hashes()
-    if before != after:
-        report["source_data_unchanged"] = False
-        write_manifest(report)
-        raise RuntimeError("Source data changed during rendering")
-    report["source_data_unchanged"] = True
-    report["source_files_after"] = len(after)
-    report["status"] = "PASS"
-    write_manifest(report)
-    print(
-        f"PASS: {len(selected)} manuscript figure entries; "
-        f"{len(after)} source files unchanged; manifest={AUDIT}"
-    )
+    if args.edition == 'v180':
+        if args.data_root is None or args.output_dir is None:
+            parser.error('V180 requires --data-root and a fresh --output-dir; see docs/V180_REPRODUCTION.md')
+        from verify_current import fresh_output, sha256
+        data_root, output_root = args.data_root.resolve(), args.output_dir.resolve()
+        fresh_output(output_root, data_root)
+        if args.census_root:
+            fresh_output(output_root, args.census_root.resolve())
+        specs = json.loads((ROOT / 'manifests/v180_figure_entry_points.json').read_text(encoding='utf-8'))['figures']
+        requested = [args.figure] if args.figure else list(specs)
+        if any(key not in specs for key in requested):
+            parser.error('V180 figures are 12–19')
+        env = os.environ.copy()
+        env['CITIES_DATA_ROOT'] = str(data_root)
+        env['MPLBACKEND'] = 'Agg'
+        if args.census_root:
+            env['CITIES_CENSUS_ROOT'] = str(args.census_root.resolve())
+        output_root.mkdir(parents=True, exist_ok=True)
+        runs = []
+        for key in requested:
+            spec = specs[key]
+            output_dir = output_root / key
+            env['CITIES_FIGURE_DIR'] = str(output_dir)
+            command = [sys.executable, '-X', 'utf8', str(ROOT / spec['entry_point']), *spec['arguments']]
+            print(f'Redrawing current Fig. {key}...', flush=True)
+            with (output_root / f'figure_{key}.log').open('w', encoding='utf-8') as log:
+                status = subprocess.run(command, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, check=False).returncode
+            files = {p.name: sha256(p) for p in output_dir.glob('*') if p.is_file()}
+            runs.append({'figure': key, 'command': command, 'returncode': status, 'output_sha256': files})
+            (output_root / 'figure_reproduction.json').write_text(json.dumps(runs, indent=2), encoding='utf-8')
+            if status:
+                print(f'Fig. {key} failed; see figure_{key}.log', file=sys.stderr)
+                return status
+            if not all((output_dir / (spec['output_stem'] + '.' + ext)).is_file() for ext in ('png','pdf','svg')):
+                raise FileNotFoundError(f'Fig. {key}: expected exports missing')
+        return 0
+    if not source_data_available():
+        parser.error('Empirical data are not included in the code-only release. '
+                     'Supply the cleared source_data bundle described in DATA_AVAILABILITY.md. '
+                     'No synthetic values will be substituted.')
+    if args.edition == 'legacy':
+        specs = {str(number): legacy_spec(number) for number in FIGURE_MAP}
+        default_root = ROOT / 'figures' / 'current'
+        audit = ROOT / 'audit' / 'current_figure_manifest.json'
+    else:
+        specs = V95_FIGURE_MAP
+        default_root = ROOT / 'figures' / 'v95'
+        audit = ROOT / 'audit' / 'v95_figure_manifest.json'
+    requested = [args.figure] if args.figure else list(specs)
+    unknown = [value for value in requested if value not in specs]
+    if unknown:
+        parser.error(f"unknown {args.edition} figure(s): {', '.join(unknown)}")
+    output_root = (args.output_dir or default_root).resolve()
+    runs = []
+    for figure_key in requested:
+        spec = specs[figure_key]
+        output_dir = output_root / str(spec.get('output_subdir', figure_key))
+        try:
+            status = run_spec(spec, output_dir)
+        except (FileNotFoundError, ValueError) as exc:
+            parser.error(str(exc))
+        runs.append(dict(edition=args.edition, manuscript_figure=figure_key,
+                         entry_point=spec['entry_point'], output_dir=str(output_dir),
+                         returncode=status))
+        audit.parent.mkdir(parents=True, exist_ok=True)
+        audit.write_text(json.dumps(runs, indent=2), encoding='utf-8')
+        if status:
+            return status
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     raise SystemExit(main())

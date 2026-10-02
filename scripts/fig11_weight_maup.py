@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import os
 import sys
 
 import matplotlib as mpl
@@ -12,12 +13,13 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 FIGURES = ROOT / "figures"
 if str(FIGURES) not in sys.path:
     sys.path.insert(0, str(FIGURES))
 from v5_cities_visual_system import COLORS, FONT_FAMILY, YEAR_COLORS, configure, panel_label, save_bundle
 
-SOURCE = ROOT / "source_data" / "figS_weight_sensitivity_v4"
+SOURCE = DATA_ROOT / "source_data" / "figS_weight_sensitivity_v4"
 OUT = ROOT / "figures"
 STEM = "Fig11_Weighting_MAUP_Sensitivity_v15_HEATMAP"
 

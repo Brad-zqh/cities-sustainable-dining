@@ -76,8 +76,9 @@ from matplotlib.patches import FancyBboxPatch, Rectangle
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "source_data" / "fig04_equity_siting_v7"
-JOINT_SRC = ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+SRC = DATA_ROOT / "source_data" / "fig04_equity_siting_v7"
+JOINT_SRC = DATA_ROOT / "source_data" / "fig14_joint_subgroup_planning_v1"
 OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 STEM = "Fig12_Joint_Equity_Planning_Strategies_v7_NATURE"
 

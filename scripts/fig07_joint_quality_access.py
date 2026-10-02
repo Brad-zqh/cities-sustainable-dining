@@ -24,6 +24,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 FIGURES = ROOT / "figures"
 if str(FIGURES) not in sys.path:
     sys.path.insert(0, str(FIGURES))
@@ -41,8 +42,8 @@ from v5_cities_visual_system import (  # noqa: E402
 
 
 YEARS = (2016, 2021, 2024)
-DATA = ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
-NETWORK_DATA = ROOT / "source_data" / "fig04_network_price_v4"
+DATA = DATA_ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
+NETWORK_DATA = DATA_ROOT / "source_data" / "fig04_network_price_v4"
 OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 STEM = "Fig7_Joint_Quality_Affordable_Access_v2_RIGHT_CBAR_NATURE"
 

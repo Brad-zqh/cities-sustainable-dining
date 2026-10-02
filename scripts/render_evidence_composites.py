@@ -5,6 +5,7 @@ map breaks and distribution helpers are reused. Document integration is separate
 this entry point writes only plots, statistics and an audit.
 """
 from pathlib import Path
+import os
 import argparse
 import hashlib
 import json
@@ -22,6 +23,8 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+TEMPORAL_DATA_DIR = DATA_ROOT / "source_data/figS_temporal_uncertainty_v4"
 sys.path.insert(0, str(ROOT / "scripts"))
 from v5_cities_visual_system import configure, FONT_FAMILY, clean_axis
 from presentation_finish import finish
@@ -50,8 +53,8 @@ AUDIT = {"status": "V45_SOURCE_DATA_REDRAW", "font_family": FONT_FAMILY,
 
 
 def source_hashes():
-    return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in sorted((ROOT / "source_data").rglob("*")) if p.is_file()}
+    return {p.relative_to(DATA_ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted((DATA_ROOT / "source_data").rglob("*")) if p.is_file()}
 
 
 def style():
@@ -163,7 +166,7 @@ def sdi_composite():
     base.YEAR_RAMPS.update(sdi.MAP_RAMPS)
     frames = base.load_maps()
     breaks = base.pooled_quintiles(frames)
-    datadir = ROOT / "source_data/figS_temporal_uncertainty_v4"
+    datadir = TEMPORAL_DATA_DIR
     annual = pd.read_csv(datadir / "annual_block_bootstrap_intervals.csv")
     changes = pd.read_csv(datadir / "change_from_2011_intervals.csv")
     coverage = pd.read_csv(datadir / "metric_coverage_audit.csv")

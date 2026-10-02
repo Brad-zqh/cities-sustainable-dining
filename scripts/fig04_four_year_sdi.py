@@ -10,6 +10,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import sys
 
@@ -75,6 +76,7 @@ from matplotlib.patches import Patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 SCRIPT_DIR = Path(__file__).resolve().parent
 FIGURES = ROOT / "figures"
 PROJECT_SCRIPTS = ROOT / "scripts"
@@ -86,7 +88,7 @@ import v10_plot_four_year_sdi_nature_pdf as base  # noqa: E402
 from v5_cities_visual_system import COLORS, COMPONENT_COLORS, MM, clean_axis, panel_label  # noqa: E402
 
 
-OUT = ROOT / "figures"
+OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 STEM = "Fig3_FourYear_Strict_SDI_v25_RIGHT_CBAR_MATCHED_LINES"
 YEARS = base.YEARS
 FIELD = base.FIELD
@@ -244,7 +246,7 @@ def main() -> int:
     base.YEAR_RAMPS.update(MAP_RAMPS)
     frames = base.load_maps()
     breaks = base.pooled_quintiles(frames)
-    data_dir = ROOT / "source_data" / "figS_temporal_uncertainty_v4"
+    data_dir = DATA_ROOT / "source_data" / "figS_temporal_uncertainty_v4"
     annual = pd.read_csv(data_dir / "annual_block_bootstrap_intervals.csv")
     changes = pd.read_csv(data_dir / "change_from_2011_intervals.csv")
     coverage = pd.read_csv(data_dir / "metric_coverage_audit.csv")

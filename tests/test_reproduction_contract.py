@@ -21,9 +21,9 @@ from reproduce import FIGURE_MAP, MANUSCRIPT_FIGURES
 class ContractTests(unittest.TestCase):
     def test_all_main_data_figures_registered(self):
         self.assertEqual(set(JOBS), set(range(3, 17)))
-        self.assertEqual(set(FIGURE_MAP), set(range(12, 20)))
-        self.assertEqual(FIGURE_MAP, MANUSCRIPT_FIGURES)
-        self.assertEqual(len(MANUSCRIPT_FIGURES[18]['commands']), 2)
+        self.assertEqual(set(FIGURE_MAP), set(range(3, 15)))  # historical export name
+        self.assertEqual(set(MANUSCRIPT_FIGURES), set(range(12, 20)))
+        self.assertEqual(len(MANUSCRIPT_FIGURES[18]['commands']), 1)
         self.assertEqual(
             MANUSCRIPT_FIGURES[16]['stems'],
             ('Fig16_Joint_Quality_Walking_Price_Opportunity',),

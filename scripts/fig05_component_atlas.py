@@ -13,6 +13,7 @@ component uses pooled four-year breaks so maps remain comparable through time.
 from __future__ import annotations
 
 from pathlib import Path
+import os
 
 import matplotlib as mpl
 
@@ -84,7 +85,8 @@ from matplotlib.patches import Patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "source_data" / "fig_v4_four_year"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+DATA = DATA_ROOT / "source_data" / "fig_v4_four_year"
 OUT = ROOT / "figures"
 STEM = "Fig13_Six_Component_FourYear_Atlas"
 YEARS = (2011, 2016, 2021, 2024)

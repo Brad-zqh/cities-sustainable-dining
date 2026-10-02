@@ -1,0 +1,14 @@
+{
+  "edition": "V180",
+  "scope": "Main empirical result figures 12–19; separately authorized prepared inputs",
+  "figures": {
+    "12": {"entry_point": "scripts/v147_reader_figure_refinements.py", "arguments": ["--only", "12"], "output_stem": "Fig12_Restaurant_Quality_SDI_Evolution_Coverage"},
+    "13": {"entry_point": "scripts/v138_reproduce_visual_polish.py", "arguments": ["--only", "13"], "output_stem": "Fig13_Six_Component_FourYear_Atlas"},
+    "14": {"entry_point": "scripts/v148_panel_precision.py", "arguments": ["--only", "14"], "output_stem": "Fig14_Restaurant_Quality_Inequality_FIXED_NUTRITION"},
+    "15": {"entry_point": "scripts/v148_panel_precision.py", "arguments": ["--only", "15"], "output_stem": "Fig15_Price_Composition_Socioeconomic_Associations"},
+    "16": {"entry_point": "scripts/v147_reader_figure_refinements.py", "arguments": ["--only", "16"], "output_stem": "Fig16_Joint_Quality_Walking_Price_Opportunity"},
+    "17": {"entry_point": "scripts/v138_reproduce_visual_polish.py", "arguments": ["--only", "17"], "output_stem": "Fig17_SameYear_Socioeconomic_Zero_Joint_Opportunity"},
+    "18": {"entry_point": "scripts/v148_panel_precision.py", "arguments": ["--only", "18b"], "output_stem": "Fig18b_Weighting_And_Cross_Scale_Diagnostics"},
+    "19": {"entry_point": "scripts/v148_panel_precision.py", "arguments": ["--only", "19"], "output_stem": "Fig19_Planning_Strategies"}
+  }
+}

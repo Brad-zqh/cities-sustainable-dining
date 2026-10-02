@@ -24,6 +24,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+TEMPORAL_DATA_DIR = DATA_ROOT / "source_data/figS_temporal_uncertainty_v4"
 sys.path.insert(0, str(ROOT / "scripts"))
 from v5_cities_visual_system import configure, FONT_FAMILY, clean_axis
 from presentation_finish import finish
@@ -165,7 +166,7 @@ def sdi_composite():
     base.YEAR_RAMPS.update(sdi.MAP_RAMPS)
     frames = base.load_maps()
     breaks = base.pooled_quintiles(frames)
-    datadir = DATA_ROOT / "source_data/figS_temporal_uncertainty_v4"
+    datadir = TEMPORAL_DATA_DIR
     annual = pd.read_csv(datadir / "annual_block_bootstrap_intervals.csv")
     changes = pd.read_csv(datadir / "change_from_2011_intervals.csv")
     coverage = pd.read_csv(datadir / "metric_coverage_audit.csv")

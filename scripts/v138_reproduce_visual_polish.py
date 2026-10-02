@@ -195,6 +195,7 @@ def main() -> None:
                 return frames
 
             evidence.sdi.base.load_maps = fixed_maps
+            evidence.TEMPORAL_DATA_DIR = TEMPORAL
             evidence.ROOT = TemporalRoot(original_root)
             evidence.sdi_composite()
         else:

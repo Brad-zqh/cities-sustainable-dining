@@ -5,6 +5,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 import geopandas as gpd
 import numpy as np
@@ -17,6 +19,21 @@ from verify_current import compare_csv, fresh_output, load_module, TASKS
 
 
 class CurrentReplayTests(unittest.TestCase):
+    def test_current_fig12_uses_fixed_temporal_results_with_external_inputs(self) -> None:
+        module = load_module('v140_reader_figure_touchups')
+        observed = []
+        evidence = SimpleNamespace(
+            ROOT=ROOT, DATA_ROOT=Path('/separate_authorized_inputs'),
+            export=lambda *args: None,
+            sdi=SimpleNamespace(base=SimpleNamespace(YEAR_RAMPS={}), MAP_RAMPS={}),
+        )
+        evidence.sdi_composite = lambda: observed.append(evidence.TEMPORAL_DATA_DIR)
+        with patch.object(module.bridge, 'load_original', return_value=(evidence, ROOT / 'renderer.py')):
+            with patch.object(module, 'sha256', return_value='test-only'):
+                module.render_12_16('12')
+        self.assertEqual(observed, [module.bridge.TEMPORAL])
+        self.assertNotEqual(observed[0], evidence.DATA_ROOT / 'source_data/figS_temporal_uncertainty_v4')
+
     def test_comparison_aligns_keys_and_preserves_nan_bool(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             a, b = Path(directory) / 'a.csv', Path(directory) / 'b.csv'

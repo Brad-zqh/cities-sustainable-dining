@@ -4,6 +4,7 @@ Presentation-only consolidation of prior main Figs 13 and 14. No new tests,
 estimates, interpolation, sample exclusions or source-data writes.
 """
 from pathlib import Path
+import os
 import argparse
 import json
 import numpy as np
@@ -20,8 +21,9 @@ import fig13_component_social_decomposition as comp
 from v5_cities_visual_system import YEAR_COLORS, clean_axis
 
 ROOT = Path(__file__).resolve().parents[1]
-STRUCT = ROOT/'source_data/figS_sdi_structural_inequality_v4'
-DETAIL = ROOT/'source_data/fig13_component_social_decomposition_v1'
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+STRUCT = DATA_ROOT/'source_data/figS_sdi_structural_inequality_v4'
+DETAIL = DATA_ROOT/'source_data/fig13_component_social_decomposition_v1'
 STEM = 'Fig14_Restaurant_Quality_Inequality'
 YEARS = [2011, 2016, 2021, 2024]
 MARKERS = ['o', 's', 'D', '^']

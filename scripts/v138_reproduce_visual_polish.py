@@ -20,15 +20,16 @@ import geopandas as gpd
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parents[1]
+CODE_ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(CODE_ROOT)))
 HISTORICAL = Path(
     os.environ.get(
         "CITIES_V134_VISUAL_SCRIPTS",
-        str(ROOT / "scripts"),
+        str(CODE_ROOT / "scripts"),
     )
 )
-OUT = ROOT / "outputs/restricted/v138_visual_polish"
-POLISHED = ROOT / "scripts/v138_visual_polish"
+OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(CODE_ROOT / "figures/v180")))
+POLISHED = CODE_ROOT / "scripts/v138_visual_polish"
 JOINT = ROOT / "outputs/restricted/v134_fixed_nutrition_joint_access"
 DOWNSTREAM = ROOT / "outputs/restricted/v134_fixed_nutrition_joint_downstream"
 AREA = ROOT / "outputs/restricted/v134_fixed_nutrition_full_chain"
@@ -36,7 +37,7 @@ TEMPORAL = ROOT / "outputs/restricted/v135_fixed_nutrition_temporal_uncertainty"
 PRICE_MARKET = ROOT / "outputs/restricted/v135_fixed_nutrition_price_market"
 CONTRASTS = ROOT / "outputs/restricted/v135_fixed_nutrition_subgroup_contrasts"
 AGGREGATION = ROOT / "outputs/restricted/v135_fixed_nutrition_aggregation_variants"
-OLD_ATLAS_GEOMETRY = HISTORICAL.parent / "source_data/fig_v4_four_year"
+OLD_ATLAS_GEOMETRY = ROOT / "source_data/fig_v4_four_year"
 
 
 class AreaSource:

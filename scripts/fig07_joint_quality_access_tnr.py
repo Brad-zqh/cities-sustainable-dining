@@ -29,7 +29,7 @@ FIGURES = ROOT / "figures"
 if str(FIGURES) not in sys.path:
     sys.path.insert(0, str(FIGURES))
 
-from v5_cities_visual_system import (  # noqa: E402
+from v5_cities_visual_system_tnr import (  # noqa: E402
     COLORS,
     clean_axis,
     configure,
@@ -45,7 +45,7 @@ YEARS = (2016, 2021, 2024)
 DATA = DATA_ROOT / "source_data" / "fig13_joint_quality_affordable_access_v1"
 NETWORK_DATA = DATA_ROOT / "source_data" / "fig04_network_price_v4"
 OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
-STEM = "Fig7_Joint_Quality_Affordable_Access_v2_RIGHT_CBAR_NATURE"
+STEM = "Fig7_Joint_Quality_Affordable_Access_v2_TNR"
 
 YEAR_COLORS = {2016: "#C94A4A", 2021: "#397FAF", 2024: "#3C9261"}
 YEAR_CMAPS = {

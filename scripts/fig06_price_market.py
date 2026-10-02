@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import os
 import sys
 
 # Allow this script to run directly from a clean repository clone without
@@ -30,7 +31,8 @@ from v4_plot_four_year_results import (
 
 YEARS = [2011, 2016, 2021, 2024]
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_DIR = ROOT / "source_data" / "figS_price_market_v4"
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
+PUBLIC_DIR = DATA_ROOT / "source_data" / "figS_price_market_v4"
 DATA_DIR = (
     PUBLIC_DIR
     if (PUBLIC_DIR / "analysis_contract.json").exists()

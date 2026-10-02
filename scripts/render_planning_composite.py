@@ -5,6 +5,7 @@ bar panels show the original K=5/10/20 outcomes in their actual units. Map
 priority shares retain zero and unavailable values as different states.
 """
 from pathlib import Path
+import os
 import argparse
 import hashlib
 import json
@@ -23,6 +24,7 @@ import fig12_planning as source
 from v5_cities_visual_system import configure, north_arrow, segmented_scale_bar, FONT_FAMILY
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 STEM = 'Fig19_Planning_Strategies'
 K = (5, 10, 20)
 SHADES = (.40, .70, 1.0)
@@ -42,8 +44,8 @@ def sha(path):
 
 
 def hashes():
-    return {p.relative_to(ROOT).as_posix(): sha(p)
-            for p in sorted((ROOT / 'source_data').rglob('*')) if p.is_file()}
+    return {p.relative_to(DATA_ROOT).as_posix(): sha(p)
+            for p in sorted((DATA_ROOT / 'source_data').rglob('*')) if p.is_file()}
 
 
 def blend(colour, strength):

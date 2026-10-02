@@ -20,7 +20,7 @@ from matplotlib.lines import Line2D
 import v140_reader_figure_touchups as parent
 
 
-OUT = parent.ROOT / "outputs/restricted/v147_reader_figure_refinements"
+OUT = parent.OUT
 parent.OUT = OUT
 _original_typography = parent.typography
 _original_export = parent.export

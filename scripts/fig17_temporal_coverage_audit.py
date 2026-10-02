@@ -14,12 +14,13 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 FIGURES = ROOT / "scripts"
 if str(FIGURES) not in sys.path:
     sys.path.insert(0, str(FIGURES))
 from v5_cities_visual_system import COLORS, FONT_FAMILY, YEAR_COLORS, configure as base_configure, panel_label, save_bundle
 
-SOURCE = ROOT / "source_data" / "figS_temporal_uncertainty_v4"
+SOURCE = DATA_ROOT / "source_data" / "figS_temporal_uncertainty_v4"
 OUT = Path(os.environ.get("CITIES_FIGURE_DIR", str(ROOT / "figures")))
 OUT.mkdir(parents=True, exist_ok=True)
 STEM_NAME = "Fig17_Temporal_Coverage_Audit_NATURE"

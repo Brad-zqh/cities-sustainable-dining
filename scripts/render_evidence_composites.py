@@ -1,10 +1,11 @@
-"""V45 evidence composites replacing V44 Figs 5/15 and 8/9, respectively.
+"""Source-native composites for current manuscript Figs. 12 and 16.
 
 Redraws from immutable source data, not resized screenshots. Existing estimators,
 map breaks and distribution helpers are reused. Document integration is separate;
 this entry point writes only plots, statistics and an audit.
 """
 from pathlib import Path
+import os
 import argparse
 import hashlib
 import json
@@ -22,6 +23,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 sys.path.insert(0, str(ROOT / "scripts"))
 from v5_cities_visual_system import configure, FONT_FAMILY, clean_axis
 from presentation_finish import finish
@@ -50,8 +52,8 @@ AUDIT = {"status": "V45_SOURCE_DATA_REDRAW", "font_family": FONT_FAMILY,
 
 
 def source_hashes():
-    return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in sorted((ROOT / "source_data").rglob("*")) if p.is_file()}
+    return {p.relative_to(DATA_ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted((DATA_ROOT / "source_data").rglob("*")) if p.is_file()}
 
 
 def style():
@@ -163,7 +165,7 @@ def sdi_composite():
     base.YEAR_RAMPS.update(sdi.MAP_RAMPS)
     frames = base.load_maps()
     breaks = base.pooled_quintiles(frames)
-    datadir = ROOT / "source_data/figS_temporal_uncertainty_v4"
+    datadir = DATA_ROOT / "source_data/figS_temporal_uncertainty_v4"
     annual = pd.read_csv(datadir / "annual_block_bootstrap_intervals.csv")
     changes = pd.read_csv(datadir / "change_from_2011_intervals.csv")
     coverage = pd.read_csv(datadir / "metric_coverage_audit.csv")
@@ -252,8 +254,8 @@ def sdi_composite():
     heading(ax, "h", "Component coverage (%)")
     cax = fig.add_axes([.91,.065,.012,.165])
     cb = fig.colorbar(im, cax=cax, ticks=[50,60,70,80,85]); cb.ax.tick_params(labelsize=6.2)
-    export(fig, "Fig05_SDI_Evolution_Coverage_Composite", {
-        "replaces_candidate": [5,15], "panels": 8,
+    export(fig, "Fig12_Restaurant_Quality_SDI_Evolution_Coverage", {
+        "manuscript_figure": 12, "legacy_source_figures": [5,15], "panels": 8,
         "panel_map": {"a-d":"V40 Fig5a-d", "e":"Fig5e + Fig15a (all three specifications)",
                       "f":"Fig5g + Fig15b (identical coverage series)",
                       "g":"Fig5f + Fig15c (six components and three index specifications)",
@@ -403,9 +405,9 @@ def joint_composite():
     assert a[keys].equals(b[keys])
     for col in ["whislo","q1","med","q3","whishi"]:
         np.testing.assert_allclose(a[col],b[col],atol=1e-12,rtol=1e-12)
-    stats.to_csv(OUT/"Fig08_weighted_box_statistics.csv",index=False)
-    export(fig,"Fig08_Joint_Opportunity_Evidence_Composite",{
-        "replaces_candidate":[8,9],"panels":11,
+    stats.to_csv(OUT/"Fig16_weighted_box_statistics.csv",index=False)
+    export(fig,"Fig16_Joint_Quality_Walking_Price_Opportunity",{
+        "manuscript_figure":16,"legacy_source_figures":[8,9],"panels":11,
         "panel_map":{"a-c":"Fig8a-c maps", "d-f":"Fig9a-c weighted distributions",
                      "g-i":"Fig9d-f; same metrics as Fig8e shown only once",
                      "j":"Fig8d sequential screen", "k":"Fig8f thresholds"},

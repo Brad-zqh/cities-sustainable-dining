@@ -10,3 +10,8 @@ figures/current/
 *.pem
 *.key
 .DS_Store
+outputs/
+authorized_inputs/
+figures/v180/
+*.gpkg
+*.parquet

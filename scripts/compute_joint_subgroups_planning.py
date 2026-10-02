@@ -21,6 +21,7 @@ import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+import os
 
 import geopandas as gpd
 import numpy as np
@@ -31,6 +32,7 @@ from scipy.sparse import csr_matrix, hstack, vstack
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("CITIES_DATA_ROOT", str(ROOT)))
 YEARS = (2016, 2021, 2024)
 SEED = 20260826
 BUDGETS = (5, 10, 20)
@@ -235,12 +237,12 @@ def solve_maximum_coverage(
     return selected
 
 
-def planning_analysis(project: Path, joint: pd.DataFrame, output: Path) -> dict:
+def planning_analysis(project: Path, joint: pd.DataFrame, output: Path, candidate_file: Path | None = None) -> dict:
     sys.path.insert(0, str(ROOT / "src"))
     from sus_dining_access.inequality import concentration_index, weighted_gini
     from sus_dining_access.policy_coverage import bottom_population_membership
 
-    site_path = ROOT / "source_data/fig04_equity_siting_v7/candidate_planning_nodes.csv"
+    site_path = candidate_file or DATA_ROOT / "source_data/fig04_equity_siting_v7/candidate_planning_nodes.csv"
     pair_path = (
         project / "outputs/restricted/v7_public_housing_planning_node_coverage_202608/"
         "public_housing_site_lsbg_reachable_pairs_15min.csv"
@@ -340,14 +342,16 @@ def main() -> int:
     parser.add_argument("--census-root", type=Path, required=True,
                         help="Directory containing the authorized 2016 and 2021 census inputs")
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--joint-file", type=Path, help="Current joint-opportunity table")
+    parser.add_argument("--candidate-file", type=Path, help="Frozen candidate-node CSV")
     parser.add_argument("--bootstrap", type=int, default=999)
     args = parser.parse_args()
     output = args.output_dir.resolve()
     output.mkdir(parents=True, exist_ok=True)
-    joint_path = ROOT / "source_data/fig13_joint_quality_affordable_access_v1/lsbg_joint_quality_affordable_access.csv"
+    joint_path = args.joint_file or DATA_ROOT / "source_data/fig13_joint_quality_affordable_access_v1/lsbg_joint_quality_affordable_access.csv"
     joint = pd.read_csv(joint_path, dtype={"lsbg_id": str, "dcca": str})
     subgroup = subgroup_analysis(joint, output, args.bootstrap, args.census_root.resolve())
-    planning = planning_analysis(args.project_root.resolve(), joint, output)
+    planning = planning_analysis(args.project_root.resolve(), joint, output, args.candidate_file)
     manifest = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "estimand": "15-min walking AND platform price <=HK$100 AND destination-LSBG SDI >=0.45",

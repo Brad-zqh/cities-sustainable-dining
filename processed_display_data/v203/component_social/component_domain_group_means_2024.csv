@@ -1,0 +1,139 @@
+restaurant_evidence_year,population_reference_year,domain,group,component,source_weight_field,weighted_component_mean,observed_group_weight,observed_lsbg_n
+2024,2021,Ethnicity,Chinese,Nutrition,ethn_chi,0.509987147302703,4836004.0,1169
+2024,2021,Ethnicity,Chinese,Carbon,ethn_chi,0.5773829345053823,4836004.0,1169
+2024,2021,Ethnicity,Chinese,Cuisine diversity,ethn_chi,0.3127132039609753,4916745.0,1184
+2024,2021,Ethnicity,Chinese,Environmental sustainability,ethn_chi,0.4148103720576926,5413421.0,1297
+2024,2021,Ethnicity,Chinese,Hygiene,ethn_chi,0.4776650788689031,5413421.0,1297
+2024,2021,Ethnicity,Chinese,Practice,ethn_chi,0.2149934253357305,5414971.0,1298
+2024,2021,Ethnicity,Filipino,Nutrition,ethn_phi,0.4769266982460321,129549.0,1066
+2024,2021,Ethnicity,Filipino,Carbon,ethn_phi,0.5741946589974661,129549.0,1066
+2024,2021,Ethnicity,Filipino,Cuisine diversity,ethn_phi,0.3288740360852124,136302.0,1086
+2024,2021,Ethnicity,Filipino,Environmental sustainability,ethn_phi,0.52518994261799,144970.0,1187
+2024,2021,Ethnicity,Filipino,Hygiene,ethn_phi,0.5901550580287953,144970.0,1187
+2024,2021,Ethnicity,Filipino,Practice,ethn_phi,0.1823888126796995,145027.0,1188
+2024,2021,Ethnicity,Indonesian,Nutrition,ethn_ind,0.4993003486903429,96778.0,1110
+2024,2021,Ethnicity,Indonesian,Carbon,ethn_ind,0.5810558339125864,96778.0,1110
+2024,2021,Ethnicity,Indonesian,Cuisine diversity,ethn_ind,0.3145884087392206,98484.0,1124
+2024,2021,Ethnicity,Indonesian,Environmental sustainability,ethn_ind,0.4670238901127973,106789.0,1232
+2024,2021,Ethnicity,Indonesian,Hygiene,ethn_ind,0.533692298482327,106789.0,1232
+2024,2021,Ethnicity,Indonesian,Practice,ethn_ind,0.1932083942315802,106815.0,1233
+2024,2021,Ethnicity,White,Nutrition,ethn_wh,0.4532594257796364,41245.0,583
+2024,2021,Ethnicity,White,Carbon,ethn_wh,0.5740580803602802,41245.0,583
+2024,2021,Ethnicity,White,Cuisine diversity,ethn_wh,0.3536953041829636,44538.0,600
+2024,2021,Ethnicity,White,Environmental sustainability,ethn_wh,0.6048979012139303,46241.0,640
+2024,2021,Ethnicity,White,Hygiene,ethn_wh,0.6542767733615423,46241.0,640
+2024,2021,Ethnicity,White,Practice,ethn_wh,0.1350869752024628,46292.0,641
+2024,2021,Ethnicity,Other,Nutrition,ethn_oth,0.4801072856268886,163750.0,1043
+2024,2021,Ethnicity,Other,Carbon,ethn_oth,0.5712857555028202,163750.0,1043
+2024,2021,Ethnicity,Other,Cuisine diversity,ethn_oth,0.3580913755279934,166624.0,1060
+2024,2021,Ethnicity,Other,Environmental sustainability,ethn_oth,0.4920081543960576,177787.0,1157
+2024,2021,Ethnicity,Other,Hygiene,ethn_oth,0.5603227515056405,177787.0,1157
+2024,2021,Ethnicity,Other,Practice,ethn_oth,0.172779740843098,177819.0,1158
+2024,2021,Occupation,Managers,Nutrition,wp_a,0.4847177671744133,248821.0,1158
+2024,2021,Occupation,Managers,Carbon,wp_a,0.5744377608914195,248821.0,1158
+2024,2021,Occupation,Managers,Cuisine diversity,wp_a,0.3373666233750308,255945.0,1176
+2024,2021,Occupation,Managers,Environmental sustainability,wp_a,0.492365551838437,271348.0,1286
+2024,2021,Occupation,Managers,Hygiene,wp_a,0.5579162239729849,271348.0,1286
+2024,2021,Occupation,Managers,Practice,wp_a,0.1925661532528156,271398.0,1287
+2024,2021,Occupation,Professionals,Nutrition,wp_b,0.4898112792253308,294638.0,1159
+2024,2021,Occupation,Professionals,Carbon,wp_b,0.5767535278649022,294638.0,1159
+2024,2021,Occupation,Professionals,Cuisine diversity,wp_b,0.3386264977900313,302117.0,1173
+2024,2021,Occupation,Professionals,Environmental sustainability,wp_b,0.4801813256971892,321439.0,1286
+2024,2021,Occupation,Professionals,Hygiene,wp_b,0.5496468662506837,321439.0,1286
+2024,2021,Occupation,Professionals,Practice,wp_b,0.1967006847188602,321519.0,1287
+2024,2021,Occupation,Clerical,Nutrition,wp_d,0.508977660336941,356798.0,1167
+2024,2021,Occupation,Clerical,Carbon,wp_d,0.5778808251504284,356798.0,1167
+2024,2021,Occupation,Clerical,Cuisine diversity,wp_d,0.3128199584553079,364785.0,1182
+2024,2021,Occupation,Clerical,Environmental sustainability,wp_d,0.4134008371872004,401156.0,1295
+2024,2021,Occupation,Clerical,Hygiene,wp_d,0.4761972948165563,401156.0,1295
+2024,2021,Occupation,Clerical,Practice,wp_d,0.2069371106988629,401232.0,1296
+2024,2021,Occupation,Service/sales,Nutrition,wp_e,0.5154140289147089,481619.0,1165
+2024,2021,Occupation,Service/sales,Carbon,wp_e,0.5776636304099706,481619.0,1165
+2024,2021,Occupation,Service/sales,Cuisine diversity,wp_e,0.3103214079285501,489692.0,1180
+2024,2021,Occupation,Service/sales,Environmental sustainability,wp_e,0.3908198752531764,545052.0,1293
+2024,2021,Occupation,Service/sales,Hygiene,wp_e,0.4549555883078804,545052.0,1293
+2024,2021,Occupation,Service/sales,Practice,wp_e,0.2206730173267082,545152.0,1294
+2024,2021,Occupation,Elementary,Nutrition,wp_h,0.505497855628547,462860.0,1168
+2024,2021,Occupation,Elementary,Carbon,wp_h,0.5765979378581315,462860.0,1168
+2024,2021,Occupation,Elementary,Cuisine diversity,wp_h,0.3119967658221371,472515.0,1183
+2024,2021,Occupation,Elementary,Environmental sustainability,wp_h,0.432786351364998,519011.0,1296
+2024,2021,Occupation,Elementary,Hygiene,wp_h,0.493843971777978,519011.0,1296
+2024,2021,Occupation,Elementary,Practice,wp_h,0.2119985782484878,519149.0,1297
+2024,2021,Education,Primary or below,Nutrition,edu_pri_be,0.5179388582874693,878950.0,1169
+2024,2021,Education,Primary or below,Carbon,edu_pri_be,0.5788264960976949,878950.0,1169
+2024,2021,Education,Primary or below,Cuisine diversity,edu_pri_be,0.3033882578803252,886107.0,1184
+2024,2021,Education,Primary or below,Environmental sustainability,edu_pri_be,0.3818973268265436,988741.0,1296
+2024,2021,Education,Primary or below,Hygiene,edu_pri_be,0.440595382896907,988741.0,1296
+2024,2021,Education,Primary or below,Practice,edu_pri_be,0.2313424879147849,988972.0,1297
+2024,2021,Education,Secondary,Nutrition,edu_sec,0.5116974666358132,2202707.0,1169
+2024,2021,Education,Secondary,Carbon,edu_sec,0.5771810107490446,2202707.0,1169
+2024,2021,Education,Secondary,Cuisine diversity,edu_sec,0.3091893759325824,2240302.0,1184
+2024,2021,Education,Secondary,Environmental sustainability,edu_sec,0.41061926282257,2482382.0,1297
+2024,2021,Education,Secondary,Hygiene,edu_sec,0.47284309228108,2482382.0,1297
+2024,2021,Education,Secondary,Practice,edu_sec,0.2135272427301908,2483092.0,1298
+2024,2021,Education,Post-secondary,Nutrition,edu_psec,0.4965460602984325,1612675.0,1169
+2024,2021,Education,Post-secondary,Carbon,edu_psec,0.5763915749760717,1612675.0,1169
+2024,2021,Education,Post-secondary,Cuisine diversity,edu_psec,0.3279492380831681,1650799.0,1184
+2024,2021,Education,Post-secondary,Environmental sustainability,edu_psec,0.4557012069067374,1780816.0,1297
+2024,2021,Education,Post-secondary,Hygiene,edu_psec,0.5214870438017121,1780816.0,1297
+2024,2021,Education,Post-secondary,Practice,edu_psec,0.2018724012357429,1781375.0,1298
+2024,2021,Household income,<HK$10k,Nutrition,dhi_sb_1,0.5130969726575627,381738.0,1167
+2024,2021,Household income,<HK$10k,Carbon,dhi_sb_1,0.5755247645242205,381738.0,1167
+2024,2021,Household income,<HK$10k,Cuisine diversity,dhi_sb_1,0.3122888517451516,381997.0,1182
+2024,2021,Household income,<HK$10k,Environmental sustainability,dhi_sb_1,0.402713607531006,429868.0,1295
+2024,2021,Household income,<HK$10k,Hygiene,dhi_sb_1,0.4659867988240239,429868.0,1295
+2024,2021,Household income,<HK$10k,Practice,dhi_sb_1,0.2275438829390993,429982.0,1296
+2024,2021,Household income,HK$10–20k,Nutrition,dhi_sb_2,0.5115887555253037,362316.0,1163
+2024,2021,Household income,HK$10–20k,Carbon,dhi_sb_2,0.5724318443011366,362316.0,1163
+2024,2021,Household income,HK$10–20k,Cuisine diversity,dhi_sb_2,0.3121086249863231,363796.0,1178
+2024,2021,Household income,HK$10–20k,Environmental sustainability,dhi_sb_2,0.3986733765480912,406363.0,1290
+2024,2021,Household income,HK$10–20k,Hygiene,dhi_sb_2,0.4613783885698553,406363.0,1290
+2024,2021,Household income,HK$10–20k,Practice,dhi_sb_2,0.2184097857651831,406602.0,1291
+2024,2021,Household income,HK$20–40k,Nutrition,dhi_sb_3,0.5125269475686662,510859.0,1167
+2024,2021,Household income,HK$20–40k,Carbon,dhi_sb_3,0.5770389474050736,510859.0,1167
+2024,2021,Household income,HK$20–40k,Cuisine diversity,dhi_sb_3,0.3134298073817793,517893.0,1181
+2024,2021,Household income,HK$20–40k,Environmental sustainability,dhi_sb_3,0.4057900220628956,571391.0,1294
+2024,2021,Household income,HK$20–40k,Hygiene,dhi_sb_3,0.4675540702442718,571391.0,1294
+2024,2021,Household income,HK$20–40k,Practice,dhi_sb_3,0.2105484113751237,571546.0,1295
+2024,2021,Household income,≥HK$40k,Nutrition,dhi_sb_4,0.4941534804412765,677363.0,1168
+2024,2021,Household income,≥HK$40k,Carbon,dhi_sb_4,0.577260492374003,677363.0,1168
+2024,2021,Household income,≥HK$40k,Cuisine diversity,dhi_sb_4,0.3302449092524219,695676.0,1183
+2024,2021,Household income,≥HK$40k,Environmental sustainability,dhi_sb_4,0.4609301575428595,746408.0,1296
+2024,2021,Household income,≥HK$40k,Hygiene,dhi_sb_4,0.5274645018719979,746408.0,1296
+2024,2021,Household income,≥HK$40k,Practice,dhi_sb_4,0.1992307854800997,746579.0,1297
+2024,2021,Age,15–24,Nutrition,age_2,0.5108869633451649,411183.0,1169
+2024,2021,Age,15–24,Carbon,age_2,0.5734328204306195,411183.0,1169
+2024,2021,Age,15–24,Cuisine diversity,age_2,0.3097953078769248,418471.0,1184
+2024,2021,Age,15–24,Environmental sustainability,age_2,0.4126482449613887,466688.0,1297
+2024,2021,Age,15–24,Hygiene,age_2,0.4750671292545165,466688.0,1297
+2024,2021,Age,15–24,Practice,age_2,0.2153681928156404,466803.0,1298
+2024,2021,Age,25–44,Nutrition,age_3,0.5043496895969022,1545681.0,1169
+2024,2021,Age,25–44,Carbon,age_3,0.5768542868720828,1545681.0,1169
+2024,2021,Age,25–44,Cuisine diversity,age_3,0.3209601071585492,1579913.0,1184
+2024,2021,Age,25–44,Environmental sustainability,age_3,0.4338225862344175,1716674.0,1297
+2024,2021,Age,25–44,Hygiene,age_3,0.4976947294462936,1716674.0,1297
+2024,2021,Age,25–44,Practice,age_3,0.2057529874501527,1717116.0,1298
+2024,2021,Age,45–64,Nutrition,age_4,0.5072115879482758,1686423.0,1169
+2024,2021,Age,45–64,Carbon,age_4,0.5770670275802013,1686423.0,1169
+2024,2021,Age,45–64,Cuisine diversity,age_4,0.3131902606608759,1719028.0,1184
+2024,2021,Age,45–64,Environmental sustainability,age_4,0.4196621766268687,1897403.0,1297
+2024,2021,Age,45–64,Hygiene,age_4,0.4817704618415062,1897403.0,1297
+2024,2021,Age,45–64,Practice,age_4,0.2148500931688013,1898107.0,1298
+2024,2021,Age,65+,Nutrition,age_5,0.5119897952295465,1051045.0,1169
+2024,2021,Age,65+,Carbon,age_5,0.5794755108685774,1051045.0,1169
+2024,2021,Age,65+,Cuisine diversity,age_5,0.3092841312077416,1059796.0,1184
+2024,2021,Age,65+,Environmental sustainability,age_5,0.4054505997591949,1171174.0,1297
+2024,2021,Age,65+,Hygiene,age_5,0.4678074495967929,1171174.0,1297
+2024,2021,Age,65+,Practice,age_5,0.2193630673477649,1171413.0,1298
+2024,2021,Sex,Female,Nutrition,derived_female_count,0.5065185963707916,2863173.0,1169
+2024,2021,Sex,Female,Carbon,derived_female_count,0.5767968311606212,2863173.0,1169
+2024,2021,Sex,Female,Cuisine diversity,derived_female_count,0.3158155256433045,2915716.0,1184
+2024,2021,Sex,Female,Environmental sustainability,derived_female_count,0.425363904060868,3198494.0,1297
+2024,2021,Sex,Female,Hygiene,derived_female_count,0.4888865092916519,3198494.0,1297
+2024,2021,Sex,Female,Practice,derived_female_count,0.2105347623771972,3199403.0,1298
+2024,2021,Sex,Male,Nutrition,derived_male_count,0.5088979088236174,2404153.0,1169
+2024,2021,Sex,Male,Carbon,derived_male_count,0.5775846631624604,2404153.0,1169
+2024,2021,Sex,Male,Cuisine diversity,derived_male_count,0.3138281697657761,2446977.0,1184
+2024,2021,Sex,Male,Environmental sustainability,derived_male_count,0.4186520090719027,2690714.0,1297
+2024,2021,Sex,Male,Hygiene,derived_male_count,0.4811070077270536,2690714.0,1297
+2024,2021,Sex,Male,Practice,derived_male_count,0.2135088067264386,2691521.0,1298

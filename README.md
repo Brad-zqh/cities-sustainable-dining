@@ -1,5 +1,13 @@
 # Sustainable dining: analysis and figure reproduction
 
+## Latest author-requested figure refinements
+
+The 5 October 2026 code-only update adds the current Fig. 15 six-domain
+coefficient display and the requested spacing, subgroup-legend and square-panel
+refinements for Figs. 15, 17 and 3. See
+[the figure refinement guide](docs/V204_FIGURE_COSMETICS.md).
+Existing V180 entry points and the empirical-data sharing boundary are unchanged.
+
 ## Current V180 manuscript
 
 The current branch includes the eight-task numerical replay, current Figs.

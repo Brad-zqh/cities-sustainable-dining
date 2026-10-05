@@ -97,24 +97,13 @@ additional scale-map page; the current Word Fig. 18 uses the diagnostics page.
 `figure_reproduction.json` records actual outputs and renderer commands.
 The explicit `--edition legacy` and `--edition v95` preserve historical numbering.
 
-## 5. Compare with the actual Word files
-
-```sh
-python verify_documents.py --manuscript "01_Manuscript_Bilingual_V180_A4.docx" --supplement "02_Supplementary_Information_Bilingual_V180_Indexed.docx" --data-root "prepared_bundle" --results-root "recalculated_v180" --figures-root "figures_v180"
-```
-
-This V180-specific mapping checks 51 main-text numeric anchors and 698
-supplementary-table values, with display rounding respected. Expected
-`document_comparison.json` numeric status is `PASS`. Every source is labelled:
-518 SI values use recalculated results and 180 use frozen source tables.
-Figure comparison reads the embedded Word images and compares RGB pixels,
-excluding PNG metadata. Pixel equality can vary with renderer versions;
-dimensions and channel differences are reported alongside the numerical checks.
+Word manuscript preparation and document-comparison tools remain private.
+The public workflow ends with the numerical receipts and figure exports above.
 
 ## Scope of this check
 
 The replay begins with frozen multimodal area components and audited walking
-pairs. It checks downstream calculation and agreement with the manuscript.
+pairs. It checks downstream calculation against the frozen result references.
 Platform acquisition, fresh LLM inference, original network construction,
 the conceptual/method illustrations, recipe-reference benchmark inference and
 the source-only SI comparisons retain their separate evidence records.

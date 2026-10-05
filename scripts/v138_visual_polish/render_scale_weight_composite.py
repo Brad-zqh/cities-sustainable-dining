@@ -56,7 +56,7 @@ def points(ax, x, y, color, marker='o', label=None):
                       edgecolor=color, lw=1.0, zorder=3)
 
 
-def build(paired_pages=False):
+def build(paired_pages=False, diagnostics_only=False):
     shared.style()
     if paired_pages:
         mpl.rcParams.update({
@@ -66,81 +66,88 @@ def build(paired_pages=False):
             'ytick.labelsize': 8.2,
             'legend.fontsize': 8.0,
         })
-    lsbg, dcca = maps.load_frames('LSBG'), maps.load_frames('DCCA')
-    mask = gpd.read_file(maps.LAND_MASK_FILE).to_crs(2326).geometry.union_all()
-    for year in YEARS:
-        dcca[year] = dcca[year].copy()
-        dcca[year]['geometry'] = dcca[year].geometry.intersection(mask)
-        dcca[year] = dcca[year].loc[~dcca[year].geometry.is_empty].copy()
-    frames = list(lsbg.values()) + list(dcca.values())
-    values = pd.concat([f.sdi_equal_arithmetic for f in frames]).dropna()
-    values = values.loc[values.gt(0)]
-    breaks = np.unique(values.quantile(np.linspace(0, 1, 6)).to_numpy(float))
-    breaks[0] = np.nextafter(breaks[0], -np.inf)
-    breaks[-1] = np.nextafter(breaks[-1], np.inf)
-    all_bounds = np.array([f.total_bounds for f in frames])
-    bounds = np.r_[all_bounds[:,:2].min(axis=0), all_bounds[:,2:].max(axis=0)]
-    dx, dy = bounds[2:] - bounds[:2]
-    xlim = [bounds[0]-.025*dx, bounds[2]+.025*dx]
-    ylim = [bounds[1]-.11*dy, bounds[3]+.06*dy]
-    fig = plt.figure(figsize=(183/25.4, (234 if not paired_pages else 238)/25.4), facecolor='white')
-    audit = {'panel_map': {}, 'map_breaks':breaks.tolist(), 'crs':'EPSG:2326',
-             'map_common_xlim':xlim, 'map_common_ylim':ylim,
-             'quantitative_values':{}, 'halos':'cosmetic, not uncertainty'}
-    for row, (scale, source) in enumerate([('LSBG',lsbg), ('DCCA',dcca)]):
-        for col, year in enumerate(YEARS):
-            x, y = .04 + col*.241, [.792,.602][row]
-            if paired_pages:
-                # Bring the paired LSBG/DCCA columns closer while retaining
-                # independent right-side colour bars.
-                x, y = .075 + row*.425, .772-col*.235
-            ax = fig.add_axes([x,y,.385,.196] if paired_pages else [x,y,.185,.160])
-            cmap = (ListedColormap(PAIRED_RAMPS[year], name=f'paired_{year}')
-                    if paired_pages else maps.sequential_map(YEAR_COLORS[year], f'scale_{year}'))
-            norm = BoundaryNorm(breaks, cmap.N)
-            maps.plot_choropleth(ax, source[year], 'sdi_equal_arithmetic', cmap,
-                                norm, positive_only=True, show_cartography=False)
-            if paired_pages:
-                # Solid thematic fill: no hidden layer or alpha blending changes
-                # the five class colours. Geometry and class membership are fixed.
-                for collection in ax.collections:
-                    collection.set_alpha(1.0)
-            ax.set(xlim=xlim, ylim=ylim)
-            north_arrow(ax, x=.11, y=.91, height=.065)
-            segmented_scale_bar(ax, length_km=10, x=.075, y=.015)
-            letter=chr(97+(col*2+row if paired_pages else row*4+col))
-            ax.text(-.03, 1.025, letter, transform=ax.transAxes,
-                    fontsize=9, fontweight='bold', va='bottom')
-            ax.set_title(f'{year} · {scale}' if paired_pages else str(year),
-                         pad=7, fontsize=8.3 if paired_pages else 7.8, fontweight='normal')
-            cax = fig.add_axes([x+(.397 if paired_pages else .19),y+.02,.008,.13])
-            cb=mpl.colorbar.ColorbarBase(cax,cmap=cmap,norm=norm,boundaries=breaks,
-                                        ticks=breaks,orientation='vertical')
-            cb.ax.set_yticklabels([maps.format_break(b) for b in breaks])
-            cb.ax.set_title('SDI', fontsize=6.2, pad=4)
-            shared.map_key_height(fig,ax,cax,source[year])
-            if paired_pages:
-                cb.ax.tick_params(labelsize=6.6, pad=2.4)
-                cax.set_position([cax.get_position().x0,cax.get_position().y0,
-                                  .010,cax.get_position().height])
-            checks=shared.map_check(source[year],'sdi_equal_arithmetic',breaks)
-            audit['panel_map'][letter]={'scale':scale,'year':year,'rows':len(source[year]),
-                                        'three_feature_check':checks}
+    if diagnostics_only:
         if not paired_pages:
-            fig.text(.015, y+.086, scale, rotation=90, ha='center', va='center', fontsize=7.3)
-    fig.legend(handles=[Patch(facecolor=maps.COLORS['missing'],edgecolor='#BAC4C9',label='Incomplete components'),
-                        Patch(facecolor=maps.COLORS['no_restaurant'],edgecolor='#C8D0D4',label='No listed outlet')],
-               loc='center',bbox_to_anchor=(.51,.023 if paired_pages else .563),ncol=2,
-               fontsize=7.4 if paired_pages else 6.2,
-               handlelength=1.1,frameon=False)
-
-    if paired_pages:
-        audit['map_palette'] = PAIRED_RAMPS
-        audit['layout'] = 'Four rows: same-year LSBG left, DCCA right; no basemap'
-        shared.export(fig, 'Fig9a-h_Scale_Maps_Two_Per_Row', audit)
+            raise ValueError('Display diagnostics require the paired-page layout')
         fig = plt.figure(figsize=(183/25.4,145/25.4),facecolor='white')
         audit = {'panel_map':{},'quantitative_values':{},
-                 'halos':'cosmetic, not uncertainty','continuation_of':'Fig. 9'}
+                 'halos':'cosmetic, not uncertainty','display_scope':'V203 Fig. 18 diagnostics only'}
+    else:
+        lsbg, dcca = maps.load_frames('LSBG'), maps.load_frames('DCCA')
+        mask = gpd.read_file(maps.LAND_MASK_FILE).to_crs(2326).geometry.union_all()
+        for year in YEARS:
+            dcca[year] = dcca[year].copy()
+            dcca[year]['geometry'] = dcca[year].geometry.intersection(mask)
+            dcca[year] = dcca[year].loc[~dcca[year].geometry.is_empty].copy()
+        frames = list(lsbg.values()) + list(dcca.values())
+        values = pd.concat([f.sdi_equal_arithmetic for f in frames]).dropna()
+        values = values.loc[values.gt(0)]
+        breaks = np.unique(values.quantile(np.linspace(0, 1, 6)).to_numpy(float))
+        breaks[0] = np.nextafter(breaks[0], -np.inf)
+        breaks[-1] = np.nextafter(breaks[-1], np.inf)
+        all_bounds = np.array([f.total_bounds for f in frames])
+        bounds = np.r_[all_bounds[:,:2].min(axis=0), all_bounds[:,2:].max(axis=0)]
+        dx, dy = bounds[2:] - bounds[:2]
+        xlim = [bounds[0]-.025*dx, bounds[2]+.025*dx]
+        ylim = [bounds[1]-.11*dy, bounds[3]+.06*dy]
+        fig = plt.figure(figsize=(183/25.4, (234 if not paired_pages else 238)/25.4), facecolor='white')
+        audit = {'panel_map': {}, 'map_breaks':breaks.tolist(), 'crs':'EPSG:2326',
+                 'map_common_xlim':xlim, 'map_common_ylim':ylim,
+                 'quantitative_values':{}, 'halos':'cosmetic, not uncertainty'}
+        for row, (scale, source) in enumerate([('LSBG',lsbg), ('DCCA',dcca)]):
+            for col, year in enumerate(YEARS):
+                x, y = .04 + col*.241, [.792,.602][row]
+                if paired_pages:
+                    # Bring the paired LSBG/DCCA columns closer while retaining
+                    # independent right-side colour bars.
+                    x, y = .075 + row*.425, .772-col*.235
+                ax = fig.add_axes([x,y,.385,.196] if paired_pages else [x,y,.185,.160])
+                cmap = (ListedColormap(PAIRED_RAMPS[year], name=f'paired_{year}')
+                        if paired_pages else maps.sequential_map(YEAR_COLORS[year], f'scale_{year}'))
+                norm = BoundaryNorm(breaks, cmap.N)
+                maps.plot_choropleth(ax, source[year], 'sdi_equal_arithmetic', cmap,
+                                    norm, positive_only=True, show_cartography=False)
+                if paired_pages:
+                    # Solid thematic fill: no hidden layer or alpha blending changes
+                    # the five class colours. Geometry and class membership are fixed.
+                    for collection in ax.collections:
+                        collection.set_alpha(1.0)
+                ax.set(xlim=xlim, ylim=ylim)
+                north_arrow(ax, x=.11, y=.91, height=.065)
+                segmented_scale_bar(ax, length_km=10, x=.075, y=.015)
+                letter=chr(97+(col*2+row if paired_pages else row*4+col))
+                ax.text(-.03, 1.025, letter, transform=ax.transAxes,
+                        fontsize=9, fontweight='bold', va='bottom')
+                ax.set_title(f'{year} · {scale}' if paired_pages else str(year),
+                             pad=7, fontsize=8.3 if paired_pages else 7.8, fontweight='normal')
+                cax = fig.add_axes([x+(.397 if paired_pages else .19),y+.02,.008,.13])
+                cb=mpl.colorbar.ColorbarBase(cax,cmap=cmap,norm=norm,boundaries=breaks,
+                                            ticks=breaks,orientation='vertical')
+                cb.ax.set_yticklabels([maps.format_break(b) for b in breaks])
+                cb.ax.set_title('SDI', fontsize=6.2, pad=4)
+                shared.map_key_height(fig,ax,cax,source[year])
+                if paired_pages:
+                    cb.ax.tick_params(labelsize=6.6, pad=2.4)
+                    cax.set_position([cax.get_position().x0,cax.get_position().y0,
+                                      .010,cax.get_position().height])
+                checks=shared.map_check(source[year],'sdi_equal_arithmetic',breaks)
+                audit['panel_map'][letter]={'scale':scale,'year':year,'rows':len(source[year]),
+                                            'three_feature_check':checks}
+            if not paired_pages:
+                fig.text(.015, y+.086, scale, rotation=90, ha='center', va='center', fontsize=7.3)
+        fig.legend(handles=[Patch(facecolor=maps.COLORS['missing'],edgecolor='#BAC4C9',label='Incomplete components'),
+                            Patch(facecolor=maps.COLORS['no_restaurant'],edgecolor='#C8D0D4',label='No listed outlet')],
+                   loc='center',bbox_to_anchor=(.51,.023 if paired_pages else .563),ncol=2,
+                   fontsize=7.4 if paired_pages else 6.2,
+                   handlelength=1.1,frameon=False)
+
+        if paired_pages:
+            audit['map_palette'] = PAIRED_RAMPS
+            audit['layout'] = 'Four rows: same-year LSBG left, DCCA right; no basemap'
+            shared.export(fig, 'Fig9a-h_Scale_Maps_Two_Per_Row', audit)
+            fig = plt.figure(figsize=(183/25.4,145/25.4),facecolor='white')
+            audit = {'panel_map':{},'quantitative_values':{},
+                     'halos':'cosmetic, not uncertainty','continuation_of':'Fig. 9'}
 
     weights=pd.read_csv(SOURCE/'weight_schemes.csv')
     agreement=pd.read_csv(SOURCE/'variant_agreement.csv')

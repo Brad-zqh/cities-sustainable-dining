@@ -1,0 +1,15 @@
+{
+  "version": "Author-supplied V203 numerical snapshot",
+  "date": "2026-10-05",
+  "checks_passed": 195,
+  "failures": 0,
+  "scope": [
+    "SI S10 coefficients and intervals",
+    "SI S12 planning values",
+    "SI S14 group weights, means, intervals, q",
+    "SI S15 six contrasts"
+  ],
+  "original_models_rerun": false,
+  "documents_edited": false,
+  "limitations": "Selected displayed numbers only; not a complete manuscript or independent scientific audit"
+}

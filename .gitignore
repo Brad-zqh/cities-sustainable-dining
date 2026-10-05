@@ -19,3 +19,6 @@ figures/v180/
 private_manuscript_tools/
 verify_documents.py
 scripts/audit_v180_supplement_tables.py
+
+# Reviewed, versioned processed display geometry only
+!processed_display_data/v203/**/*.gpkg

@@ -1,3 +1,10 @@
+# V204 figure-layout code
+
+The original guide below describes the earlier code-only update. The processed
+V203 inputs for result Figs. 15/17 are now bundled; use
+[the guarded public display entry point](PROCESSED_DISPLAY_DATA.md). The old
+historical `03` number is not V203 main Fig. 3.
+
 # Author-requested figure refinements, 5 October 2026
 
 This update publishes code only. It does not publish the rendered empirical

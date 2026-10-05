@@ -1,37 +1,37 @@
-# Sustainable dining: analysis and figure reproduction
+# Sustainable dining: processed display data and code
 
-## Latest author-requested figure refinements
-
-The 5 October 2026 code-only update adds the current Fig. 15 six-domain
-coefficient display and the requested spacing, subgroup-legend and square-panel
-refinements for Figs. 15, 17 and 3. See
-[the figure refinement guide](docs/V204_FIGURE_COSMETICS.md).
-Existing V180 entry points and the empirical-data sharing boundary are unchanged.
-
-## Current V180 manuscript
-
-The current branch includes the eight-task numerical replay and current Figs.
-12–19. Word manuscript preparation, editing and document checks remain private. Follow
-[the coauthor reproduction guide](docs/V180_REPRODUCTION.md).
+The 5 October 2026 release includes field-reviewed, processed display inputs
+for the supplied V203 manuscript **Figs. 12–19** and SI **Fig. S9**, plus selected
+SI numerical result tables. The files support reconstruction of the displayed
+results from this repository. Raw reviews/images, restaurant master records,
+household microdata and walking origin–destination pairs remain private.
 
 ```sh
-python verify_current.py --help
-python reproduce.py --edition v180 --help
+python -m pip install -r requirements.txt
+python scripts/reproduce_display.py --validate-only
+python scripts/reproduce_display.py --output-dir outputs/display-v203
+python scripts/build_display_tables.py --output-dir outputs/tables-v203
 ```
 
-Supply authorized inputs outside the clone and use fresh output directories.
-The scripts record source/input hashes, preserve source files and report
-differences explicitly. The data-sharing boundary remains separate from this
-code release. The sections below document historical entry points.
+For one figure use `--figure 15` (or `S9`) and a fresh output directory.
+The Fig. 15 CSV is the **V203 six-domain primary model**. Fig. 15/17 use the
+V204 author-requested layout refinements without changing estimates. Fig. S9
+distinguishes the six-domain primary and five-domain sensitivity specifications.
+PNG/PDF/SVG exports and consumed-input hash receipts are written locally.
 
-Code for the Cities revision on sustainable dining, walking opportunity and
-social inequality in Hong Kong.
+See [the display-data guide](docs/PROCESSED_DISPLAY_DATA.md),
+[the bundle and field dictionary](processed_display_data/v203/README.md),
+and [data availability](DATA_AVAILABILITY.md). This release supports display
+reproduction of the listed results, not rerunning acquisition, original SDI
+construction, walking routing, regressions, bootstrapping or optimisation.
+The V203 SI is a versioned snapshot; this deposit does not label old SI tables
+as a final revised supplement. Manuscript Word files and their workflows are private.
 
-**Release status: code-only; the empirical data bundle is not publicly released.**
-This repository must not be cited as evidence that all data or all experiments
-are openly reproducible. Redistribution clearance for platform-derived
-aggregates and spatial inputs is still being checked. No restricted raw records,
-manuscripts, reviewer correspondence or credentials are included.
+## Historical analysis and code releases
+
+The sections below describe earlier releases and their external-input entry
+points. Use `scripts/reproduce_display.py` for the bundled V203 display data;
+`reproduce.py` and `verify_current.py` retain the historical analysis contracts.
 
 The V135 revision adds synthetic-testable utilities for annual dish mentions,
 nutrition scoring and deletion audits, and external benchmark bookkeeping.

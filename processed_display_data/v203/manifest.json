@@ -1,0 +1,1037 @@
+{
+  "version": "V203 display results with V204 layout refinements",
+  "release_date": "2026-10-05",
+  "purpose": "Display reproduction only; no raw-model rerun",
+  "files": [
+    {
+      "path": "area/2011_lsbg_price_market.gpkg",
+      "rows": 1620,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "sdi_equal_arithmetic",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 10,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2011_lsbg_price_market.gpkg",
+      "source_sha256": "a7dec20d5ce27fb91515dcd6ebf04961ae49945b9d11bf497397bc994242d4b8",
+      "sha256": "e61d0953c5b95d36e650a77bab12feda8f6277b24988ebccad47b228982ca386",
+      "bytes": 1310720
+    },
+    {
+      "path": "area/2011_lsbg_components.csv",
+      "rows": 1620,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "nutrition_score",
+        "carbon_score",
+        "diversity_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2011_lsbg_components.csv",
+      "source_sha256": "3ada4e436cc3fb4c5fbf475645db2a91f41812dc4c90eb11606497cd7c6e8e6f",
+      "sha256": "e1b80f95da4c9589e8ba98456f66ab44caae692507c789fe564bf840426acbe5",
+      "bytes": 115530
+    },
+    {
+      "path": "atlas/2011_lsbg_components.gpkg",
+      "rows": 1620,
+      "columns": [
+        "lsbg",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig_v4_four_year/2011_lsbg_components.gpkg",
+      "source_sha256": "233b7bea2b9ee27fe9890ee593d8c86f269b8dd3c59b3805188470ea127ab503",
+      "sha256": "f12fbabf59c075275a46a3d8965fdbec699da5df3a592894c815cd1f69dc8756",
+      "bytes": 1028096
+    },
+    {
+      "path": "market/2011_lsbg_price_market.gpkg",
+      "rows": 1620,
+      "columns": [
+        "lsbg",
+        "active_restaurant_n",
+        "low_price_share",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 18,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_price_market/2011_lsbg_price_market.gpkg",
+      "source_sha256": "f490e10e843a0fb6df972d5e365e690155dbdbd52107273c6c6d0bf086e135af",
+      "sha256": "c8ad38b01ea16a958071ce787b1d13443df94c087b186926a22e9ad8dbb3fec8",
+      "bytes": 1028096
+    },
+    {
+      "path": "area/2016_lsbg_price_market.gpkg",
+      "rows": 1622,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "sdi_equal_arithmetic",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 10,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2016_lsbg_price_market.gpkg",
+      "source_sha256": "f2f1d800effd58b6dbbc47ddab8e91d2e9c3afc84a6a419c87e75abf4ffd41f7",
+      "sha256": "09719fab8596a07c8fac8ea58ec85aed6be922c1808576e081706bc061ee460b",
+      "bytes": 1368064
+    },
+    {
+      "path": "area/2016_lsbg_components.csv",
+      "rows": 1622,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "nutrition_score",
+        "carbon_score",
+        "diversity_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2016_lsbg_components.csv",
+      "source_sha256": "480989417ad8ac02dbb2679c5c896b2d2c4e94ee0f9dde66caa0922c2e537355",
+      "sha256": "30ef41b84dc5f1e3ba9be8b6a288106d7abbf990ea33d0753c32f20cc20a7a17",
+      "bytes": 127633
+    },
+    {
+      "path": "atlas/2016_lsbg_components.gpkg",
+      "rows": 1622,
+      "columns": [
+        "lsbg",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig_v4_four_year/2016_lsbg_components.gpkg",
+      "source_sha256": "dfdfae8beedef05fe5c0006d453a22f4dab91aa1027f12ededd6ae405d159f79",
+      "sha256": "71b526085a2636c7436f4c6b807b7a453b47660c6c70413aeae28a3967fce054",
+      "bytes": 1064960
+    },
+    {
+      "path": "market/2016_lsbg_price_market.gpkg",
+      "rows": 1622,
+      "columns": [
+        "lsbg",
+        "active_restaurant_n",
+        "low_price_share",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 18,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_price_market/2016_lsbg_price_market.gpkg",
+      "source_sha256": "28c45e675ef3b0ec234bbc5326bbb93fc6ab3ab393a7cc80a3fe401e6e1ec380",
+      "sha256": "cfc5e695e06ff2620bcd0b1b17df5f9c35ae588f6e25626fb3e52b23bfacdf2e",
+      "bytes": 1081344
+    },
+    {
+      "path": "area/2021_lsbg_price_market.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "sdi_equal_arithmetic",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 10,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2021_lsbg_price_market.gpkg",
+      "source_sha256": "1e01bb94f54a3720f450fc694fff50c1078a8b8e0a35d3127d58c20174d9b5e8",
+      "sha256": "e6b484e3b3cbf9a6298821752adc6011717e590c1619f37f714f36aeb267b722",
+      "bytes": 1380352
+    },
+    {
+      "path": "area/2021_lsbg_components.csv",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "nutrition_score",
+        "carbon_score",
+        "diversity_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2021_lsbg_components.csv",
+      "source_sha256": "f783478c4723c22bad7dba2fed642e9f274874aff82bce09cd3a16da447cec4b",
+      "sha256": "3349621699b9da6e8e4fecf95e92b28cbabc105225b0669b4b5b06900862c902",
+      "bytes": 145315
+    },
+    {
+      "path": "atlas/2021_lsbg_components.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig_v4_four_year/2021_lsbg_components.gpkg",
+      "source_sha256": "fde3e3953cc96c69a3d5d85864adb034fa22be7e8879a580783883a8d98d21d3",
+      "sha256": "8fb3209f9cfbf7e5293d04b5b44fe96363726eb89e8912e20daf7e6ac35144ec",
+      "bytes": 1060864
+    },
+    {
+      "path": "market/2021_lsbg_price_market.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "active_restaurant_n",
+        "low_price_share",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 18,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_price_market/2021_lsbg_price_market.gpkg",
+      "source_sha256": "2f8d4b2d5615f0a62d1685eb73934be16cb8f0afc6663f408e28469a6e5950e6",
+      "sha256": "b0eb1cad5c7491182d3a78293cba932ca4e8fd1b26b6cb01a4ce421ec3f905be",
+      "bytes": 1073152
+    },
+    {
+      "path": "area/2024_lsbg_price_market.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "sdi_equal_arithmetic",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 10,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2024_lsbg_price_market.gpkg",
+      "source_sha256": "9ebda0e63dbf0e539a5180c5082c48638128a44d364f3c74f0656b11ff2dfc40",
+      "sha256": "73ab33bd5f2058a2736fa68a2c1be55f1508cded17940a831fa086ffab02ef32",
+      "bytes": 1380352
+    },
+    {
+      "path": "area/2024_lsbg_components.csv",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "restaurant_n",
+        "nutrition_score",
+        "carbon_score",
+        "diversity_score",
+        "sustainability_score",
+        "hygiene_score",
+        "practice_score"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_full_chain/2024_lsbg_components.csv",
+      "source_sha256": "19d32fa1af3402e561078729654871c33e20c68e1ea98c07423b77fc659fee01",
+      "sha256": "6a3928fd165f21fe042e37be42539c4774374a76a6bd4ba0072375a09f62c073",
+      "bytes": 141571
+    },
+    {
+      "path": "atlas/2024_lsbg_components.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig_v4_four_year/2024_lsbg_components.gpkg",
+      "source_sha256": "bf2c80fcec94c3b795ab36337ce088c80f764b01449ba003adb395a81947e7f8",
+      "sha256": "434611853c9ca0f2331e864f6020b99b4ba90af68c0972cb40494eb5607c24f7",
+      "bytes": 1060864
+    },
+    {
+      "path": "market/2024_lsbg_price_market.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg",
+        "active_restaurant_n",
+        "low_price_share",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 18,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_price_market/2024_lsbg_price_market.gpkg",
+      "source_sha256": "7b3d56e90854743a332562bebc96c55444200bd9ed98a7ac8da9b90ec3570798",
+      "sha256": "2046a68b82ebc3e4e79f27d0dee59caf1f883ba6c90b1d28ec312a388ed41feb",
+      "bytes": 1073152
+    },
+    {
+      "path": "temporal/annual_block_bootstrap_intervals.csv",
+      "rows": 36,
+      "columns": [
+        "year",
+        "metric",
+        "metric_label",
+        "population_weighted_mean",
+        "ci_low",
+        "ci_high",
+        "valid_lsbg_n",
+        "valid_population",
+        "dcca_block_n",
+        "bootstrap_replicates"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_temporal_uncertainty/annual_block_bootstrap_intervals.csv",
+      "source_sha256": "e4f2a2880990354e24bea281dd6fec7a98aaf591b286f957a5ba92132e40cf2e",
+      "sha256": "12d4803ebd805d72e2d01a0082da741bac805863464290866b605671cdfe1c63",
+      "bytes": 4535
+    },
+    {
+      "path": "temporal/change_from_2011_intervals.csv",
+      "rows": 27,
+      "columns": [
+        "reference_year",
+        "year",
+        "metric",
+        "metric_label",
+        "difference",
+        "ci_low",
+        "ci_high",
+        "bootstrap_replicates"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_temporal_uncertainty/change_from_2011_intervals.csv",
+      "source_sha256": "c9dbdca5a007027ee8e5294ded034d66805a19e04cef888d94d815b65326669c",
+      "sha256": "8e62122742aadee87619015d6df71fbf5960e39160e05ac69b7b5bb7a4b0b555",
+      "bytes": 3043
+    },
+    {
+      "path": "temporal/metric_coverage_audit.csv",
+      "rows": 36,
+      "columns": [
+        "year",
+        "metric",
+        "metric_label",
+        "valid_lsbg_n",
+        "all_lsbg_n",
+        "lsbg_coverage_share",
+        "valid_population",
+        "all_population",
+        "population_coverage_share",
+        "strict_valid_population",
+        "population_share_of_strict_denominator"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_temporal_uncertainty/metric_coverage_audit.csv",
+      "source_sha256": "e430dccd1a4c1362c0dde8544a1eda5c99aeccd1912f33a3d15188fdec5f48c2",
+      "sha256": "3d887124114de08717fe9061c873f3972ebc8df8ffe4577c30e0ba3371b42ded",
+      "bytes": 5084
+    },
+    {
+      "path": "structure/sdi_inequality_block_intervals.csv",
+      "rows": 16,
+      "columns": [
+        "year",
+        "metric",
+        "estimate",
+        "lower_95",
+        "upper_95",
+        "valid_replicates"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_structural_inequality_999/sdi_inequality_block_intervals.csv",
+      "source_sha256": "0b6d9585dc795594046e6e6bcdfb19e0789ef6cb6301f34aeb3ca9451a11a668",
+      "sha256": "20eb51314b19380aa27a650d044cbbdbd870281364ed6d61346a22b53a318fe3",
+      "bytes": 1414
+    },
+    {
+      "path": "structure/sdi_income_concentration_curves.csv",
+      "rows": 404,
+      "columns": [
+        "population_fraction",
+        "cumulative_sdi_fraction",
+        "year"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_structural_inequality_999/sdi_income_concentration_curves.csv",
+      "source_sha256": "cda42fc8ef2875c65aa9583f66406e26f3adc1f7f26ca0787c9d5926f903becc",
+      "sha256": "5e8c5b3ff30267a5aa1e7a68d866ee94ac5560921216332e8d60504eb0b333f5",
+      "bytes": 12244
+    },
+    {
+      "path": "structure/sdi_income_quintile_means.csv",
+      "rows": 20,
+      "columns": [
+        "year",
+        "income_quintile",
+        "mean_sdi"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_structural_inequality_999/sdi_income_quintile_means.csv",
+      "source_sha256": "7bdebc59aead8b38a62e0863ac1fad1683ec20bd0395ab76d3b84cb5a0110d79",
+      "sha256": "023db4a903bac4e8c48cdb35b411b1dadc53a1c80ea47b7d6b52c25c8d1655b7",
+      "bytes": 571
+    },
+    {
+      "path": "structure/component_income_concentration.csv",
+      "rows": 24,
+      "columns": [
+        "year",
+        "component",
+        "concentration_index",
+        "lsbg_n",
+        "population_analyzed"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_structural_inequality_999/component_income_concentration.csv",
+      "source_sha256": "f02e619e73301444784a02150f19890ecc54663db0bb290146159e8e36700d7e",
+      "sha256": "1b5603c42c351325e3df24d4309a7d6b1dba05aaf7e3c0422e282d3f2a9bd1d8",
+      "bytes": 1336
+    },
+    {
+      "path": "component_social/weighted_component_income_distributions.csv",
+      "rows": 90,
+      "columns": [
+        "year",
+        "population_reference_year",
+        "component",
+        "component_column",
+        "income_quintile",
+        "observed_lsbg_n",
+        "population_observed",
+        "q05",
+        "q25",
+        "median",
+        "q75",
+        "q95",
+        "weighted_mean"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_component_social/weighted_component_income_distributions.csv",
+      "source_sha256": "0d3d2619c6b8fe5a48348334cae9efc0534755557f00e23cade25d77a97ad1d8",
+      "sha256": "79809ca69c2dfd72cdd87bd94bd608e2ac9cea251cf8f22547ce757048fe9940",
+      "bytes": 14518
+    },
+    {
+      "path": "component_social/component_domain_reference_contrasts_2024.csv",
+      "rows": 36,
+      "columns": [
+        "year",
+        "population_reference_year",
+        "domain",
+        "focal_group",
+        "reference_group",
+        "contrast_label",
+        "component",
+        "focal_mean",
+        "reference_mean",
+        "difference"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_component_social/component_domain_reference_contrasts_2024.csv",
+      "source_sha256": "11448f3504f6a05d0a4a3551b2a49e3af42ead137e6389ad1f234f0da76e60e2",
+      "sha256": "258b572821d7bd2deb906cf4fd99c6b5f267d31bd94fd352c45cc7065a3e5a54",
+      "bytes": 4827
+    },
+    {
+      "path": "component_social/component_domain_group_means_2024.csv",
+      "rows": 138,
+      "columns": [
+        "restaurant_evidence_year",
+        "population_reference_year",
+        "domain",
+        "group",
+        "component",
+        "source_weight_field",
+        "weighted_component_mean",
+        "observed_group_weight",
+        "observed_lsbg_n"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_component_social/component_domain_group_means_2024.csv",
+      "source_sha256": "945ad338c936b87bcc6adbbf535ff8b4c9986d7f7c63490226d5e271a37dec55",
+      "sha256": "a7eb6a4e6c26cc4a801fb1ceb7cbdbfbf7910271762e55c085507bdb124eecb0",
+      "bytes": 11977
+    },
+    {
+      "path": "subgroups/joint_subgroup_point_estimates.csv",
+      "rows": 69,
+      "columns": [
+        "year",
+        "census_composition_year",
+        "temporal_status",
+        "domain",
+        "group",
+        "source_count_field",
+        "mean_joint_options",
+        "zero_joint_access_share",
+        "group_denominator"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_downstream/joint_subgroup_point_estimates.csv",
+      "source_sha256": "f9aa928608a3c4681326438b332dad3c9c46c0b09120cd580e88d2ae485c4180",
+      "sha256": "fc5e1481728342b030ccdb4aa89b76eacda029fc9ce3e7daa07218565a0375ae",
+      "bytes": 7397
+    },
+    {
+      "path": "subgroups/joint_subgroup_dcca_block_intervals.csv",
+      "rows": 138,
+      "columns": [
+        "year",
+        "domain",
+        "group",
+        "metric",
+        "lower_95",
+        "upper_95",
+        "valid_replicate_n"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_downstream/joint_subgroup_dcca_block_intervals.csv",
+      "source_sha256": "6075f1cafa00cb158f2806c48396d1e6927b328e0471552b96384fa5f4ddcae7",
+      "sha256": "246617a106348b01cc81ec3670c1eddcbe89fd3e6d548e8c03453d715182ae12",
+      "bytes": 12244
+    },
+    {
+      "path": "contrasts/within_year_contrasts.csv",
+      "rows": 51,
+      "columns": [
+        "year",
+        "domain",
+        "reference_group",
+        "comparison_group",
+        "difference_percentage_points",
+        "lower_95_percentage_points",
+        "upper_95_percentage_points",
+        "p_two_sided",
+        "paired_replicates",
+        "q_bh_within_domain_year"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_subgroup_contrasts/within_year_contrasts.csv",
+      "source_sha256": "fe7108386e4900ac5439bbfea27a320f983153144e29148f3999a2228b1b7b42",
+      "sha256": "d31e680497fbf6a16849e3d087dc64c298df8dabe1d40d0ea75c4d1be02c35c3",
+      "bytes": 6919
+    },
+    {
+      "path": "sensitivity/weight_schemes.csv",
+      "rows": 18,
+      "columns": [
+        "scheme",
+        "component",
+        "weight",
+        "component_label"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_aggregation_variants/weight_schemes.csv",
+      "source_sha256": "96f4ed7bf544a418128afd66178de3dbdf11c2dc02096c9b6d2298cd3ec51655",
+      "sha256": "dbffebe830b5e82fa63ef74627343663031b6eb8313e90c9839d3bd389ce8611",
+      "bytes": 1152
+    },
+    {
+      "path": "sensitivity/variant_agreement.csv",
+      "rows": 56,
+      "columns": [
+        "year",
+        "scale",
+        "variant",
+        "spearman_vs_equal",
+        "pearson_vs_equal",
+        "low_quintile_jaccard",
+        "high_quintile_jaccard"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_aggregation_variants/variant_agreement.csv",
+      "source_sha256": "2037357697e074eec2c0f306c8b80819b05f5df55ef00b5ea72393ec4e9ac02c",
+      "sha256": "95763ecf85683cde19cd6eecf38cd7caed53720beab8279f2760886a6290865a",
+      "bytes": 4793
+    },
+    {
+      "path": "sensitivity/maup_agreement.csv",
+      "rows": 20,
+      "columns": [
+        "year",
+        "variant",
+        "dcca_n",
+        "pearson",
+        "spearman",
+        "mae",
+        "direct_population_weighted_mean",
+        "aggregated_population_weighted_mean"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_aggregation_variants/maup_agreement.csv",
+      "source_sha256": "4c5519e7853212578672a809d6256fcaa4bd0e27dd4f6db2b2f645acf5a0c4c3",
+      "sha256": "e2950b0edacb408e0bd157d48b338af01407619f41dde12a265db59240d0b91e",
+      "bytes": 2580
+    },
+    {
+      "path": "joint/joint_access_point_estimates.csv",
+      "rows": 63,
+      "columns": [
+        "year",
+        "threshold_min",
+        "price_ceiling_hkd",
+        "destination_area_sdi_threshold",
+        "outcome",
+        "population_weighted_mean",
+        "zero_access_population_share",
+        "weighted_gini",
+        "concentration_index",
+        "lsbg_n",
+        "population_analyzed"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_access/joint_access_point_estimates.csv",
+      "source_sha256": "796bcadce8e5e49629d0a982f30727a4d576b472dd52fc7997e0f040d26693c1",
+      "sha256": "b57ccb86fd817a2b4de27f0d867257f2f363c0d4cd9cff9afb8cb809f8817fd4",
+      "bytes": 8520
+    },
+    {
+      "path": "joint/joint_access_dcca_block_intervals.csv",
+      "rows": 24,
+      "columns": [
+        "year",
+        "outcome",
+        "metric",
+        "ci_low",
+        "ci_high",
+        "valid_replicates",
+        "point_estimate"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_access/joint_access_dcca_block_intervals.csv",
+      "source_sha256": "4e9a626f5699bd76184d8fc12991eef2692a205ec87af32ee7d884f674ca4d7d",
+      "sha256": "2c8fe19b27fd9c79b8e23b1ca1f20890601cd7a1d3bf918f136986960dbdeadb",
+      "bytes": 2561
+    },
+    {
+      "path": "nutrition_sensitivity/point_estimates.csv",
+      "rows": 12,
+      "columns": [
+        "year",
+        "outcome",
+        "population_weighted_mean",
+        "zero_access_population_share",
+        "weighted_gini",
+        "concentration_index",
+        "lsbg_n",
+        "population_analyzed"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_no_nutrition_opportunity_sensitivity_v3_parameterized_replay/point_estimates.csv",
+      "source_sha256": "9fa391e5a84460c952f096ff83419b34be8f265d80abc9d21030ab4d84b49e01",
+      "sha256": "079b7e3f7ef5633bf33c72641266692974b2713a80c1facb08e71b296e1c74d3",
+      "bytes": 1466
+    },
+    {
+      "path": "nutrition_sensitivity/paired_dcca_block_differences.csv",
+      "rows": 24,
+      "columns": [
+        "year",
+        "alternative",
+        "metric",
+        "difference_lower_95",
+        "difference_upper_95",
+        "bootstrap_repetitions",
+        "dcca_blocks"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_no_nutrition_opportunity_sensitivity_v3_parameterized_replay/paired_dcca_block_differences.csv",
+      "source_sha256": "6a5188f504e2bd72badb18961d6e5fbe258747b31dfc1f3a0c7feefa6956c58a",
+      "sha256": "5a7c7a34df62f33854dcd3825f60c6ed4d17365cf0d297d5a4ebbce1cbbced07",
+      "bytes": 2349
+    },
+    {
+      "path": "nutrition_sensitivity/threshold_equating.csv",
+      "rows": 3,
+      "columns": [
+        "year",
+        "six_cutoff",
+        "five_fixed_cutoff",
+        "five_matched_cutoff",
+        "complete_destination_areas",
+        "six_qualifying_areas",
+        "five_fixed_qualifying_areas",
+        "five_matched_qualifying_areas"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_no_nutrition_opportunity_sensitivity_v3_parameterized_replay/threshold_equating.csv",
+      "source_sha256": "acf90721493470cbd37ecb37c91fc56dcab2a65f47c5fb92183759e9826fb2f5",
+      "sha256": "acf90721493470cbd37ecb37c91fc56dcab2a65f47c5fb92183759e9826fb2f5",
+      "bytes": 316
+    },
+    {
+      "path": "variant_inequality/sdi_variant_income_inequality_intervals.csv",
+      "rows": 56,
+      "columns": [
+        "year",
+        "variant",
+        "variant_field",
+        "metric",
+        "estimate",
+        "lower_95",
+        "upper_95",
+        "lsbg_n",
+        "population_analyzed",
+        "dcca_blocks",
+        "valid_replicates"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_variant_inequality_999/sdi_variant_income_inequality_intervals.csv",
+      "source_sha256": "522d9304b3403128e17c8c343df2f6509b41fd90e7546b5dd8cc8b3fb7980072",
+      "sha256": "25f66f03e4f39035c46a9e4b3e022d20308188298e140c5394ec8bedcd0355a1",
+      "bytes": 8473
+    },
+    {
+      "path": "joint/2016_joint_access_geometry.gpkg",
+      "rows": 1622,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "network_available",
+        "low_price_access",
+        "joint_access",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 18,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_access/2016_joint_access_geometry.gpkg",
+      "source_sha256": "f27511dc31a4b8c3fcc3ff7669add629beba8882dab40a734db520948b6e48b1",
+      "sha256": "ce08eb4679ba663f4f40abde3e2c4a3ac0431e6f21bcf3f1d4d07dba9f8ff429",
+      "bytes": 1085440
+    },
+    {
+      "path": "joint/2021_joint_access_geometry.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "network_available",
+        "low_price_access",
+        "joint_access",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 18,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_access/2021_joint_access_geometry.gpkg",
+      "source_sha256": "cc8c4d852dd04c8900f83a7b1f0ac20e37dbc12303b0885f7fd26150c0127acb",
+      "sha256": "8def9802c7ef4dd6dfa7d6f303688d1a165119060ec34dea1ffc04c41be5d174",
+      "bytes": 1077248
+    },
+    {
+      "path": "joint/2024_joint_access_geometry.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "network_available",
+        "low_price_access",
+        "joint_access",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": 18,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_access/2024_joint_access_geometry.gpkg",
+      "source_sha256": "9ce57f66b81bc5f1260c4892f10f626ac6f65248d1b83dc3f81880d7778c311d",
+      "sha256": "8095601f997c6199c8db165aa70c8784bc4d3e4d703fa4f10eaa4217d370d865",
+      "bytes": 1077248
+    },
+    {
+      "path": "joint/lsbg_joint_quality_affordable_access.csv",
+      "rows": 5114,
+      "columns": [
+        "year",
+        "lsbg_id",
+        "network_available",
+        "ma_hh",
+        "t_pop",
+        "low_price_access",
+        "joint_access"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_access/lsbg_joint_quality_affordable_access.csv",
+      "source_sha256": "18ba4fa7019d7c185c02fad26e9dc3c687815ba0a57e941127aebc3437e14ee5",
+      "sha256": "b8ac6c40f8fdf24994408e5ef9b592dde7cabaf661b88e4a0e185bf41ca980b7",
+      "bytes": 199454
+    },
+    {
+      "path": "network/network_price_inequality_point_estimates.csv",
+      "rows": 12,
+      "columns": [
+        "year",
+        "threshold_min",
+        "outcome",
+        "lsbg_n",
+        "population_analyzed",
+        "population_weighted_mean",
+        "weighted_gini",
+        "theil_t",
+        "theil_l",
+        "zero_access_population_share",
+        "bottom_access_quintile_mean",
+        "concentration_index",
+        "income_quintile_low_mean",
+        "income_quintile_high_mean",
+        "income_quintile_absolute_gap",
+        "income_quintile_relative_ratio",
+        "income_bottom40_mean",
+        "income_top10_mean",
+        "palma_top10_bottom40_ratio"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig04_network_price_v4/network_price_inequality_point_estimates.csv",
+      "source_sha256": "496bcb3892566cef09c57d3b3f98c5b73cd23e99028496ee9e26457e50166f8e",
+      "sha256": "5d71dd0881a62508156e0271b6f64bc06f9ed0811d58abcf5dc5e85975a1f4c4",
+      "bytes": 3946
+    },
+    {
+      "path": "network/network_price_inequality_intervals.csv",
+      "rows": 72,
+      "columns": [
+        "year",
+        "threshold_min",
+        "outcome",
+        "metric",
+        "ci_low",
+        "ci_high",
+        "valid_replicate_n"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig04_network_price_v4/network_price_inequality_intervals.csv",
+      "source_sha256": "775fd33e5db66730b106ef7f9cde16104908fb3f61161a3da38c39a0f6c447d6",
+      "sha256": "97a6e6da85d372a6a637ef831981ba6f4439147eab14cdd62bf09b5a97c793fc",
+      "bytes": 7225
+    },
+    {
+      "path": "market/price_market_summary.csv",
+      "rows": 4,
+      "columns": [
+        "year",
+        "population_weighted_low_price_share",
+        "population_weighted_low_price_per1000",
+        "population_weighted_total_supply_per1000"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v135_fixed_nutrition_price_market/price_market_summary.csv",
+      "source_sha256": "0ba6fe9c653b418d8b5ed6750bfbc8ceb974cd1010056b53ae40afa57a3cac49",
+      "sha256": "236e097f02a234bd52b83d31e4d787f5798eeb4696f98ece3b89c5f85e303bff",
+      "bytes": 366
+    },
+    {
+      "path": "market/quality_market_decomposition.csv",
+      "rows": 20,
+      "columns": [
+        "year",
+        "model",
+        "predictor",
+        "standardized_beta",
+        "se_cluster_dcca",
+        "ci_low",
+        "ci_high",
+        "p_value",
+        "lsbg_n",
+        "dcca_cluster_n",
+        "weighted_r2"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "V203 income_results/quality_market_decomposition.csv",
+      "source_sha256": "0abee15d85e5317b9203bb491ee4e7497db9293ea58f01a6d1c92f87d4a87cfd",
+      "sha256": "38114fbd32a62c7d29ce9a7b368698193793ca795a801c8a39fe824d50e53e9c",
+      "bytes": 3451
+    },
+    {
+      "path": "regression_comparison/income_models_six_and_five.csv",
+      "rows": 40,
+      "columns": [
+        "specification",
+        "year",
+        "model",
+        "predictor",
+        "standardized_beta",
+        "se_cluster_dcca",
+        "ci_low",
+        "ci_high",
+        "p_value",
+        "lsbg_n",
+        "dcca_cluster_n",
+        "weighted_r2"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "V203 income_results/income_models_six_and_five.csv",
+      "source_sha256": "2ea20e690a7f3832646b587ca187e398a1a2f9ac1194b3625d9bb686a2c43a9a",
+      "sha256": "b9ad0e297ae1a38447011e398020aab03929f1ad326c88d2292fbf0e74169f47",
+      "bytes": 7683,
+      "row_selection": "Only Six-domain primary and Five-domain sensitivity; unused same-six-sample rows excluded"
+    },
+    {
+      "path": "planning/candidate_planning_nodes.csv",
+      "rows": 237,
+      "columns": [
+        "site_id",
+        "longitude",
+        "latitude"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig04_equity_siting_v7/candidate_planning_nodes.csv",
+      "source_sha256": "d1d3ef12b6e49fb4f2e2a574dc9044475d05da96844ba7f5cdeb5c8cba6b7df3",
+      "sha256": "2424c8149fa262f7ec5fa51218d0672f5f2ac1c88d795db8518aa3831731224f",
+      "bytes": 11181
+    },
+    {
+      "path": "planning/selected_planning_nodes.csv",
+      "rows": 140,
+      "columns": [
+        "scenario",
+        "budget_sites",
+        "site_id"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_downstream/selected_planning_nodes.csv",
+      "source_sha256": "69e64d7c929570ea290404325987a34d6c4da8c6cddfbcbf46013bbecc0b14ed",
+      "sha256": "803c760c954e650d4c651383640a2a2fada3a62315cb77fd7c45def7d8b7a8c4",
+      "bytes": 4211
+    },
+    {
+      "path": "planning/scenario_results.csv",
+      "rows": 13,
+      "columns": [
+        "scenario",
+        "budget_sites",
+        "population_within_selected_catchments",
+        "zero_affordability_priority_reached_share",
+        "joint_priority_reached_share",
+        "weighted_gini",
+        "income_concentration_index",
+        "zero_access_population_share",
+        "population_newly_covered",
+        "mean_joint_options",
+        "joint_priority_population_reached",
+        "joint_priority_population_denominator",
+        "zero_affordability_priority_population_reached",
+        "zero_affordability_priority_population_denominator"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_downstream/scenario_results.csv",
+      "source_sha256": "a10ba0a43417b3149197bf0317da256a3b5248256e87b9605856a52f4466dfe7",
+      "sha256": "b7d85455ad45e9619b6c51c0556bde13fbd8cc3e603e07280102cb5120930047",
+      "bytes": 3091
+    },
+    {
+      "path": "planning/priority_population_definition.csv",
+      "rows": 1744,
+      "columns": [
+        "lsbg_id",
+        "t_pop",
+        "zero_affordability_priority_population"
+      ],
+      "crs": null,
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "v134_fixed_nutrition_joint_downstream/priority_population_definition.csv",
+      "source_sha256": "00452037dc46f64bf9e18ac11cc05ccbc22a8c87a8c6b91b6de00278aaf441cb",
+      "sha256": "c10223d338d62171c7cdc79987833bbaad47f8868020f7c421f7be71152c0d17",
+      "bytes": 32854
+    },
+    {
+      "path": "planning/lsbg_scenario_map.gpkg",
+      "rows": 1746,
+      "columns": [
+        "lsbg_id",
+        "geometry"
+      ],
+      "crs": "EPSG:2326",
+      "geometry_simplification_metres": null,
+      "geometry_make_valid_count": 0,
+      "source": "source_data/fig04_equity_siting_v7/lsbg_scenario_map.gpkg",
+      "source_sha256": "46523a199b3389c00ee0df47ef0ede8471f7ad1d7191d85286a3b9093d9b1272",
+      "sha256": "07dc5ed72ed17b9253c02b6eb4c6dd708b51406e57a6229b82503a83c7bd8ae7",
+      "bytes": 17539072
+    }
+  ],
+  "metadata_sha256": {
+    "field_dictionary.csv": "123f3d9531b94c447635246d83735b69fc1166bc47de76067e4bc24ef9104522"
+  }
+}

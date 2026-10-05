@@ -1,3 +1,16 @@
+# Bundled V203 display reproduction
+
+Run `python scripts/reproduce_display.py --output-dir outputs/display-v203`
+and `python scripts/build_display_tables.py --output-dir outputs/tables-v203`.
+Both require fresh output folders. See [the scope and mapping](docs/PROCESSED_DISPLAY_DATA.md).
+They read hash-locked inputs from `processed_display_data/v203` inside the clone.
+The guarded figure readers reject external empirical files and ignore inherited
+external data/script locations. No raw-model rerun is claimed.
+
+## Historical reproduction contracts
+
+The following earlier contracts use separately authorised analysis inputs.
+
 # Reproduction scope and verification
 
 ## Current V180 entry points

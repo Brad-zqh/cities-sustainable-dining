@@ -1,0 +1,19 @@
+scheme,component,weight,component_label
+Equal six,nutrition_score,0.1666666666666666,Nutrition
+Absolute PC1 loading,nutrition_score,0.1526391476318137,Nutrition
+Entropy,nutrition_score,0.0588909024046725,Nutrition
+Equal six,carbon_score,0.1666666666666666,Carbon
+Absolute PC1 loading,carbon_score,0.0762865451562536,Carbon
+Entropy,carbon_score,0.0427400061122785,Carbon
+Equal six,diversity_score,0.1666666666666666,Cuisine diversity
+Absolute PC1 loading,diversity_score,0.1005530326165896,Cuisine diversity
+Entropy,diversity_score,0.1644497169284003,Cuisine diversity
+Equal six,sustainability_score,0.1666666666666666,Sustainability signal
+Absolute PC1 loading,sustainability_score,0.291080358180726,Sustainability signal
+Entropy,sustainability_score,0.0622970567790953,Sustainability signal
+Equal six,hygiene_score,0.1666666666666666,Hygiene
+Absolute PC1 loading,hygiene_score,0.2966085430212939,Hygiene
+Entropy,hygiene_score,0.0405239439607322,Hygiene
+Equal six,practice_score,0.1666666666666666,Practice tag
+Absolute PC1 loading,practice_score,0.082832373393323,Practice tag
+Entropy,practice_score,0.6310983738148209,Practice tag

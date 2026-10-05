@@ -1,2 +1,2 @@
 # Hash-locked display files must keep their exact published bytes on all OSes.
-processed_display_data/** -text
+processed_display_data/** -text whitespace=cr-at-eol

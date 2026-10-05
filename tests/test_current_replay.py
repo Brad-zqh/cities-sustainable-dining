@@ -108,11 +108,19 @@ class CurrentReplayTests(unittest.TestCase):
         self.assertEqual(len(TASKS), 8)
         for record in spec['figures'].values():
             self.assertTrue((ROOT / record['entry_point']).is_file())
-        for path in [ROOT / 'verify_current.py', ROOT / 'verify_documents.py',
+        for path in [ROOT / 'verify_current.py',
                      *sorted((ROOT / 'scripts').glob('v4_*.py'))]:
             text = path.read_text(encoding='utf-8')
             for forbidden in ('D:\\OneDrive', 'E:\\UserData', 'C:\\Users', 'ghp_'):
                 self.assertNotIn(forbidden, text, path)
+
+    def test_word_workflow_is_not_part_of_public_checkout(self) -> None:
+        """Keep manuscript-specific tools outside the public analysis package."""
+        for relative_path in ('verify_documents.py',
+                              'scripts/audit_v180_supplement_tables.py'):
+            self.assertFalse((ROOT / relative_path).exists(), relative_path)
+        self.assertIn('Word manuscript writing, revision, layout',
+                      (ROOT / 'README.md').read_text(encoding='utf-8'))
 
 
 if __name__ == '__main__':

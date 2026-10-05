@@ -333,8 +333,8 @@ def render_14() -> dict:
     composite, source = bridge.load_original("render_quality_inequality_composite")
     components = composite.comp
     import compute_joint_subgroups_planning as subgroup_source
-    composite.STRUCT = ROOT / "outputs/restricted/v135_fixed_nutrition_structural_inequality_999"
-    composite.DETAIL = ROOT / "outputs/restricted/v135_fixed_nutrition_component_social"
+    composite.STRUCT = getattr(bridge, "DISPLAY_STRUCT", ROOT / "outputs/restricted/v135_fixed_nutrition_structural_inequality_999")
+    composite.DETAIL = getattr(bridge, "DISPLAY_DETAIL", ROOT / "outputs/restricted/v135_fixed_nutrition_component_social")
     composite.STEM = "Fig14_Restaurant_Quality_Inequality_FIXED_NUTRITION"
     components.COMPONENT_DATA = bridge.AREA
     components.CONCENTRATION_DATA = composite.STRUCT / "component_income_concentration.csv"

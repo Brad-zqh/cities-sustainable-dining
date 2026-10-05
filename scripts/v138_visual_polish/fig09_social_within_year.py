@@ -349,13 +349,20 @@ def panel_label(ax: plt.Axes, label: str) -> None:
             fontweight="bold", ha="left", va="top", color="#111111")
 
 
-def main() -> int:
+def main(display_contrasts: Path | None = None) -> int:
     points = pd.read_csv(SOURCE / "joint_subgroup_point_estimates.csv")
     intervals = pd.read_csv(SOURCE / "joint_subgroup_dcca_block_intervals.csv")
-    replicates = pd.read_csv(SOURCE / "joint_subgroup_dcca_block_replicates.csv")
-    contrasts = within_year_contrasts(replicates, points)
+    if display_contrasts is None:
+        replicates = pd.read_csv(SOURCE / "joint_subgroup_dcca_block_replicates.csv")
+        contrasts = within_year_contrasts(replicates, points)
+        if len(replicates) != 68931:
+            raise ValueError("Unexpected bootstrap source-data dimensions")
+    else:
+        contrasts = pd.read_csv(display_contrasts)
+        if len(contrasts) != 51 or contrasts.duplicated(['year','domain','reference_group','comparison_group']).any():
+            raise ValueError("Unexpected archived display contrasts")
 
-    if len(points) != 69 or len(intervals) != 138 or len(replicates) != 68931:
+    if len(points) != 69 or len(intervals) != 138:
         raise ValueError("Unexpected source-data dimensions")
     if contrasts["paired_replicates"].min() != 999:
         raise ValueError("Every within-year contrast must retain 999 paired DCCA replicates")

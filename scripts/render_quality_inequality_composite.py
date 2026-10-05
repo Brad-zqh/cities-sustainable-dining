@@ -48,7 +48,7 @@ def frame_heatmap(ax, colorbar):
     colorbar.outline.set_linewidth(.55)
 
 
-def render():
+def render(display_only: bool = False):
     shared.style()
     intervals = pd.read_csv(STRUCT/'sdi_inequality_block_intervals.csv')
     curves = pd.read_csv(STRUCT/'sdi_income_concentration_curves.csv')
@@ -59,7 +59,7 @@ def render():
     means = pd.read_csv(DETAIL/'component_domain_group_means_2024.csv')
     # Recalculate all 90 weighted boxes and all 36 ecological contrasts using
     # the existing estimators. Verify rather than merely copy old artwork.
-    fresh = comp.build_distributions()
+    fresh = boxes.copy() if display_only else comp.build_distributions()
     keys = ['year', 'component', 'income_quintile']
     a, b = [d.sort_values(keys).reset_index(drop=True) for d in (boxes, fresh)]
     assert a[keys].equals(b[keys])
@@ -195,7 +195,8 @@ def render():
     frame_heatmap(ax,cb)
     shared.export(fig,STEM,dict(manuscript_figure=14,panels=11,
         legacy_source_figures=[13,14],
-        weighted_boxes_recomputed=90,box_statistics=box_stats,
+        weighted_boxes_recomputed=0 if display_only else 90,box_statistics=box_stats,
+        weighted_boxes_loaded=90 if display_only else 0,
         subgroup_contrasts_recomputed=36,intervals=recorded,
         duplicate_removed='Same 24 component concentration values previously drawn twice',
         panel_map={'a-c':'former Fig14a-c','d-i':'former Fig13a-f',

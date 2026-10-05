@@ -1,38 +1,32 @@
-# Data availability and release gates
+# Data availability
 
-This release contains code and source-file metadata, **not empirical data**.
-The local figure bundle contains 174 source files. Its file hashes and tabular
-schemas are documented in `manifests/source_inventory.json`; these metadata
-allow subsequent verification but cannot reproduce the numerical figures alone.
+The author authorised public release of the processed inputs used to display
+the V203 results on 5 October 2026. `processed_display_data/v203` contains
+regional indicators, frozen statistics/intervals, display geometries and
+anonymous public-housing plotting nodes. See [the exact scope](docs/PROCESSED_DISPLAY_DATA.md).
+This is a processed display-data release, not an open deposit of every raw
+dataset or a reproduction of the original data-acquisition and modelling chain.
 
-| Material | Current access route | What is still required |
-| --- | --- | --- |
-| Author-written plotting/estimator code | Public repository | Ongoing code review and versioned fixes |
-| Platform-derived LSBG/DCCA counts, scores and bootstrap tables | Withheld pending redistribution clearance | Record applicable authorization or licence, including permitted aggregation/resolution |
-| Census, FEHD and public-housing spatial derivatives | Withheld pending source-specific review | Original dataset identifiers, versions, licence terms and attribution |
-| Basemap tile cache and old preview imagery | Not included; not needed by current figures | No basemap is used in current figures |
-| Raw reviews, menus, photographs, restaurant identifiers and OD pairs | Not included | Separate rights/privacy basis; no blanket redistribution claim |
-| Conceptual/LLM workflow illustrations | Not part of numerical reproduction | Authorship/provenance and approved manuscript exports |
+Raw OpenRice records, reviews, menus and images; restaurant master/linkage
+records; personal profiles; household microdata; routing OD pairs; credentials;
+manuscripts; reviewer correspondence; and Word preparation/check scripts are
+excluded. Individual bootstrap replicates and unrelated intermediate fields
+are also excluded. Missing evidence and network-unavailable states are retained.
 
-The current [OpenRice service terms](https://www.openrice.com/info/tnc/OR-terms-en.html)
-contain restrictions on copying/extraction and third-party rights. They do not
-establish the historical terms or any separate authorization applicable to the
-study. Existing lawful access and permission to redistribute must be documented
-separately; neither is inferred here. This checklist is not a legal opinion or
-an allegation of misconduct.
+Code retains the repository MIT licence and fonts retain their own notices.
+This release adds no CC BY or other blanket third-party data licence and no
+invented DOI. Author release authorisation for these processed display files
+does not establish new redistribution rights for the underlying platform,
+census, FEHD or OSM source materials. Acquisition and third-party terms remain
+separate; see [the existing notices](THIRD_PARTY_NOTICES.md).
 
-The rights review is unresolved, not a statement that clearance has been denied.
-The repository will not declare CC BY for third-party material without a basis.
-The current code release is therefore an **incomplete data-release milestone**.
+The supplied V203 manuscript Figs. 12–19 and SI Fig. S9 are supported. Main
+Figs. 1–11, SI Figs. S1–S8 and all other acquisition/model stages are outside
+this display release. Result-table outputs are tagged as a V203 numerical
+snapshot, while SI wording, numbering and layout may be revised separately.
 
-## Suggested manuscript wording while clearance is pending
-
-The visualization code and shared analytical functions are available in the
-accompanying code repository. Redistribution of the empirical source-data bundle
-is pending source-specific permission and licence checks. Accordingly, the
-current public release does not yet support independent numerical reproduction
-of all figures. Restricted raw platform records and origin–destination pairs
-are not included.
-
-Do not replace this with “all code and data are publicly available” until the
-cleared empirical bundle is actually deposited and independently downloaded.
+`manifests/source_inventory.json` describes a larger historical private bundle.
+Its metadata is not the public data contract. The release-specific contract is
+`processed_display_data/v203/manifest.json`, accompanied by SHA256SUMS and a
+field dictionary. Hashes establish file identity, not source ownership or
+independent scientific validation.

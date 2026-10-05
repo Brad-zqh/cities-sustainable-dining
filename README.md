@@ -10,14 +10,13 @@ Existing V180 entry points and the empirical-data sharing boundary are unchanged
 
 ## Current V180 manuscript
 
-The current branch includes the eight-task numerical replay, current Figs.
-12–19, and a direct Word-to-results comparison. Follow
+The current branch includes the eight-task numerical replay and current Figs.
+12–19. Word manuscript preparation, editing and document checks remain private. Follow
 [the coauthor reproduction guide](docs/V180_REPRODUCTION.md).
 
 ```sh
 python verify_current.py --help
 python reproduce.py --edition v180 --help
-python verify_documents.py --help
 ```
 
 Supply authorized inputs outside the clone and use fresh output directories.
@@ -57,6 +56,9 @@ layered entry points and required separately cleared inputs are described in
 - Dependency specifications, synthetic unit tests, source-file hashes and a
   data dictionary/availability inventory (metadata, not empirical observations).
 - Licensed TeX Gyre Heros fonts; these are Helvetica-compatible, not Helvetica.
+
+Word manuscript writing, revision, layout and document-comparison scripts
+are outside this public repository.
 
 The historical conceptual and method illustrations are outside these plotting
 entry points. Current V180 reproduction covers Figs. 12–19; other main-text

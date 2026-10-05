@@ -12,21 +12,19 @@ coauthors receive the empirical input bundle separately.
 - `reproduce.py --edition v180` renders current main-text Figs. 12–19 as PNG,
   PDF and SVG. The current Word Fig. 18 uses the diagnostics export (18b);
   the same lineage also exports an additional scale-map page (18a).
-- `verify_documents.py` compares 51 main-text numeric anchors and 698 SI-table
-  values with the named outputs. It separates 518 values supported by this
-  recalculation from 180 values checked against source tables. Optional image
-  comparison checks the embedded Word images against the renderer exports.
 
 Use fresh output folders outside the inputs. Numerical receipts are written
-to `verification.json`, Word comparisons to `document_comparison.json` and
-`word_table_comparison.json`, and renderer commands/output hashes to
+to `verification.json`, and renderer commands/output hashes to
 `figure_reproduction.json` in their respective output folders.
 
 The replay starts from prepared multimodal area components and audited walking
 pairs. Original platform acquisition, fresh model inference, pedestrian-network
 construction, recipe-reference inference and independent construct validation
 have separate evidence requirements. Agreement in this downstream replay
-supports the calculations and document correspondence within that scope.
+supports the downstream calculations within that scope.
+
+Word manuscript preparation and document-comparison tools remain private;
+they are not public reproduction entry points.
 
 The sections below retain historical verification records. Their figure
 numbers, commands, test counts and receipts refer to those earlier releases.

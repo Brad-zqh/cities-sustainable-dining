@@ -15,3 +15,7 @@ authorized_inputs/
 figures/v180/
 *.gpkg
 *.parquet
+*.docx
+private_manuscript_tools/
+verify_documents.py
+scripts/audit_v180_supplement_tables.py
